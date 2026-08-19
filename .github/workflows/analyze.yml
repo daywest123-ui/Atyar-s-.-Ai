@@ -20,11 +20,13 @@ jobs:
           python-version: '3.11'
       - name: Install
         run: pip install -r requirements.txt
-      - name: Collect and analyze
+      - name: Collect daily program and historical form
+        run: python src/collector.py
+      - name: Rank horses
         run: python src/main.py
-      - name: Upload analysis
+      - name: Upload analysis data
         uses: actions/upload-artifact@v4
         with:
-          name: at-yarisi-ai-${{ github.run_number }}
+          name: at-yarisi-analysis
           path: data/*.json
-          if-no-files-found: error
+          retention-days: 7
