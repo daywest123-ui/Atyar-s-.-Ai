@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 6 * * *'
 
+permissions:
+  contents: read
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -17,5 +20,11 @@ jobs:
           python-version: '3.11'
       - name: Install
         run: pip install -r requirements.txt
-      - name: Analyze
+      - name: Collect and analyze
         run: python src/main.py
+      - name: Upload analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: at-yarisi-ai-${{ github.run_number }}
+          path: data/*.json
+          if-no-files-found: error
