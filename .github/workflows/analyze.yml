@@ -22,8 +22,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Collect daily program and historical form
         run: python src/collector.py
-      - name: Rank horses
+      - name: Run integrated advanced analysis
         run: python src/main.py
+      - name: Build race summaries
+        run: python src/advanced_pipeline.py
       - name: Upload analysis data
         uses: actions/upload-artifact@v4
         with:
