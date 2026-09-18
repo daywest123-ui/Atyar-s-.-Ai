@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from advanced_model import enrich
 from scoring import rank_horses
 
 BASE = Path(__file__).resolve().parents[1]
@@ -17,14 +18,27 @@ def main() -> None:
         return
 
     rows = json.loads(source.read_text(encoding="utf-8"))
-    ranked = rank_horses(rows)
-    out = DATA / "ranked_horses.json"
-    out.write_text(json.dumps(ranked, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    for i, horse in enumerate(ranked, 1):
+    # Keep the original transparent score for continuity.
+    baseline = rank_horses(rows)
+    (DATA / "ranked_horses.json").write_text(
+        json.dumps(baseline, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    # Add the integrated components inspired by the compatible open-source
+    # TJK architecture: ranking, Bayesian shrinkage, fair odds, edge and
+    # Harville-ready race probabilities.
+    advanced = enrich(rows)
+    (DATA / "advanced_ranked_horses.json").write_text(
+        json.dumps(advanced, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    for i, horse in enumerate(advanced, 1):
         print(
             f"{i:02d}. {horse.get('horse', 'Unknown')} "
-            f"score={horse['score']} history={horse.get('history_count', 0)}"
+            f"p={horse.get('model_probability', 0):.2%} "
+            f"fair={horse.get('fair_odds')} "
+            f"edge={horse.get('edge')}"
         )
 
 
