@@ -22,18 +22,20 @@ jobs:
         run: pip install -r requirements.txt
       - name: Collect daily program and historical form
         run: python src/collector.py
+      - name: Archive historical race results
+        run: python src/archive_results.py
       - name: Build training data from archived results
         run: python src/build_training.py
       - name: Run integrated advanced analysis
         run: python src/main.py
       - name: Build race summaries
         run: python src/advanced_pipeline.py
-      - name: Persist training and analysis data
+      - name: Persist training and archive data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/training.csv
-          git diff --cached --quiet || git commit -m "Update horse racing training data"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update horse racing archive and training data"
           git push || true
       - name: Upload analysis data
         uses: actions/upload-artifact@v4
