@@ -26,6 +26,7 @@ HEADERS = {
 
 TJK_BASE = "https://www.tjk.org"
 TJK_PROGRAM_PAGE = "/TR/YarisSever/Info/Page/GunlukYarisProgrami"
+TJK_PROGRAM_DATA = "/TR/YarisSever/Info/Data/GunlukYarisProgrami"
 TJK_PROGRAM_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisProgrami"
 DOMESTIC_SEHIR_IDS = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
@@ -151,16 +152,16 @@ def collect_tjk() -> list[dict]:
     session = requests.Session()
     session.headers.update(HEADERS)
 
-    main_url = f"{TJK_BASE}{TJK_PROGRAM_PAGE}"
+    main_url = f"{TJK_BASE}{TJK_PROGRAM_DATA}"
     response = session.get(
         main_url,
-        params={"QueryParameter_Tarih": date_str},
+        params={"QueryParameter_Tarih": date_str, "Era": "today"},
         timeout=30,
     )
     response.raise_for_status()
 
     soup = BeautifulSoup(response.text, "html.parser")
-    tabs = soup.select("ul.gunluk-tabs li a[data-sehir-id]")
+    tabs = soup.select("ul.gunluk-tabs li a")
     if not tabs:
         raise RuntimeError(
             "TJK program sayfası açıldı ancak şehir sekmeleri bulunamadı; "
@@ -170,7 +171,8 @@ def collect_tjk() -> list[dict]:
     tracks = []
     for tab in tabs:
         try:
-            sid = int(tab.get("data-sehir-id", ""))
+            raw_id = tab.get("data-sehir-id") or tab.get("href") or ""
+            sid = int(raw_id.split("SehirId=")[1].split("&")[0]) if "SehirId=" in raw_id else -1
         except (TypeError, ValueError):
             continue
         if sid not in DOMESTIC_SEHIR_IDS:
@@ -186,6 +188,7 @@ def collect_tjk() -> list[dict]:
                 "SehirId": str(sid),
                 "QueryParameter_Tarih": date_str,
                 "SehirAdi": track_name,
+                "Era": "today",
             },
             timeout=30,
         )
