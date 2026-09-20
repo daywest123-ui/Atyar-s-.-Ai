@@ -12,7 +12,7 @@ ARCHIVE.mkdir(parents=True, exist_ok=True)
 
 FEATURES = [
     "recent_form", "track_form", "distance_form",
-    "jockey_form", "trainer_form", "weight_score", "agf_score", "history_count",
+    "jockey_form", "trainer_form", "weight_score", "agf_score", "history_count", "hp",
 ]
 
 
@@ -90,6 +90,7 @@ def archive():
                 "jockey_form": round(filtered(prior, lambda x: str(x.get("jockey") or "") == str(r.get("jockey") or "")), 3),
                 "trainer_form": round(filtered(prior, lambda x: str(x.get("trainer") or x.get("antrenor") or "") == str(r.get("trainer") or r.get("antrenor") or "")), 3),
                 "history_count": len(prior),
+                "hp": round(num(r.get("hp") or r.get("HP") or r.get("handikap")) or 0.0, 3),
                 "weight_score": round(max(0.0, min(100.0, 100.0 - abs((num(r.get("weight")) or 60.0) - 60.0) * 4)), 3),
                 "agf_score": round(num(r.get("AGF1") or r.get("agf")) or 0.0, 3),
                 "odds": num(r.get("odds")),
