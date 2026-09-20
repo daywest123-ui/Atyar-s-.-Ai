@@ -86,8 +86,23 @@ def select_leg_candidates(race: list[dict], target_count: int | None = None, max
     return sorted(selected, key=_rank_score, reverse=True)
 
 
+def _banko_eligible(race: list[dict]) -> bool:
+    """Allow a single only when the model has a meaningful separation."""
+    if len(race) <= 1:
+        return True
+    ranked = sorted(race, key=_rank_score, reverse=True)
+    top = _p(ranked[0])
+    second = _p(ranked[1])
+    margin = top - second
+    # A single is allowed only with both probability and separation.
+    # This is a selection rule, not a claim of certainty.
+    return top >= 0.30 and margin >= 0.10
+
+
 def _coverage_candidates(races: list[list[dict]], budget: int, unit_cost: int) -> list[list[dict]]:
-    counts = [min(2, len(r)) for r in races]
+    # Banko is earned by model separation; otherwise start every leg with
+    # at least two runners.
+    counts = [1 if _banko_eligible(r) else min(2, len(r)) for r in races]
     target = max(1, budget // max(unit_cost, 1))
     while True:
         product = 1
