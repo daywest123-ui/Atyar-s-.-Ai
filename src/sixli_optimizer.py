@@ -59,17 +59,52 @@ def group_races(rows: Iterable[dict]) -> list[list[dict]]:
     return [sorted(v, key=_rank_score, reverse=True) for _, v in sorted(groups.items(), key=lambda x: x[0])]
 
 
-def select_leg_candidates(race: list[dict], max_horses: int = 6) -> list[dict]:
+def _field_uncertainty(race: list[dict]) -> float:
+    if not race:
+        return 1.0
+    probs = [_p(r) for r in race]
+    top = max(probs)
+    second = sorted(probs, reverse=True)[1] if len(probs) > 1 else 0.0
+    margin = max(0.0, top - second)
+    entropy = -sum(p * __import__("math").log(max(p, 1e-12)) for p in probs)
+    max_entropy = __import__("math").log(max(len(probs), 2))
+    return max(0.0, min(1.0, 0.65 * (1.0 - margin / 0.30) + 0.35 * (entropy / max_entropy)))
+
+
+def select_leg_candidates(race: list[dict], target_count: int | None = None, max_horses: int = 6) -> list[dict]:
     if not race:
         return []
     ranked = sorted(race, key=_rank_score, reverse=True)
-    # Keep enough candidates to cover uncertainty, but cap the explosion.
-    selected = ranked[:max_horses]
-    if len(ranked) > max_horses:
-        surprises = [r for r in ranked[max_horses:] if _edge(r) > 0.04 and _agf(r) < 15]
+    if target_count is None:
+        target_count = 2 + int(round(_field_uncertainty(race) * 4))
+    target_count = max(1 if len(ranked) == 1 else 2, min(max_horses, target_count, len(ranked)))
+    selected = ranked[:target_count]
+    if len(ranked) > target_count:
+        surprises = [r for r in ranked[target_count:] if _edge(r) > 0.04 and _agf(r) < 15]
         if surprises:
             selected[-1] = max(surprises, key=_rank_score)
     return sorted(selected, key=_rank_score, reverse=True)
+
+
+def _coverage_candidates(races: list[list[dict]], budget: int, unit_cost: int) -> list[list[dict]]:
+    counts = [min(2, len(r)) for r in races]
+    target = max(1, budget // max(unit_cost, 1))
+    while True:
+        product = 1
+        for c in counts:
+            product *= max(c, 1)
+        if product >= target:
+            break
+        choices = []
+        for i, race in enumerate(races):
+            if counts[i] >= min(6, len(race)):
+                continue
+            choices.append((_field_uncertainty(race) / counts[i], i))
+        if not choices:
+            break
+        _, idx = max(choices)
+        counts[idx] += 1
+    return [select_leg_candidates(race, target_count=counts[i]) for i, race in enumerate(races)]
 
 
 def combination_score(combo: tuple[dict, ...]) -> float:
@@ -93,7 +128,7 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
 
     races = races[:6]
     # Candidate counts are reduced before Cartesian expansion.
-    candidates = [select_leg_candidates(r, 6) for r in races]
+    candidates = _coverage_candidates(races, budget, unit_cost)
     counts = [len(x) for x in candidates]
 
     all_combos = []
@@ -130,6 +165,20 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
         "candidate_counts": counts,
         "requested_combinations": max_combos,
         "returned_combinations": len(combinations),
+        "legs": [
+            {
+                "race": _race_key(race[0]) if race else str(i + 1),
+                "selection_count": len(candidates[i]),
+                "selections": [
+                    {"horse": r.get("horse"), "start": r.get("start"),
+                     "probability": round(_p(r), 6), "agf": round(_agf(r), 3),
+                     "edge": r.get("edge")}
+                    for r in candidates[i]
+                ],
+            }
+            for i, race in enumerate(races)
+        ],
+        "coverage_note": "Aday sayıları yarış belirsizliğine ve bütçeye göre dağıtıldı; tek at zorunlu değil.",
         "combinations": combinations,
     }
 
