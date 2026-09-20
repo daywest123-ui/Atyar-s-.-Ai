@@ -25,12 +25,15 @@ Mimari, TJK odaklı açık kaynak Ganyan projelerindeki ranking/Bayesian/Harvill
     python src/collector.py
     python src/main.py
     python src/advanced_pipeline.py
+python src/backtest.py
 
 Üretilen dosyalar:
 
 - data/ranked_horses.json — eski/şeffaf skor
 - data/advanced_ranked_horses.json — model olasılığı + fair odds + edge
 - data/race_analysis.json — yarış bazlı özet ve skip gate
+- data/sixli_coupons.json — 6'lı Ganyan için 240/720/1440 TL bütçe katmanları
+- data/backtest_report.json — arşivlenmiş yarışlarda tanısal backtest raporu
 
 ### LightGBM eğitim verisi
 
