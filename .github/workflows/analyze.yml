@@ -22,6 +22,20 @@ jobs:
         run: pip install -r requirements.txt
       - name: Collect daily program and historical form
         run: python src/collector.py
+      - name: Validate collected program
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/horses.json")
+          if not p.exists():
+              raise SystemExit("data/horses.json oluşturulmadı")
+          rows = json.loads(p.read_text(encoding="utf-8"))
+          if not isinstance(rows, list) or len(rows) == 0:
+              raise SystemExit("Yarış verisi 0 kayıt: pipeline durduruldu")
+          races = {str(r.get("race_number") or r.get("race")) for r in rows}
+          print(f"Validated {len(rows)} horses across {len(races)} races")
+
       - name: Archive historical race results
         run: python src/archive_results.py
       - name: Build training data from archived results
