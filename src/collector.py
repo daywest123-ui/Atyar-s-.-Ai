@@ -303,47 +303,94 @@ def collect_tjk_pdf() -> list[dict]:
 
 
 def collect_public_html_fallback() -> list[dict]:
-    """Fallback: parse the public daily TJK-derived race tables when TJK itself times out."""
+    """Robust HTML fallback using the site's rendered table structure, not pandas column inference."""
     target_date = date.today()
-    url = (
-        "https://www.agftablosu.com/at-yarisi/karma/"
-        f"{target_date:%d-%B-%Y}-"
-        "pazar"
-    )
-    # Turkish month names are not reliable in URL generation; use the known
-    # numeric route as a second attempt.
-    urls = [url, f"https://www.agftablosu.com/at-yarisi/karma/{target_date:%d-%m-%Y}"]
     month_names = {
-        1:"ocak",2:"subat",3:"mart",4:"nisan",5:"mayis",6:"haziran",
-        7:"temmuz",8:"agustos",9:"eylul",10:"ekim",11:"kasim",12:"aralik"
+        1: "ocak", 2: "subat", 3: "mart", 4: "nisan", 5: "mayis", 6: "haziran",
+        7: "temmuz", 8: "agustos", 9: "eylul", 10: "ekim", 11: "kasim", 12: "aralik",
     }
-    weekday = ["pazartesi","sali","carsamba","persembe","cuma","cumartesi","pazar"][target_date.weekday()]
-    urls.insert(0, f"https://www.agftablosu.com/at-yarisi/karma/{target_date.day}-{month_names[target_date.month]}-{target_date.year}-{weekday}")
+    weekdays = ["pazartesi", "sali", "carsamba", "persembe", "cuma", "cumartesi", "pazar"]
+    slug = f"{target_date.day}-{month_names[target_date.month]}-{target_date.year}-{weekdays[target_date.weekday()]}"
+    urls = [
+        f"https://www.agftablosu.com/at-yarisi/karma/{slug}",
+        f"https://www.agftablosu.com/at-yarisi/karma/{target_date:%d-%m-%Y}",
+        f"https://www.agftablosu.com/at-yarisi/karma/{target_date:%d-%B-%Y}-{weekdays[target_date.weekday()]}",
+    ]
+
+    def norm(value: str) -> str:
+        value = value.strip().lower()
+        value = value.replace("ı", "i").replace("ş", "s").replace("ğ", "g")
+        value = value.replace("ü", "u").replace("ö", "o").replace("ç", "c")
+        value = re.sub(r"[^a-z0-9]+", " ", value)
+        return re.sub(r"\s+", " ", value).strip()
 
     last_error = None
     for page_url in urls:
         try:
             response = requests.get(page_url, headers=HEADERS, timeout=(15, 30))
             response.raise_for_status()
-            tables = __import__("pandas").read_html(StringIO(response.text))
+            soup = BeautifulSoup(response.text, "html.parser")
             rows: list[dict] = []
-            race_no = 0
-            for table in tables:
-                cols = {str(x).strip().lower(): x for x in table.columns}
-                required = ["at ismi", "kilo", "jokey", "st", "son 6 y."]
-                if not all(k in cols for k in required):
+            race_numbers: set[int] = set()
+
+            for table in soup.find_all("table"):
+                trs = table.find_all("tr")
+                if len(trs) < 2:
                     continue
-                race_no += 1
-                for _, rec in table.iterrows():
-                    horse = str(rec[cols["at ismi"]]).strip()
-                    if not horse or horse.lower() == "nan":
+
+                header_cells = trs[0].find_all(["th", "td"])
+                headers = [norm(cell.get_text(" ", strip=True)) for cell in header_cells]
+                header_map = {h: i for i, h in enumerate(headers) if h}
+
+                def find_col(*names):
+                    wanted = {norm(x) for x in names}
+                    for h, i in header_map.items():
+                        if h in wanted:
+                            return i
+                    for h, i in header_map.items():
+                        if any(x in h for x in wanted):
+                            return i
+                    return None
+
+                i_horse = find_col("at ismi", "at")
+                i_weight = find_col("kilo", "kg")
+                i_jockey = find_col("jokey")
+                i_start = find_col("st", "start")
+                i_form = find_col("son 6 y", "son 6")
+                i_hp = find_col("hk", "h k", "handikap")
+
+                if i_horse is None or i_weight is None or i_jockey is None or i_start is None or i_form is None:
+                    continue
+
+                heading = table.find_previous(["h1", "h2", "h3", "h4", "h5", "h6"])
+                heading_text = heading.get_text(" ", strip=True) if heading else ""
+                race_match = re.search(r"(\d+)\s*\.\s*Koşu", heading_text, re.I)
+                if not race_match:
+                    # Also search nearby parent text for headings such as "Karma 1. Koşu".
+                    parent_text = table.parent.get_text(" ", strip=True) if table.parent else ""
+                    race_match = re.search(r"(\d+)\s*\.\s*Koşu", parent_text, re.I)
+                if not race_match:
+                    continue
+                race_no = int(race_match.group(1))
+                race_numbers.add(race_no)
+
+                for tr in trs[1:]:
+                    cells = [cell.get_text(" ", strip=True) for cell in tr.find_all(["td", "th"])]
+                    if len(cells) <= max(i_horse, i_weight, i_jockey, i_start, i_form):
                         continue
-                    form = str(rec[cols["son 6 y."]]).strip()
-                    weight = _number(str(rec[cols["kilo"]]))
-                    start = _safe_int(str(rec[cols["st"]]))
-                    jockey = str(rec[cols["jokey"]]).strip()
-                    hp_key = cols.get("hk", cols.get("hk."))
-                    hp = _number(str(rec[hp_key])) if hp_key is not None else 0.0
+
+                    horse = cells[i_horse].strip()
+                    if not horse or norm(horse) in {"at ismi", "at"}:
+                        continue
+                    if horse.lower() == "nan":
+                        continue
+
+                    form = cells[i_form].strip()
+                    start = _safe_int(cells[i_start])
+                    weight = _number(cells[i_weight])
+                    jockey = cells[i_jockey].strip()
+                    hp = _number(cells[i_hp]) if i_hp is not None and i_hp < len(cells) else 0.0
+
                     rows.append({
                         "horse": horse,
                         "race": str(race_no),
@@ -355,7 +402,7 @@ def collect_public_html_fallback() -> list[dict]:
                         "jockey": jockey,
                         "trainer": "",
                         "owner": "",
-                        "form": form if form != "nan" else "",
+                        "form": form,
                         "weight": weight,
                         "agf_score": 0.0,
                         "recent_form": _form_score(form),
@@ -370,10 +417,17 @@ def collect_public_html_fallback() -> list[dict]:
                         "s20": 0.0,
                         "scratched": False,
                     })
-            if rows and race_no >= 6:
+
+            if rows and len(race_numbers) >= 6:
+                print(f"Public HTML parsed: {len(rows)} horses / {len(race_numbers)} races")
                 return rows
+            last_error = RuntimeError(
+                f"HTML sayfası açıldı ancak yeterli yarış tablosu bulunamadı "
+                f"(atlar={len(rows)}, yarışlar={sorted(race_numbers)})"
+            )
         except Exception as exc:
             last_error = exc
+
     raise RuntimeError(f"Public HTML fallback başarısız: {last_error}")
 
 def collect_nalsesleri() -> list[dict]:
