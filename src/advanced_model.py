@@ -6,7 +6,7 @@ from typing import Iterable
 
 FEATURES = (
     "recent_form", "track_form", "distance_form",
-    "jockey_form", "trainer_form", "weight_score", "agf_score", "hp",
+    "jockey_form", "trainer_form", "weight_score", "agf_score", "hp", "history_count",
 )
 
 
@@ -21,9 +21,20 @@ def baseline_score(row: dict, field: list[dict] | None = None) -> float:
     weights = {
         "recent_form": .34, "track_form": .10, "distance_form": .10,
         "jockey_form": .10, "trainer_form": .08,
-        "weight_score": .06, "agf_score": .07, "hp": .15,
+        "weight_score": .06, "agf_score": .07, "hp": .15, "history_count": .05,
     }
-    score = sum(weights[k] * _f(row, k) for k in weights if k != "hp")
+    available = []
+    for k in ("recent_form", "track_form", "distance_form", "jockey_form", "trainer_form", "weight_score", "agf_score"):
+        v = _f(row, k)
+        if k in {"track_form", "distance_form", "jockey_form", "trainer_form"} and _f(row, "history_count") <= 0:
+            continue
+        if k == "agf_score" and v <= 0:
+            continue
+        if k == "recent_form" and v <= 0:
+            continue
+        available.append((k, v))
+    denom = sum(weights[k] for k, _ in available)
+    score = sum(weights[k] * v for k, v in available) / max(denom, 1e-9)
     hp = _f(row, "hp")
     hps = [_f(r, "hp") for r in (field or []) if _f(r, "hp") > 0]
     if hps and hp > 0:
@@ -31,7 +42,11 @@ def baseline_score(row: dict, field: list[dict] | None = None) -> float:
         hp_norm = 50.0 if hi <= lo else 100.0 * (hp - lo) / (hi - lo)
     else:
         hp_norm = 50.0
-    return score + weights["hp"] * hp_norm
+    score = 0.85 * score + 0.15 * hp_norm
+    # Historical depth slightly raises/lowers the score only as a confidence
+    # modifier, not as a performance claim.
+    depth = min(_f(row, "history_count") / 12.0, 1.0)
+    return score * (0.92 + 0.08 * depth)
 
 
 def _softmax(values: list[float], temperature: float = 8.0) -> list[float]:
