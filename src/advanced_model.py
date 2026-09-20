@@ -166,6 +166,14 @@ def enrich(rows: list[dict]) -> list[dict]:
                 odds = 0.0
             item["market_odds"] = odds or None
             item["edge"] = round(p - (1.0 / odds), 6) if odds > 1 else None
+            available = 0
+            if _f(item, "recent_form") > 0: available += 1
+            if _f(item, "hp") > 0: available += 1
+            if _f(item, "weight") > 0: available += 1
+            if _f(item, "agf_score") > 0: available += 1
+            if _f(item, "history_count") > 0: available += 3
+            item["data_quality"] = round(min(1.0, available / 7.0), 3)
+            item["risk_flag"] = "low_data" if item["data_quality"] < 0.45 else ("medium_data" if item["data_quality"] < 0.70 else "normal")
 
     return sorted(out, key=lambda x: (str(x.get("race")), -x.get("model_probability", 0)))
 
@@ -204,4 +212,11 @@ def race_summary(rows: list[dict]) -> dict:
             for r in ranked[:3]
         ],
         "skip_gate": bool(ranked and ranked[0].get("model_probability", 0) < 0.35),
+        "data_quality": round(sum(float(r.get("data_quality", 0) or 0) for r in ranked) / len(ranked), 3),
+        "banko_candidate": bool(
+            ranked and len(ranked) > 1
+            and float(ranked[0].get("model_probability", 0) or 0) >= 0.30
+            and (float(ranked[0].get("model_probability", 0) or 0) - float(ranked[1].get("model_probability", 0) or 0)) >= 0.10
+            and float(ranked[0].get("data_quality", 0) or 0) >= 0.60
+        ),
     }
