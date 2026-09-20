@@ -1,11 +1,8 @@
 from __future__ import annotations
 
 import csv
-import json
-import os
+from collections import defaultdict
 from pathlib import Path
-
-import requests
 
 BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / "data"
@@ -16,106 +13,66 @@ FEATURES = [
     "jockey_form", "trainer_form", "weight_score", "agf_score", "history_count", "hp",
 ]
 
-
-def _num(v):
+def num(v):
     try:
-        return float(str(v).replace("%", "").replace(",", "."))
+        return float(str(v).replace("%","").replace(",","."))
     except (TypeError, ValueError):
-        return None
+        return 0.0
 
+def form_score(positions, step=15.0):
+    vals = [max(0.0, 100.0 - (p - 1) * step) for p in positions[-8:] if p]
+    return sum(vals) / len(vals) if vals else 0.0
 
-def _pos(v):
-    try:
-        return int(str(v).split()[0])
-    except (TypeError, ValueError, IndexError):
-        return None
-
-
-def _rows_from_json(path: Path):
-    try:
-        obj = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return []
-    if isinstance(obj, list):
-        return obj
-    if isinstance(obj, dict):
-        for key in ("horses", "results", "data"):
-            if isinstance(obj.get(key), list):
-                return obj[key]
-    return []
-
-
-def normalize(row, race_id):
-    # Accept several common field names so archived TJK/Nal Sesleri JSON
-    # can be converted without rewriting the collector.
-    pos = _pos(row.get("finish_position", row.get("result", row.get("sira"))))
-    if pos is None:
-        return None
-    out = {
-        "race_id": race_id,
-        "race_date": str(row.get("race_date") or row.get("date") or ""),
-        "finish_position": pos,
-    }
-    aliases = {
-        "recent_form": ("recent_form", "form_score"),
-        "track_form": ("track_form",),
-        "distance_form": ("distance_form",),
-        "jockey_form": ("jockey_form",),
-        "trainer_form": ("trainer_form",),
-        "weight_score": ("weight_score",),
-        "agf_score": ("agf_score", "agf"),
-        "history_count": ("history_count",),
-        "hp": ("hp", "handikap"),
-    }
-    for feature, keys in aliases.items():
-        value = next((_num(row.get(k)) for k in keys if row.get(k) is not None), None)
-        out[feature] = 0.0 if value is None else value
-    return out
-
+def rate(rows, predicate):
+    vals = []
+    for r in rows:
+        if predicate(r):
+            p = int(r["finish_position"])
+            vals.append(max(0.0, 100.0 - (p - 1) * 18.0))
+    return sum(vals) / len(vals) if vals else 50.0
 
 def build():
-    candidates = []
-    for p in sorted(DATA.glob("*.json")):
-        if p.name in {
-            "horses.json", "raw_program.json",
-            "ranked_horses.json", "advanced_ranked_horses.json",
-            "race_analysis.json",
-        }:
-            continue
-        candidates.append(p)
+    source = DATA / "historical_results.csv"
+    if not source.exists():
+        raise SystemExit("historical_results.csv yok; önce results_backfill.py çalıştırılmalı.")
+    raw = list(csv.DictReader(source.open("r", newline="", encoding="utf-8")))
+    raw.sort(key=lambda r: (r.get("race_date",""), r.get("race_id",""), r.get("horse","")))
+    by_horse = defaultdict(list)
+    for r in raw:
+        by_horse[r["horse"].strip().upper()].append(r)
 
     rows = []
-    for p in candidates:
-        source = _rows_from_json(p)
-        for i, raw in enumerate(source):
-            race_id = raw.get("race_id") or raw.get("race") or f"{p.stem}-{i}"
-            item = normalize(raw, str(race_id))
-            if item:
-                rows.append(item)
-
-    if not rows:
-        print("No archived result JSON found. training.csv was not changed.")
-        return
+    for r in raw:
+        name = r["horse"].strip().upper()
+        prior = [x for x in by_horse[name] if x["race_date"] < r["race_date"]]
+        target_track = r.get("track","")
+        target_distance = num(r.get("distance"))
+        prior_positions = [int(x["finish_position"]) for x in prior]
+        weight = num(r.get("weight")) or 60.0
+        jockey = r.get("jockey","").strip()
+        trainer = r.get("trainer","").strip()
+        rows.append({
+            "race_id": r["race_id"],
+            "race_date": r["race_date"],
+            "finish_position": int(r["finish_position"]),
+            "recent_form": round(form_score(prior_positions), 3),
+            "track_form": round(rate(prior, lambda x: x.get("track","") == target_track), 3),
+            "distance_form": round(rate(prior, lambda x: abs(num(x.get("distance")) - target_distance) <= 200), 3),
+            "jockey_form": round(rate(prior, lambda x: x.get("jockey","").strip() == jockey), 3),
+            "trainer_form": round(rate(prior, lambda x: x.get("trainer","").strip() == trainer), 3),
+            "weight_score": round(max(0.0, min(100.0, 100.0 - abs(weight - 60.0) * 4)), 3),
+            "agf_score": num(r.get("agf_score")),
+            "history_count": len(prior),
+            "hp": num(r.get("hp")),
+        })
 
     path = DATA / "training.csv"
-    existing = {}
-    if path.exists():
-        with path.open("r", newline="", encoding="utf-8") as f:
-            for r in csv.DictReader(f):
-                key = (r.get("race_id"), r.get("finish_position"))
-                existing[key] = r
-
-    for r in rows:
-        existing[(r["race_id"], r["finish_position"])] = r
-
     with path.open("w", newline="", encoding="utf-8") as f:
-        fields = ["race_id", "race_date", "finish_position", *FEATURES]
+        fields = ["race_id","race_date","finish_position",*FEATURES]
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
-        w.writerows(existing.values())
-
-    print(f"training.csv: {len(existing)} rows")
-
+        w.writerows(rows)
+    print(f"training.csv: {len(rows)} rows / {len(set(r['race_id'] for r in rows))} races / {len(set(r['race_date'] for r in rows))} dates")
 
 if __name__ == "__main__":
     build()
