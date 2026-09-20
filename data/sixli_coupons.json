@@ -1,0 +1,23 @@
+{
+  "240": {
+    "status": "insufficient_races",
+    "race_count": 0,
+    "required_races": 6,
+    "budget": 240,
+    "combinations": []
+  },
+  "720": {
+    "status": "insufficient_races",
+    "race_count": 0,
+    "required_races": 6,
+    "budget": 720,
+    "combinations": []
+  },
+  "1440": {
+    "status": "insufficient_races",
+    "race_count": 0,
+    "required_races": 6,
+    "budget": 1440,
+    "combinations": []
+  }
+}
