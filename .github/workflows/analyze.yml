@@ -11,6 +11,7 @@ permissions:
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,7 +36,7 @@ jobs:
           PY
       - name: Backfill historical TJK results
         env:
-          BACKFILL_DAYS: "45"
+          BACKFILL_DAYS: "7"
         run: python src/results_backfill.py
       - name: Archive historical race results
         run: python src/archive_results.py
