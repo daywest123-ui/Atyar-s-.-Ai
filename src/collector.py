@@ -301,6 +301,80 @@ def collect_tjk_pdf() -> list[dict]:
     return rows
 
 
+def collect_public_html_fallback() -> list[dict]:
+    """Fallback: parse the public daily TJK-derived race tables when TJK itself times out."""
+    target_date = date.today()
+    url = (
+        "https://www.agftablosu.com/at-yarisi/karma/"
+        f"{target_date:%d-%B-%Y}-"
+        "pazar"
+    )
+    # Turkish month names are not reliable in URL generation; use the known
+    # numeric route as a second attempt.
+    urls = [url, f"https://www.agftablosu.com/at-yarisi/karma/{target_date:%d-%m-%Y}"]
+    month_names = {
+        1:"ocak",2:"subat",3:"mart",4:"nisan",5:"mayis",6:"haziran",
+        7:"temmuz",8:"agustos",9:"eylul",10:"ekim",11:"kasim",12:"aralik"
+    }
+    weekday = ["pazartesi","sali","carsamba","persembe","cuma","cumartesi","pazar"][target_date.weekday()]
+    urls.insert(0, f"https://www.agftablosu.com/at-yarisi/karma/{target_date.day}-{month_names[target_date.month]}-{target_date.year}-{weekday}")
+
+    last_error = None
+    for page_url in urls:
+        try:
+            response = requests.get(page_url, headers=HEADERS, timeout=(15, 30))
+            response.raise_for_status()
+            tables = __import__("pandas").read_html(response.text)
+            rows: list[dict] = []
+            race_no = 0
+            for table in tables:
+                cols = {str(x).strip().lower(): x for x in table.columns}
+                required = ["at ismi", "kilo", "jokey", "st", "son 6 y."]
+                if not all(k in cols for k in required):
+                    continue
+                race_no += 1
+                for _, rec in table.iterrows():
+                    horse = str(rec[cols["at ismi"]]).strip()
+                    if not horse or horse.lower() == "nan":
+                        continue
+                    form = str(rec[cols["son 6 y."]]).strip()
+                    weight = _number(str(rec[cols["kilo"]]))
+                    start = _safe_int(str(rec[cols["st"]]))
+                    jockey = str(rec[cols["jokey"]]).strip()
+                    hp_key = cols.get("hk", cols.get("hk."))
+                    hp = _number(str(rec[hp_key])) if hp_key is not None else 0.0
+                    rows.append({
+                        "horse": horse,
+                        "race": str(race_no),
+                        "race_number": race_no,
+                        "date": target_date.isoformat(),
+                        "start": start or "",
+                        "gate": start or "",
+                        "track": "Karma",
+                        "jockey": jockey,
+                        "trainer": "",
+                        "owner": "",
+                        "form": form if form != "nan" else "",
+                        "weight": weight,
+                        "agf_score": 0.0,
+                        "recent_form": _form_score(form),
+                        "track_form": 50.0,
+                        "distance_form": 50.0,
+                        "jockey_form": 50.0,
+                        "trainer_form": 50.0,
+                        "weight_score": 50.0,
+                        "distance": 0,
+                        "hp": hp,
+                        "kgs": 0.0,
+                        "s20": 0.0,
+                        "scratched": False,
+                    })
+            if rows and race_no >= 6:
+                return rows
+        except Exception as exc:
+            last_error = exc
+    raise RuntimeError(f"Public HTML fallback başarısız: {last_error}")
+
 def collect_nalsesleri() -> list[dict]:
     """Legacy fallback source retained for resilience."""
     url = os.getenv("NALSESLERI_PROGRAM_URL", "https://nalsesleri.com/program")
@@ -358,6 +432,13 @@ def collect() -> list[dict]:
             source = "TJK PDF CDN fallback"
         except Exception as exc:
             errors.append(f"TJK PDF: {exc}")
+
+    if not rows:
+        try:
+            rows = collect_public_html_fallback()
+            source = "Public HTML fallback"
+        except Exception as exc:
+            errors.append(f"Public HTML: {exc}")
 
     if not rows:
         try:
