@@ -49,7 +49,8 @@ def _rank_score(row: dict) -> float:
     p = _p(row)
     edge = max(-0.25, min(0.25, _edge(row)))
     surprise = 0.03 if _agf(row) < 10 and edge > 0.03 else 0.0
-    return p + 0.35 * edge + surprise
+    quality = max(0.35, min(1.0, float(row.get("data_quality", 1.0) or 1.0)))
+    return p * quality + 0.35 * edge + surprise
 
 
 def group_races(rows: Iterable[dict]) -> list[list[dict]]:
