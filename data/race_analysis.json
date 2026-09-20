@@ -1,1 +1,170 @@
-[]
+[
+  {
+    "race": "1",
+    "field_size": 12,
+    "top3": [
+      {
+        "horse": "ARSLAN OĞLU",
+        "start": 1,
+        "probability": 0.083333,
+        "fair_odds": 12.0,
+        "edge": null
+      },
+      {
+        "horse": "ÖZGÜNALP",
+        "start": 6,
+        "probability": 0.083333,
+        "fair_odds": 12.0,
+        "edge": null
+      },
+      {
+        "horse": "SALAHİYET",
+        "start": 4,
+        "probability": 0.083333,
+        "fair_odds": 12.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  },
+  {
+    "race": "2",
+    "field_size": 8,
+    "top3": [
+      {
+        "horse": "GOLD FLOWER",
+        "start": 6,
+        "probability": 0.125,
+        "fair_odds": 8.0,
+        "edge": null
+      },
+      {
+        "horse": "PEHLİVAN YILDIZI",
+        "start": 3,
+        "probability": 0.125,
+        "fair_odds": 8.0,
+        "edge": null
+      },
+      {
+        "horse": "SHIROKE",
+        "start": 4,
+        "probability": 0.125,
+        "fair_odds": 8.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  },
+  {
+    "race": "3",
+    "field_size": 10,
+    "top3": [
+      {
+        "horse": "SMART CHILDREN",
+        "start": 4,
+        "probability": 0.1,
+        "fair_odds": 10.0,
+        "edge": null
+      },
+      {
+        "horse": "BELLAFINA",
+        "start": 3,
+        "probability": 0.1,
+        "fair_odds": 10.0,
+        "edge": null
+      },
+      {
+        "horse": "BIG FORTUNA",
+        "start": 5,
+        "probability": 0.1,
+        "fair_odds": 10.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  },
+  {
+    "race": "4",
+    "field_size": 4,
+    "top3": [
+      {
+        "horse": "CALVADOS",
+        "start": 4,
+        "probability": 0.25,
+        "fair_odds": 4.0,
+        "edge": null
+      },
+      {
+        "horse": "METAL HEART",
+        "start": 2,
+        "probability": 0.25,
+        "fair_odds": 4.0,
+        "edge": null
+      },
+      {
+        "horse": "MR ÇIRAK",
+        "start": 1,
+        "probability": 0.25,
+        "fair_odds": 4.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  },
+  {
+    "race": "5",
+    "field_size": 11,
+    "top3": [
+      {
+        "horse": "YELLOW LION",
+        "start": 6,
+        "probability": 0.090909,
+        "fair_odds": 11.0,
+        "edge": null
+      },
+      {
+        "horse": "BOBİDİK",
+        "start": 7,
+        "probability": 0.090909,
+        "fair_odds": 11.0,
+        "edge": null
+      },
+      {
+        "horse": "DR NECO",
+        "start": 4,
+        "probability": 0.090909,
+        "fair_odds": 11.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  },
+  {
+    "race": "6",
+    "field_size": 18,
+    "top3": [
+      {
+        "horse": "KOŞAN NUR",
+        "start": 7,
+        "probability": 0.055556,
+        "fair_odds": 18.0,
+        "edge": null
+      },
+      {
+        "horse": "EFE METE BEY",
+        "start": 5,
+        "probability": 0.055556,
+        "fair_odds": 18.0,
+        "edge": null
+      },
+      {
+        "horse": "LEONİDAS",
+        "start": 16,
+        "probability": 0.055556,
+        "fair_odds": 18.0,
+        "edge": null
+      }
+    ],
+    "skip_gate": true
+  }
+]
