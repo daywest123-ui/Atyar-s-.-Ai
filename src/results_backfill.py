@@ -48,7 +48,7 @@ def parse_day(session: requests.Session, d: date) -> list[dict]:
                 rr = session.get(
                     f"{TJK}{RESULTS_CITY}",
                     params={
-                        "Era": "past",
+                        "Era": "yesterday",
                         "SehirId": str(sid),
                         "QueryParameter_Tarih": ds,
                         "SehirAdi": name,
