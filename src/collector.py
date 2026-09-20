@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import date
+import re
+from datetime import date, datetime
 from pathlib import Path
 
 import requests
@@ -14,13 +15,27 @@ BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / "data"
 DATA.mkdir(exist_ok=True)
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/1.0)"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/2.0)",
+    "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+}
+
+TJK_BASE = "https://www.tjk.org"
+TJK_PROGRAM_PAGE = "/TR/YarisSever/Info/Page/GunlukYarisProgrami"
+TJK_PROGRAM_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisProgrami"
+DOMESTIC_SEHIR_IDS = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 
 def _number(value: str | None) -> float:
     if not value:
         return 0.0
-    value = value.strip().replace("%", "").replace(".", "").replace(",", ".")
+    value = value.strip().replace("%", "")
+    # TJK percentages/decimals may use Turkish commas.
+    if "," in value:
+        value = value.replace(".", "").replace(",", ".")
+    else:
+        # Keep ordinary decimals such as 12.5 intact.
+        value = value.replace(" ", "")
     try:
         return float(value)
     except ValueError:
@@ -38,7 +53,155 @@ def _form_score(form: str | None) -> float:
     return round(sum(values) / len(values), 2) if values else 0.0
 
 
+def _text(node) -> str:
+    return node.get_text(" ", strip=True) if node else ""
+
+
+def _link_text(node) -> str:
+    if not node:
+        return ""
+    link = node.select_one("a")
+    return link.get_text(" ", strip=True) if link else _text(node)
+
+
+def _safe_int(value: str | None) -> int | None:
+    if not value:
+        return None
+    m = re.search(r"\d+", value)
+    return int(m.group()) if m else None
+
+
+def _parse_tjk_program(html: str, race_date: date) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    rows: list[dict] = []
+
+    # Current TJK program markup uses race panes + tablesorter tables.
+    panes = soup.select("div.races-panes > div")
+    if not panes:
+        panes = soup.select("div.race-details")
+
+    for pane in panes:
+        detail = pane.select_one("div.race-details") if pane.name != "div" or "race-details" not in (pane.get("class") or []) else pane
+        if detail is None:
+            detail = pane
+
+        race_text = _text(detail.select_one("h3.race-no"))
+        race_match = re.search(r"(\d+)\.\s*Koşu", race_text, re.I)
+        race_no = int(race_match.group(1)) if race_match else _safe_int(race_text)
+        if race_no is None:
+            continue
+
+        config = _text(detail.select_one("h3.race-config"))
+        distance = _safe_int(config)
+
+        table = pane.select_one("table.tablesorter") if hasattr(pane, "select_one") else None
+        if table is None:
+            continue
+
+        for tr in table.select("tbody tr"):
+            name_cell = tr.select_one("td.gunluk-GunlukYarisProgrami-AtAdi")
+            if not name_cell:
+                continue
+            name_link = name_cell.select_one("a")
+            horse = name_link.get_text(" ", strip=True) if name_link else _text(name_cell)
+            horse = re.sub(r"\(\d+\)", "", horse).strip()
+            if not horse:
+                continue
+
+            # Scratched horses are kept in the source but excluded from modelling.
+            scratched = "Koşmaz" in str(name_cell) or "Kosmaz" in str(name_cell)
+
+            age = _text(tr.select_one("td.gunluk-GunlukYarisProgrami-Yas"))
+            weight = _number(_text(tr.select_one("td.gunluk-GunlukYarisProgrami-Kilo")))
+            agf_text = _text(tr.select_one("td.gunluk-GunlukYarisProgrami-AGFORAN"))
+            agf = _number(agf_text)
+
+            rows.append({
+                "horse": horse,
+                "race": f"{race_no}",
+                "race_number": race_no,
+                "date": race_date.isoformat(),
+                "start": _text(tr.select_one("td.gunluk-GunlukYarisProgrami-SiraId")),
+                "jockey": _link_text(tr.select_one("td.gunluk-GunlukYarisProgrami-JokeAdi")),
+                "trainer": _link_text(tr.select_one("td.gunluk-GunlukYarisProgrami-AntronorAdi")),
+                "form": _text(tr.select_one("td.gunluk-GunlukYarisProgrami-Son6Yaris")),
+                "weight": weight,
+                "agf_score": min(agf, 100.0),
+                "recent_form": _form_score(_text(tr.select_one("td.gunluk-GunlukYarisProgrami-Son6Yaris"))),
+                "track_form": 50.0,
+                "distance_form": 50.0,
+                "jockey_form": 50.0,
+                "trainer_form": 50.0,
+                "weight_score": 50.0,
+                "distance": distance,
+                "scratched": scratched,
+            })
+    return rows
+
+
+def collect_tjk() -> list[dict]:
+    """Collect today's domestic TJK program through the public TJK AJAX pages."""
+    target_date = date.today()
+    date_str = target_date.strftime("%d.%m.%Y")
+
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
+    main_url = f"{TJK_BASE}{TJK_PROGRAM_PAGE}"
+    response = session.get(
+        main_url,
+        params={"QueryParameter_Tarih": date_str},
+        timeout=30,
+    )
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    tabs = soup.select("ul.gunluk-tabs li a[data-sehir-id]")
+    if not tabs:
+        raise RuntimeError(
+            "TJK program sayfası açıldı ancak şehir sekmeleri bulunamadı; "
+            "TJK HTML yapısı değişmiş olabilir."
+        )
+
+    tracks = []
+    for tab in tabs:
+        try:
+            sid = int(tab.get("data-sehir-id", ""))
+        except (TypeError, ValueError):
+            continue
+        if sid not in DOMESTIC_SEHIR_IDS:
+            continue
+        name = re.sub(r"\s*\(\d+\.\s*Y\.G\.\)\s*$", "", _text(tab)).strip()
+        tracks.append((sid, name))
+
+    all_rows: list[dict] = []
+    for sid, track_name in tracks:
+        r = session.get(
+            f"{TJK_BASE}{TJK_PROGRAM_CITY}",
+            params={
+                "SehirId": str(sid),
+                "QueryParameter_Tarih": date_str,
+                "SehirAdi": track_name,
+            },
+            timeout=30,
+        )
+        r.raise_for_status()
+        city_rows = _parse_tjk_program(r.text, target_date)
+        for row in city_rows:
+            row["track"] = track_name
+        all_rows.extend(city_rows)
+
+    if not all_rows:
+        raise RuntimeError(
+            "TJK bağlantısı başarılı fakat bugünün programından 0 at ayrıştırıldı."
+        )
+
+    # Never feed scratched horses into the prediction model.
+    return [r for r in all_rows if not r.get("scratched")]
+
+
 def collect_nalsesleri() -> list[dict]:
+    """Legacy fallback source retained for resilience."""
     url = os.getenv("NALSESLERI_PROGRAM_URL", "https://nalsesleri.com/program")
     response = requests.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
@@ -77,17 +240,54 @@ def collect_nalsesleri() -> list[dict]:
 
 
 def collect() -> list[dict]:
-    rows = collect_nalsesleri()
+    errors: list[str] = []
+
+    # TJK is the primary source. The old source is only a fallback.
+    try:
+        rows = collect_tjk()
+        source = "TJK"
+    except Exception as exc:
+        errors.append(f"TJK: {exc}")
+        rows = []
+        source = ""
+
     if not rows:
-        return rows
-    return enrich_horses(rows)
+        try:
+            rows = collect_nalsesleri()
+            source = "Nal Sesleri fallback"
+        except Exception as exc:
+            errors.append(f"Nal Sesleri: {exc}")
+
+    if not rows:
+        raise RuntimeError(
+            "Hiçbir veri kaynağından yarış programı alınamadı.\n"
+            + "\n".join(errors)
+        )
+
+    enriched = enrich_horses(rows)
+    if not enriched:
+        raise RuntimeError(f"{source} veri verdi fakat enrichment sonrası 0 at kaldı.")
+
+    print(f"Data source: {source}")
+    return enriched
 
 
 def main() -> None:
     rows = collect()
-    payload = {"date": date.today().isoformat(), "count": len(rows), "horses": rows}
-    (DATA / "horses.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
-    (DATA / "raw_program.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = {
+        "date": date.today().isoformat(),
+        "count": len(rows),
+        "source": "TJK primary / Nal Sesleri fallback",
+        "horses": rows,
+    }
+    (DATA / "horses.json").write_text(
+        json.dumps(rows, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    (DATA / "raw_program.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     print(f"Collected and enriched {len(rows)} horses")
 
 
