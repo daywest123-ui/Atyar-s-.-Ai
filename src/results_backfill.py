@@ -18,10 +18,11 @@ DATA.mkdir(exist_ok=True)
 
 TJK = "https://www.tjk.org"
 GANYAN = "https://ganyan.app"
+JINA = "https://r.jina.ai/http://www.tjk.org"
 RESULTS_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari"
 DOMESTIC = {
-    1: "Adana", 2: "İzmir", 3: "Ankara", 4: "Bursa", 5: "İstanbul",
-    6: "Şanlıurfa", 7: "Elazığ", 8: "Kocaeli", 9: "Diyarbakır", 10: "Antalya",
+    1: "Adana", 2: "İzmir", 3: "İstanbul", 4: "Ankara", 5: "Bursa",
+    6: "Elazığ", 7: "Diyarbakır", 8: "Şanlıurfa", 9: "Kocaeli", 10: "Antalya",
 }
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/4.0)",
@@ -157,6 +158,33 @@ def fetch_ganyan_day(d: date) -> list[dict]:
     except Exception as exc:
         print(f"[backfill] ganyan.app {d}: {exc}"); return []
 
+def fetch_jina_city(sid: int, name: str, d: date) -> list[dict]:
+    """Fetch the same TJK results page through Jina Reader when GitHub IPs are blocked."""
+    try:
+        ds = d.strftime("%d.%m.%Y")
+        target = (f"{TJK}{RESULTS_CITY}?Era=yesterday&SehirId={sid}"
+                  f"&QueryParameter_Tarih={ds}&SehirAdi={name}")
+        r = requests.get(f"{JINA}/{target}", headers=HEADERS, timeout=(8, 25))
+        r.raise_for_status()
+        lines = [x.strip() for x in r.text.splitlines() if x.strip()]
+        out = []; race_no = None; distance = 0
+        for line in lines:
+            m = re.search(r"(\d+)\.?\s*Koşu", line, re.I)
+            if m:
+                race_no = int(m.group(1)); dm = re.search(r"(\d{3,4})\s*m", line); distance = int(dm.group(1)) if dm else 0
+            if not line.startswith("|") or line.count("|") < 4 or race_no is None: continue
+            cells = [x.strip() for x in line.strip("|").split("|")]; low = [x.lower() for x in cells]
+            if any("sonuç" in x or "sonuc" in x for x in low): continue
+            if any(re.fullmatch(r":?-{3,}:?", x) for x in cells): continue
+            finish = pos(cells[0]); horse_idx = next((i for i,x in enumerate(low) if "at adı" in x or x in {"at","horse"}), None)
+            if horse_idx is None: horse_idx = 1 if len(cells) > 1 else None
+            if finish is None or horse_idx is None: continue
+            horse = re.sub(r"\(\d+\)", "", cells[horse_idx]).strip()
+            if not horse or len(horse) < 2: continue
+            out.append({"race_id": f"{d.isoformat()}-{name}-{race_no}", "race_date": d.isoformat(), "race_number": race_no, "track": name, "distance": distance, "horse": horse, "finish_position": finish, "jockey": "", "trainer": "", "weight": 0.0, "hp": 0.0, "agf_score": 0.0, "odds": 0.0})
+        return out
+    except Exception as exc:
+        print(f"[backfill] jina {d} {name}: {exc}"); return []
 def load_existing(path: Path) -> dict[tuple[str, str], dict]:
     existing = {}
     if not path.exists():
@@ -197,9 +225,19 @@ def main():
                     print(f"[backfill] {d} city task failed: {exc}")
 
         if not any(row.get("race_date") == d.isoformat() for row in existing.values()):
-            mirror_rows=fetch_ganyan_day(d)
-            for row in mirror_rows: existing[(row["race_id"],row["horse"])]=row
-            if mirror_rows: print(f"[backfill] mirror fallback {d}: +{len(mirror_rows)} rows")
+            proxy_rows = []
+            for sid, name in DOMESTIC.items():
+                proxy_rows.extend(fetch_jina_city(sid, name, d))
+            for row in proxy_rows:
+                existing[(row["race_id"], row["horse"])] = row
+            if proxy_rows:
+                print(f"[backfill] TJK/Jina fallback {d}: +{len(proxy_rows)} rows")
+            else:
+                mirror_rows = fetch_ganyan_day(d)
+                for row in mirror_rows:
+                    existing[(row["race_id"], row["horse"])] = row
+                if mirror_rows:
+                    print(f"[backfill] Ganyan fallback {d}: +{len(mirror_rows)} rows")
         save_rows(path, existing)
         race_count = len({key[0] for key in existing})
         print(
