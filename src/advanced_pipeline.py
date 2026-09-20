@@ -5,6 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from advanced_model import enrich, race_summary
+from sixli_optimizer import build_budgets
 
 BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / "data"
@@ -33,7 +34,13 @@ def run() -> None:
         json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    sixli = build_budgets(ranked, budgets=(240, 720, 1440))
+    (DATA / "sixli_coupons.json").write_text(
+        json.dumps(sixli, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
     print(f"Advanced ensemble: {len(ranked)} horses / {len(summaries)} races")
+    print("6'li optimizer: " + str(sixli.get("status", "unknown")))
     for r in summaries:
         top = (r.get("top3") or [{}])[0]
         print(
