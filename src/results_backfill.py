@@ -19,6 +19,7 @@ DATA.mkdir(exist_ok=True)
 TJK = "https://www.tjk.org"
 GANYAN = "https://ganyan.app"
 JINA = "https://r.jina.ai/"
+RESULTS_DATA = "/TR/YarisSever/Info/Data/GunlukYarisSonuclari"
 RESULTS_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari"
 DOMESTIC = {
     1: "Adana", 2: "İzmir", 3: "İstanbul", 4: "Ankara", 5: "Bursa",
@@ -99,6 +100,24 @@ def parse_city(html: str, d: date, track: str) -> list[dict]:
     return out
 
 
+def fetch_data_endpoint(sid: int, name: str, d: date, era: str) -> list[dict]:
+    ds = d.strftime("%d.%m.%Y")
+    with requests.Session() as session:
+        session.headers.update(HEADERS)
+        response = session.get(
+            f"{TJK}{RESULTS_DATA}",
+            params={
+                "Era": era,
+                "SehirId": str(sid),
+                "QueryParameter_Tarih": ds,
+                "SehirAdi": name,
+            },
+            timeout=(5, 12),
+        )
+        response.raise_for_status()
+        return parse_city(response.text, d, name)
+
+
 def fetch_city(sid: int, name: str, d: date) -> list[dict]:
     ds = d.strftime("%d.%m.%Y")
     for era in ("yesterday", "past"):
@@ -120,6 +139,12 @@ def fetch_city(sid: int, name: str, d: date) -> list[dict]:
                     rows = parse_city(response.text, d, name)
                     if rows:
                         return rows
+                    try:
+                        rows = fetch_data_endpoint(sid, name, d, era)
+                        if rows:
+                            return rows
+                    except Exception as data_exc:
+                        print(f"[backfill] {d} {name} Data endpoint: {data_exc}")
             except Exception as exc:
                 print(f"[backfill] {d} {name} era={era} attempt={attempt + 1}: {exc}")
                 time.sleep(0.4 * (attempt + 1))
