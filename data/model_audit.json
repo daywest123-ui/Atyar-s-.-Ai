@@ -1,0 +1,12 @@
+{
+  "status": "low_data",
+  "rows": 0,
+  "races": 0,
+  "winners": 0,
+  "date_min": null,
+  "date_max": null,
+  "feature_missing_rate": {},
+  "warnings": [
+    "training.csv yok"
+  ]
+}

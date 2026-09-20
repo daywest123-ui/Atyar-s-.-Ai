@@ -2,5 +2,8 @@
   "archived_rows": 0,
   "evaluated_races": 0,
   "top1_hit_rate": null,
+  "brier_score": null,
+  "log_loss": null,
+  "probability_quality_rows": 0,
   "note": "This is a diagnostic metric, not a guarantee of future performance."
 }

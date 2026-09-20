@@ -6,26 +6,28 @@
       {
         "horse": "TEYAR",
         "start": 12,
-        "probability": 0.292285,
-        "fair_odds": 3.421,
+        "probability": 0.418988,
+        "fair_odds": 2.387,
         "edge": null
       },
       {
         "horse": "SALAHİYET",
         "start": 4,
-        "probability": 0.200705,
-        "fair_odds": 4.982,
+        "probability": 0.198216,
+        "fair_odds": 5.045,
         "edge": null
       },
       {
         "horse": "ALİMENDER",
         "start": 7,
-        "probability": 0.084906,
-        "fair_odds": 11.778,
+        "probability": 0.08091,
+        "fair_odds": 12.359,
         "edge": null
       }
     ],
-    "skip_gate": true
+    "skip_gate": false,
+    "data_quality": 0.429,
+    "banko_candidate": false
   },
   {
     "race": "2",
@@ -34,26 +36,28 @@
       {
         "horse": "SPLENDID",
         "start": 2,
-        "probability": 0.330381,
-        "fair_odds": 3.027,
+        "probability": 0.518046,
+        "fair_odds": 1.93,
         "edge": null
       },
       {
         "horse": "NYMPHADORA TONKS",
         "start": 1,
-        "probability": 0.212457,
-        "fair_odds": 4.707,
+        "probability": 0.120205,
+        "fair_odds": 8.319,
         "edge": null
       },
       {
         "horse": "SHIROKE",
         "start": 4,
-        "probability": 0.129094,
-        "fair_odds": 7.746,
+        "probability": 0.101374,
+        "fair_odds": 9.864,
         "edge": null
       }
     ],
-    "skip_gate": true
+    "skip_gate": false,
+    "data_quality": 0.429,
+    "banko_candidate": false
   },
   {
     "race": "3",
@@ -62,26 +66,28 @@
       {
         "horse": "SMART CHILDREN",
         "start": 4,
-        "probability": 0.280938,
-        "fair_odds": 3.56,
+        "probability": 0.325981,
+        "fair_odds": 3.068,
         "edge": null
       },
       {
         "horse": "BELLAFINA",
         "start": 3,
-        "probability": 0.18023,
-        "fair_odds": 5.548,
+        "probability": 0.18967,
+        "fair_odds": 5.272,
         "edge": null
       },
       {
         "horse": "BIG FORTUNA",
         "start": 5,
-        "probability": 0.137113,
-        "fair_odds": 7.293,
+        "probability": 0.164829,
+        "fair_odds": 6.067,
         "edge": null
       }
     ],
-    "skip_gate": true
+    "skip_gate": true,
+    "data_quality": 0.429,
+    "banko_candidate": false
   },
   {
     "race": "4",
@@ -90,26 +96,28 @@
       {
         "horse": "MR ÇIRAK",
         "start": 1,
-        "probability": 0.378486,
-        "fair_odds": 2.642,
+        "probability": 0.415489,
+        "fair_odds": 2.407,
         "edge": null
       },
       {
         "horse": "CALVADOS",
         "start": 4,
-        "probability": 0.356021,
-        "fair_odds": 2.809,
+        "probability": 0.350039,
+        "fair_odds": 2.857,
         "edge": null
       },
       {
-        "horse": "METAL HEART",
-        "start": 2,
-        "probability": 0.146316,
-        "fair_odds": 6.835,
+        "horse": "MR TT",
+        "start": 3,
+        "probability": 0.138622,
+        "fair_odds": 7.214,
         "edge": null
       }
     ],
-    "skip_gate": false
+    "skip_gate": false,
+    "data_quality": 0.429,
+    "banko_candidate": false
   },
   {
     "race": "5",
@@ -118,26 +126,28 @@
       {
         "horse": "YELLOW LION",
         "start": 6,
-        "probability": 0.354254,
-        "fair_odds": 2.823,
+        "probability": 0.333726,
+        "fair_odds": 2.996,
         "edge": null
       },
       {
         "horse": "DR NECO",
         "start": 4,
-        "probability": 0.17227,
-        "fair_odds": 5.805,
+        "probability": 0.250826,
+        "fair_odds": 3.987,
         "edge": null
       },
       {
-        "horse": "DISASTER GIRL",
-        "start": 1,
-        "probability": 0.090982,
-        "fair_odds": 10.991,
+        "horse": "IRRITABLE GIRL",
+        "start": 2,
+        "probability": 0.083237,
+        "fair_odds": 12.014,
         "edge": null
       }
     ],
-    "skip_gate": false
+    "skip_gate": true,
+    "data_quality": 0.299,
+    "banko_candidate": false
   },
   {
     "race": "6",
@@ -146,25 +156,27 @@
       {
         "horse": "GÜLALP KIZI",
         "start": 1,
-        "probability": 0.336357,
-        "fair_odds": 2.973,
-        "edge": null
-      },
-      {
-        "horse": "KOŞAN NUR",
-        "start": 7,
-        "probability": 0.092278,
-        "fair_odds": 10.837,
+        "probability": 0.568723,
+        "fair_odds": 1.758,
         "edge": null
       },
       {
         "horse": "UMUDUNU KAYBETME",
         "start": 12,
-        "probability": 0.067405,
-        "fair_odds": 14.836,
+        "probability": 0.052066,
+        "fair_odds": 19.206,
+        "edge": null
+      },
+      {
+        "horse": "KOŞAN NUR",
+        "start": 7,
+        "probability": 0.04093,
+        "fair_odds": 24.432,
         "edge": null
       }
     ],
-    "skip_gate": true
+    "skip_gate": false,
+    "data_quality": 0.429,
+    "banko_candidate": false
   }
 ]
