@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install
+      - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Collect daily program and historical form
         run: python src/collector.py
@@ -27,18 +27,19 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          p = Path("data/horses.json")
-          if not p.exists():
-              raise SystemExit("data/horses.json oluşturulmadı")
-          rows = json.loads(p.read_text(encoding="utf-8"))
-          if not isinstance(rows, list) or len(rows) == 0:
+          rows = json.loads(Path("data/horses.json").read_text(encoding="utf-8"))
+          if not isinstance(rows, list) or not rows:
               raise SystemExit("Yarış verisi 0 kayıt: pipeline durduruldu")
           races = {str(r.get("race_number") or r.get("race")) for r in rows}
           print(f"Validated {len(rows)} horses across {len(races)} races")
-
+          PY
+      - name: Backfill historical TJK results
+        env:
+          BACKFILL_DAYS: "45"
+        run: python src/results_backfill.py
       - name: Archive historical race results
         run: python src/archive_results.py
-      - name: Build training data from archived results
+      - name: Build training data from historical results
         run: python src/build_training.py
       - name: Run model audit
         run: python src/model_audit.py > data/model_audit.json
@@ -53,7 +54,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Update horse racing analysis, 6li optimizer and archive"
+          git diff --cached --quiet || git commit -m "Backfill TJK historical results and retrain dataset"
           git push || true
       - name: Upload analysis data
         uses: actions/upload-artifact@v4
