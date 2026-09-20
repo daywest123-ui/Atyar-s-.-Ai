@@ -4,6 +4,7 @@ import csv
 import os
 import re
 import time
+from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
 from pathlib import Path
@@ -16,6 +17,7 @@ DATA = BASE / "data"
 DATA.mkdir(exist_ok=True)
 
 TJK = "https://www.tjk.org"
+GANYAN = "https://ganyan.app"
 RESULTS_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari"
 DOMESTIC = {
     1: "Adana", 2: "İzmir", 3: "Ankara", 4: "Bursa", 5: "İstanbul",
@@ -123,6 +125,38 @@ def fetch_city(sid: int, name: str, d: date) -> list[dict]:
     return []
 
 
+
+def fetch_ganyan_day(d: date) -> list[dict]:
+    """Fallback source when TJK is unreachable from GitHub Actions."""
+    try:
+        session=requests.Session(); session.headers.update(HEADERS)
+        r=session.get(f"{GANYAN}/?karma={d.isoformat()}",timeout=(5,15)); r.raise_for_status()
+        soup=BeautifulSoup(r.text,"html.parser"); links=[]; seen=set()
+        for a in soup.select('a[href*="/kosu/"]'):
+            href=urljoin(GANYAN,a.get("href",""))
+            if href not in seen: seen.add(href); links.append(href)
+        out=[]
+        for href in links[:80]:
+            rr=session.get(href,timeout=(5,12)); rr.raise_for_status(); rs=BeautifulSoup(rr.text,"html.parser")
+            title=text(rs.select_one("h1")) or text(rs.select_one("h2")); m=re.search(r"(\\d+)\\.?\\s*Koşu",title,re.I); rn=int(m.group(1)) if m else None
+            if rn is None:
+                sm=re.search(r"-(\\d+)-kosu",href); rn=int(sm.group(1)) if sm else None
+            if rn is None: continue
+            body=text(rs.select_one("body"))[:1600]; track=next((n for n in DOMESTIC.values() if n.lower() in body.lower()),"Ganyan")
+            for tr in rs.select("table tr"):
+                cells=[text(td) for td in tr.select("td")]
+                if len(cells)<4: continue
+                finish=pos(cells[0]); horse=cells[2].strip()
+                if finish is None or not horse or horse.lower() in {"at","horse"}: continue
+                nums=[]
+                for v in cells[3:]:
+                    n=num(v.replace(".","").replace(",", "."))
+                    if n>0: nums.append(n)
+                out.append({"race_id":f"{d.isoformat()}-{track}-{rn}","race_date":d.isoformat(),"race_number":rn,"track":track,"distance":0,"horse":horse,"finish_position":finish,"jockey":"","trainer":"","weight":0.0,"hp":0.0,"agf_score":min(next((n for n in nums[1:] if n<=100),0.0),100.0),"odds":nums[0] if nums else 0.0})
+        return out
+    except Exception as exc:
+        print(f"[backfill] ganyan.app {d}: {exc}"); return []
+
 def load_existing(path: Path) -> dict[tuple[str, str], dict]:
     existing = {}
     if not path.exists():
@@ -162,6 +196,10 @@ def main():
                 except Exception as exc:
                     print(f"[backfill] {d} city task failed: {exc}")
 
+        if not any(row.get("race_date") == d.isoformat() for row in existing.values()):
+            mirror_rows=fetch_ganyan_day(d)
+            for row in mirror_rows: existing[(row["race_id"],row["horse"])]=row
+            if mirror_rows: print(f"[backfill] mirror fallback {d}: +{len(mirror_rows)} rows")
         save_rows(path, existing)
         race_count = len({key[0] for key in existing})
         print(
