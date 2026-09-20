@@ -50,14 +50,11 @@ def _bayesian_shrink(prob: float, prior: float, strength: float = 6.0) -> float:
 
 
 def _try_lightgbm(rows: list[dict]) -> list[float] | None:
-    """Use LightGBM when a labelled training.csv is supplied; otherwise return None.
-
-    Expected columns: race_id, finish_position and the FEATURES above.
-    This deliberately avoids training on today's result data.
-    """
+    """Train only on historical races and calibrate on a later validation period."""
     try:
         import pandas as pd
         import lightgbm as lgb
+        from sklearn.linear_model import LogisticRegression
     except ImportError:
         return None
 
@@ -67,30 +64,52 @@ def _try_lightgbm(rows: list[dict]) -> list[float] | None:
         return None
 
     df = pd.read_csv(path)
-    needed = {"race_id", "finish_position", *FEATURES}
-    if not needed.issubset(df.columns) or len(df) < 100:
+    needed = {"race_id", "race_date", "finish_position", *FEATURES}
+    if not needed.issubset(df.columns):
+        return None
+    df["race_date"] = pd.to_datetime(df["race_date"], errors="coerce")
+    df = df.dropna(subset=["race_date", "finish_position"]).sort_values("race_date")
+    if len(df) < 300:
+        return None
+    race_dates = sorted(df["race_date"].dt.date.unique())
+    if len(race_dates) < 20:
         return None
 
-    df = df.dropna(subset=["race_id", "finish_position"])
-    df["target"] = (df["finish_position"].astype(float) == 1).astype(int)
-    if df["target"].sum() < 10:
+    cut = max(10, int(len(race_dates) * 0.80))
+    train_dates = set(race_dates[:cut])
+    valid_dates = set(race_dates[cut:])
+    train = df[df["race_date"].dt.date.isin(train_dates)].copy()
+    valid = df[df["race_date"].dt.date.isin(valid_dates)].copy()
+    if train["finish_position"].eq(1).sum() < 20 or valid["finish_position"].eq(1).sum() < 5:
         return None
 
-    model = lgb.LGBMClassifier(
-        n_estimators=250,
-        learning_rate=0.04,
-        num_leaves=15,
-        subsample=.85,
-        colsample_bytree=.85,
-        random_state=42,
-        verbosity=-1,
+    X_train = train[list(FEATURES)].fillna(0.0)
+    y_train = (train["finish_position"].astype(float) == 1).astype(int)
+    X_valid = valid[list(FEATURES)].fillna(0.0)
+    y_valid = (valid["finish_position"].astype(float) == 1).astype(int)
+
+    params = dict(
+        n_estimators=300, learning_rate=0.035, num_leaves=15,
+        max_depth=-1, subsample=.85, colsample_bytree=.85,
+        random_state=42, verbosity=-1,
     )
-    model.fit(df[list(FEATURES)], df["target"])
+    model = lgb.LGBMClassifier(**params)
+    model.fit(X_train, y_train)
 
-    return model.predict_proba(
-        pd.DataFrame([{k: _f(r, k) for k in FEATURES} for r in rows])
-    )[:, 1].tolist()
+    # Calibration is fitted strictly on later validation races.
+    raw_valid = model.predict_proba(X_valid)[:, 1]
+    calibrator = LogisticRegression(C=1.0, max_iter=1000)
+    calibrator.fit(raw_valid.reshape(-1, 1), y_valid)
 
+    # Refit the base learner on all historical races available before today.
+    all_x = df[list(FEATURES)].fillna(0.0)
+    all_y = (df["finish_position"].astype(float) == 1).astype(int)
+    final_model = lgb.LGBMClassifier(**params)
+    final_model.fit(all_x, all_y)
+
+    current = pd.DataFrame([{k: _f(r, k) for k in FEATURES} for r in rows]).fillna(0.0)
+    raw_current = final_model.predict_proba(current)[:, 1]
+    return calibrator.predict_proba(raw_current.reshape(-1, 1))[:, 1].tolist()
 
 def enrich(rows: list[dict]) -> list[dict]:
     """Add model probability, fair odds, edge and confidence to today's horses."""
