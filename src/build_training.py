@@ -13,7 +13,7 @@ DATA.mkdir(exist_ok=True)
 
 FEATURES = [
     "recent_form", "track_form", "distance_form",
-    "jockey_form", "trainer_form", "weight_score", "agf_score",
+    "jockey_form", "trainer_form", "weight_score", "agf_score", "history_count",
 ]
 
 
@@ -64,6 +64,7 @@ def normalize(row, race_id):
         "trainer_form": ("trainer_form",),
         "weight_score": ("weight_score",),
         "agf_score": ("agf_score", "agf"),
+        "history_count": ("history_count",),
     }
     for feature, keys in aliases.items():
         value = next((_num(row.get(k)) for k in keys if row.get(k) is not None), None)
