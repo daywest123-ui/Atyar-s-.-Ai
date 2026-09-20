@@ -53,6 +53,7 @@ def normalize(row, race_id):
         return None
     out = {
         "race_id": race_id,
+        "race_date": str(row.get("race_date") or row.get("date") or ""),
         "finish_position": pos,
     }
     aliases = {
@@ -106,7 +107,7 @@ def build():
         existing[(r["race_id"], r["finish_position"])] = r
 
     with path.open("w", newline="", encoding="utf-8") as f:
-        fields = ["race_id", "finish_position", *FEATURES]
+        fields = ["race_id", "race_date", "finish_position", *FEATURES]
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(existing.values())
