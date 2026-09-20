@@ -13,7 +13,7 @@
     "form": "869742",
     "weight": 63.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 29.17,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -25,6 +25,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -41,7 +42,7 @@
     "form": "378894",
     "weight": 59.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 22.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -53,6 +54,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -69,7 +71,7 @@
     "form": "821464",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 53.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -81,6 +83,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -97,7 +100,7 @@
     "form": "215429",
     "weight": 59.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 60.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -109,6 +112,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -125,7 +129,7 @@
     "form": "941000",
     "weight": 58.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 30.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -137,6 +141,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -153,7 +158,7 @@
     "form": "460487",
     "weight": 55.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 25.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -165,6 +170,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -181,7 +187,7 @@
     "form": "954476",
     "weight": 52.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 30.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -193,6 +199,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -209,7 +216,7 @@
     "form": "217917",
     "weight": 53.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 50.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -221,6 +228,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -237,7 +245,7 @@
     "form": "339720",
     "weight": 54.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 40.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -249,6 +257,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -265,7 +274,7 @@
     "form": "086000",
     "weight": 52.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 10.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -277,6 +286,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -293,7 +303,7 @@
     "form": "060000",
     "weight": 51.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 12.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -305,6 +315,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -321,7 +332,7 @@
     "form": "445900",
     "weight": 50.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 28.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -333,6 +344,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -349,7 +361,7 @@
     "form": "665366",
     "weight": 61.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 35.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -361,6 +373,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -377,7 +390,7 @@
     "form": "144718",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 53.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -389,6 +402,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -405,7 +419,7 @@
     "form": "323159",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 60.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -417,6 +431,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -433,7 +448,7 @@
     "form": "214422",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 77.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -445,6 +460,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -461,7 +477,7 @@
     "form": "912174",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 58.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -473,6 +489,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -489,7 +506,7 @@
     "form": "5-66412",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 55.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -501,6 +518,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -517,7 +535,7 @@
     "form": "64065-2",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 40.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -529,6 +547,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -545,7 +564,7 @@
     "form": "552450",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 45.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -557,6 +576,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -573,7 +593,7 @@
     "form": "333444",
     "weight": 59.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 62.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -585,6 +605,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -601,7 +622,7 @@
     "form": "271372",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 60.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -613,6 +634,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -629,7 +651,7 @@
     "form": "171633",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 62.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -641,6 +663,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -657,7 +680,7 @@
     "form": "370867",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 20.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -669,6 +692,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -685,7 +709,7 @@
     "form": "763066",
     "weight": 56.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 27.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -697,6 +721,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -713,7 +738,7 @@
     "form": "603452",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 47.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -725,6 +750,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -741,7 +767,7 @@
     "form": "026825",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 40.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -753,6 +779,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -769,7 +796,7 @@
     "form": "756966",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 20.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -781,6 +808,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -797,7 +825,7 @@
     "form": "735325",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 52.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -809,6 +837,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -825,7 +854,7 @@
     "form": "0-61290",
     "weight": 52.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 38.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -837,6 +866,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -853,7 +883,7 @@
     "form": "521312",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 80.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -865,6 +895,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -881,7 +912,7 @@
     "form": "190451",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 50.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -893,6 +924,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -909,7 +941,7 @@
     "form": "4-22212",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 82.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -921,6 +953,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -937,7 +970,7 @@
     "form": "411",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 85.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -949,6 +982,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -965,7 +999,7 @@
     "form": "442623",
     "weight": 60.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 62.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -977,6 +1011,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -993,7 +1028,7 @@
     "form": "47",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 32.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1005,6 +1040,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1021,7 +1057,7 @@
     "form": "33",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 70.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1033,6 +1069,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1049,7 +1086,7 @@
     "form": "50",
     "weight": 53.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 25.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1061,6 +1098,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1077,7 +1115,7 @@
     "form": "5",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 40.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1089,6 +1127,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1105,7 +1144,7 @@
     "form": "6",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 25.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1117,6 +1156,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1133,7 +1173,7 @@
     "form": "75",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 25.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1145,6 +1185,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1161,7 +1202,7 @@
     "form": "242202",
     "weight": 59.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 67.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1173,6 +1214,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1189,7 +1231,7 @@
     "form": "62",
     "weight": 55.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 55.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1201,6 +1243,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1217,7 +1260,7 @@
     "form": "5",
     "weight": 53.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 40.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1229,6 +1272,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1257,6 +1301,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1273,7 +1318,7 @@
     "form": "243809",
     "weight": 61.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 36.67,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1285,6 +1330,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1301,7 +1347,7 @@
     "form": "020608",
     "weight": 60.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 23.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1313,6 +1359,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1329,7 +1376,7 @@
     "form": "487954",
     "weight": 60.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 26.67,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1341,6 +1388,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1357,7 +1405,7 @@
     "form": "131833",
     "weight": 57.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 68.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1369,6 +1417,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1385,7 +1434,7 @@
     "form": "003600",
     "weight": 61.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 22.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1397,6 +1446,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1413,7 +1463,7 @@
     "form": "256709",
     "weight": 59.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 28.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1425,6 +1475,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1441,7 +1492,7 @@
     "form": "708950",
     "weight": 58.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 11.67,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1453,6 +1504,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1469,7 +1521,7 @@
     "form": "176104",
     "weight": 59.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 50.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1481,6 +1533,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1497,7 +1550,7 @@
     "form": "375932",
     "weight": 56.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 45.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1509,6 +1562,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1525,7 +1579,7 @@
     "form": "834579",
     "weight": 55.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 29.17,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1537,6 +1591,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1553,7 +1608,7 @@
     "form": "002100",
     "weight": 55.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 37.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1565,6 +1620,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1581,7 +1637,7 @@
     "form": "177065",
     "weight": 56.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 32.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1593,6 +1649,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1609,7 +1666,7 @@
     "form": "004070",
     "weight": 58.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 17.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1621,6 +1678,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1637,7 +1695,7 @@
     "form": "012087",
     "weight": 55.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 35.83,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1649,6 +1707,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1665,7 +1724,7 @@
     "form": "447030",
     "weight": 57.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 35.0,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1677,6 +1736,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1693,7 +1753,7 @@
     "form": "090301",
     "weight": 52.0,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 33.33,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1705,6 +1765,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1721,7 +1782,7 @@
     "form": "040808",
     "weight": 55.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 14.17,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1733,6 +1794,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   },
   {
@@ -1749,7 +1811,7 @@
     "form": "17-0200",
     "weight": 55.5,
     "agf_score": 0.0,
-    "recent_form": 0.0,
+    "recent_form": 37.5,
     "track_form": 50.0,
     "distance_form": 50.0,
     "jockey_form": 50.0,
@@ -1761,6 +1823,7 @@
     "s20": 0.0,
     "scratched": false,
     "history_count": 0,
+    "history_source_status": "unavailable",
     "history_sample": []
   }
 ]
