@@ -28,18 +28,22 @@ jobs:
         run: python src/build_training.py
       - name: Run integrated advanced analysis
         run: python src/main.py
-      - name: Build race summaries
+      - name: Build race summaries and 6li coupons
         run: python src/advanced_pipeline.py
+      - name: Run leakage-aware archive diagnostics
+        run: python src/backtest.py > data/backtest_report.json
       - name: Persist training and archive data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Update horse racing archive and training data"
+          git diff --cached --quiet || git commit -m "Update horse racing analysis, 6li optimizer and archive"
           git push || true
       - name: Upload analysis data
         uses: actions/upload-artifact@v4
         with:
           name: at-yarisi-analysis
-          path: data/*.json
+          path: |
+            data/*.json
+            data/*.csv
           retention-days: 7
