@@ -216,22 +216,12 @@ def collect_tjk_pdf() -> list[dict]:
     response = requests.get(url, headers=HEADERS, timeout=(15, 60))
     response.raise_for_status()
 
-    pdftotext = shutil.which("pdftotext")
-    if not pdftotext:
-        raise RuntimeError("GitHub runner'da pdftotext bulunamadı.")
-
+    from pypdf import PdfReader
     with tempfile.TemporaryDirectory() as tmp:
         pdf_path = Path(tmp) / "program.pdf"
-        txt_path = Path(tmp) / "program.txt"
         pdf_path.write_bytes(response.content)
-        subprocess.run(
-            [pdftotext, "-layout", str(pdf_path), str(txt_path)],
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=30,
-        )
-        text = txt_path.read_text(encoding="utf-8", errors="ignore")
+        reader = PdfReader(str(pdf_path))
+        text = "\n".join((page.extract_text() or "") for page in reader.pages)
 
     rows: list[dict] = []
     race_no = None
