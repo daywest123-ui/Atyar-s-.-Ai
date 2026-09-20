@@ -6,7 +6,7 @@ from typing import Iterable
 
 FEATURES = (
     "recent_form", "track_form", "distance_form",
-    "jockey_form", "trainer_form", "weight_score", "agf_score",
+    "jockey_form", "trainer_form", "weight_score", "agf_score", "hp",
 )
 
 
@@ -17,14 +17,21 @@ def _f(row: dict, key: str) -> float:
         return 0.0
 
 
-def baseline_score(row: dict) -> float:
-    # Transparent baseline retained from the original project.
+def baseline_score(row: dict, field: list[dict] | None = None) -> float:
     weights = {
-        "recent_form": .30, "track_form": .15, "distance_form": .15,
-        "jockey_form": .15, "trainer_form": .10,
-        "weight_score": .05, "agf_score": .10,
+        "recent_form": .34, "track_form": .10, "distance_form": .10,
+        "jockey_form": .10, "trainer_form": .08,
+        "weight_score": .06, "agf_score": .07, "hp": .15,
     }
-    return sum(weights[k] * _f(row, k) for k in FEATURES)
+    score = sum(weights[k] * _f(row, k) for k in weights if k != "hp")
+    hp = _f(row, "hp")
+    hps = [_f(r, "hp") for r in (field or []) if _f(r, "hp") > 0]
+    if hps and hp > 0:
+        lo, hi = min(hps), max(hps)
+        hp_norm = 50.0 if hi <= lo else 100.0 * (hp - lo) / (hi - lo)
+    else:
+        hp_norm = 50.0
+    return score + weights["hp"] * hp_norm
 
 
 def _softmax(values: list[float], temperature: float = 8.0) -> list[float]:
@@ -100,9 +107,15 @@ def enrich(rows: list[dict]) -> list[dict]:
 
     out = [dict(r) for r in rows]
     for race, indexes in by_race.items():
-        probs = _softmax([raw[i] for i in indexes])
+        if ml is None:
+            field = [rows[i] for i in indexes]
+            race_raw = [baseline_score(rows[i], field) for i in indexes]
+        else:
+            race_raw = [raw[i] for i in indexes]
+        probs = _softmax(race_raw, temperature=6.0)
         prior = 1.0 / max(len(indexes), 1)
-        probs = [_bayesian_shrink(p, prior) for p in probs]
+        # Mild shrinkage; the previous strong shrinkage flattened the field.
+        probs = [(p * 2.0 + prior) / 3.0 for p in probs]
         total = sum(probs) or 1.0
         probs = [p / total for p in probs]
 
