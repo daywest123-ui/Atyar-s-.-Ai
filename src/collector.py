@@ -6,6 +6,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from io import StringIO
 from datetime import date, datetime
 from pathlib import Path
 
@@ -324,7 +325,7 @@ def collect_public_html_fallback() -> list[dict]:
         try:
             response = requests.get(page_url, headers=HEADERS, timeout=(15, 30))
             response.raise_for_status()
-            tables = __import__("pandas").read_html(response.text)
+            tables = __import__("pandas").read_html(StringIO(response.text))
             rows: list[dict] = []
             race_no = 0
             for table in tables:
