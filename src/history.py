@@ -102,7 +102,14 @@ def enrich_horses(horses: list[dict]) -> list[dict]:
 
         history = cache[name.lower()]
         target_distance = _num(horse.get("distance")) or 0.0
-        summary = summarize_history(history, str(horse.get("hippodrome", "")), target_distance)
-        horse.update(summary)
+        if history:
+            summary = summarize_history(history, str(horse.get("hippodrome", "")), target_distance)
+            # Only overwrite features when historical evidence actually exists.
+            horse.update(summary)
+        else:
+            # Preserve TJK/PDF current-day form instead of replacing it with
+            # synthetic zeros/50s when the legacy history endpoint is down.
+            horse["history_count"] = 0
+            horse["history_source_status"] = "unavailable"
         horse["history_sample"] = history[:20]
     return horses
