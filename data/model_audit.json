@@ -5,8 +5,21 @@
   "winners": 0,
   "date_min": null,
   "date_max": null,
-  "feature_missing_rate": {},
+  "feature_missing_rate": {
+    "race_id": NaN,
+    "race_date": NaN,
+    "finish_position": NaN,
+    "recent_form": NaN,
+    "track_form": NaN,
+    "distance_form": NaN,
+    "jockey_form": NaN,
+    "trainer_form": NaN,
+    "weight_score": NaN,
+    "agf_score": NaN,
+    "history_count": NaN,
+    "hp": NaN
+  },
   "warnings": [
-    "training.csv yok"
+    "20'den az tarihsel yarış: öğrenilmiş model güvenilmez olabilir"
   ]
 }
