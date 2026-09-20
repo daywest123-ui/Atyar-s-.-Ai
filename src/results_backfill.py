@@ -17,6 +17,7 @@ TJK = "https://www.tjk.org"
 RESULTS_PAGE = "/TR/YarisSever/Info/Page/GunlukYarisSonuclari"
 RESULTS_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari"
 DOMESTIC = {1,2,3,4,5,6,7,8,9,10}
+CITY_NAMES = {1: "Adana", 2: "İzmir", 3: "Ankara", 4: "Bursa", 5: "İstanbul", 6: "Şanlıurfa", 7: "Elazığ", 8: "Kocaeli", 9: "Diyarbakır", 10: "Antalya"}
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/3.0)",
     "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
@@ -37,37 +38,39 @@ def pos(v):
     return int(m.group()) if m else None
 
 def parse_day(session: requests.Session, d: date) -> list[dict]:
+    """Fetch historical results directly from the TJK city endpoint."""
     ds = d.strftime("%d.%m.%Y")
-    r = session.get(f"{TJK}{RESULTS_PAGE}", params={"QueryParameter_Tarih": ds}, timeout=25)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    tabs = []
-    for a in soup.select("ul.gunluk-tabs li a[data-sehir-id]"):
-        try:
-            sid = int(a.get("data-sehir-id",""))
-        except ValueError:
-            continue
-        if sid in DOMESTIC:
-            name = re.sub(r"\s*\(\d+\.\s*Y\.G\.\)\s*$", "", text(a)).strip()
-            tabs.append((sid, name))
 
-    def city(item):
-        sid, name = item
-        rr = session.get(
-            f"{TJK}{RESULTS_CITY}",
-            params={"SehirId": str(sid), "QueryParameter_Tarih": ds, "SehirAdi": name},
-            timeout=25,
-        )
-        rr.raise_for_status()
-        return name, parse_city(rr.text, d, name)
+    def city(sid: int, name: str):
+        last = None
+        for attempt in range(3):
+            try:
+                rr = session.get(
+                    f"{TJK}{RESULTS_CITY}",
+                    params={
+                        "Era": "past",
+                        "SehirId": str(sid),
+                        "QueryParameter_Tarih": ds,
+                        "SehirAdi": name,
+                    },
+                    timeout=(8, 18),
+                )
+                rr.raise_for_status()
+                return parse_city(rr.text, d, name)
+            except Exception as exc:
+                last = exc
+                if attempt < 2:
+                    import time
+                    time.sleep(0.8 * (attempt + 1))
+        raise last
 
     rows = []
-    for item in tabs:
+    for sid in sorted(DOMESTIC):
+        name = CITY_NAMES[sid]
         try:
-            _, got = city(item)
-            rows.extend(got)
+            rows.extend(city(sid, name))
         except Exception as exc:
-            print(f"[backfill] {d} {item[1]} failed: {exc}")
+            print(f"[backfill] {d} {name} failed: {exc}")
     return rows
 
 def parse_city(html: str, d: date, track: str) -> list[dict]:
@@ -132,7 +135,7 @@ def main():
     dates = [start + timedelta(days=i) for i in range(days)]
 
     all_rows = []
-    with ThreadPoolExecutor(max_workers=5) as pool:
+    with ThreadPoolExecutor(max_workers=3) as pool:
         futures = {}
         for d in dates:
             s = requests.Session()
