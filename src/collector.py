@@ -3,6 +3,9 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
+import subprocess
+import tempfile
 from datetime import date, datetime
 from pathlib import Path
 
@@ -200,6 +203,114 @@ def collect_tjk() -> list[dict]:
     return [r for r in all_rows if not r.get("scratched")]
 
 
+
+def collect_tjk_pdf() -> list[dict]:
+    """Fallback: parse TJK daily PDF from the public CDN when AJAX times out."""
+    target_date = date.today()
+    day = target_date.isoformat()
+    url = (
+        f"https://medya-cdn.tjk.org/raporftp/TJKPDF/{target_date:%Y}/"
+        f"{day}/PDFOzet/GunlukYarisProgrami/"
+        f"{target_date:%d.%m.%Y}-Karma-GunlukYarisProgrami-TR.pdf"
+    )
+    response = requests.get(url, headers=HEADERS, timeout=(15, 60))
+    response.raise_for_status()
+
+    pdftotext = shutil.which("pdftotext")
+    if not pdftotext:
+        raise RuntimeError("GitHub runner'da pdftotext bulunamadı.")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        pdf_path = Path(tmp) / "program.pdf"
+        txt_path = Path(tmp) / "program.txt"
+        pdf_path.write_bytes(response.content)
+        subprocess.run(
+            [pdftotext, "-layout", str(pdf_path), str(txt_path)],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=30,
+        )
+        text = txt_path.read_text(encoding="utf-8", errors="ignore")
+
+    rows: list[dict] = []
+    race_no = None
+    distance = None
+    track = ""
+    for raw_line in text.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+
+        title = re.search(r"^(\d{2}\.\d{2}\.\d{4})\s+(.+?)\s*-\s*Yarış Programı", line)
+        if title:
+            track = title.group(2).strip()
+            continue
+
+        race = re.match(r"^(\d+)\.\s*Koşu$", line)
+        if race:
+            race_no = int(race.group(1))
+            distance = None
+            continue
+
+        if race_no is None:
+            continue
+
+        dist = re.search(r"(\d{3,4})m\.", line)
+        if dist:
+            distance = int(dist.group(1))
+
+        m = re.match(
+            r"^(\d+)\((\d+)\)\s+(.+?)\s+(\d+[yY])\s+"
+            r"([\d]+(?:[.,]\d+)?)\s+"
+            r"([A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜ.\-]+)\s+"
+            r"(.+?)\s+"
+            r"(\d+(?:[.,]\d+)?)\s+"
+            r"(\d+(?:[.,]\d+)?)\s+"
+            r"(\d+(?:[.,]\d+)?)"
+            r"(?:\s+([0-9\-]+))?$",
+            line,
+        )
+        if not m:
+            continue
+
+        no, gate, horse_raw, age, weight, jockey, owner, hp, kgs, s20, form = m.groups()
+        horse = re.sub(r"\s+(?:KG|DB|SKG|SK|K|GKR)(?=\s|$)", " ", horse_raw).strip()
+        if not horse:
+            continue
+
+        rows.append({
+            "horse": horse,
+            "race": str(race_no),
+            "race_number": race_no,
+            "date": target_date.isoformat(),
+            "start": no,
+            "gate": gate,
+            "track": track,
+            "jockey": jockey.strip(),
+            "trainer": "",
+            "owner": owner.strip(),
+            "form": form or "",
+            "weight": _number(weight),
+            "agf_score": 0.0,
+            "recent_form": _form_score(form or ""),
+            "track_form": 50.0,
+            "distance_form": 50.0,
+            "jockey_form": 50.0,
+            "trainer_form": 50.0,
+            "weight_score": 50.0,
+            "distance": distance or 0,
+            "hp": _number(hp),
+            "kgs": _number(kgs),
+            "s20": _number(s20),
+            "scratched": False,
+        })
+
+    if not rows:
+        raise RuntimeError("TJK günlük PDF indirildi fakat at satırları ayrıştırılamadı.")
+    return rows
+
+
 def collect_nalsesleri() -> list[dict]:
     """Legacy fallback source retained for resilience."""
     url = os.getenv("NALSESLERI_PROGRAM_URL", "https://nalsesleri.com/program")
@@ -250,6 +361,13 @@ def collect() -> list[dict]:
         errors.append(f"TJK: {exc}")
         rows = []
         source = ""
+
+    if not rows:
+        try:
+            rows = collect_tjk_pdf()
+            source = "TJK PDF CDN fallback"
+        except Exception as exc:
+            errors.append(f"TJK PDF: {exc}")
 
     if not rows:
         try:
