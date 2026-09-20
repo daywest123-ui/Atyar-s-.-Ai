@@ -40,7 +40,11 @@ def run() -> None:
     )
 
     print(f"Advanced ensemble: {len(ranked)} horses / {len(summaries)} races")
-    print("6'li optimizer: " + str(sixli.get("status", "unknown")))
+    statuses = ", ".join(
+        f"{budget}={payload.get('status', 'unknown')}"
+        for budget, payload in sixli.items()
+    )
+    print("6'li optimizer: " + statuses)
     for r in summaries:
         top = (r.get("top3") or [{}])[0]
         print(
