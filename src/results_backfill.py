@@ -18,7 +18,7 @@ DATA.mkdir(exist_ok=True)
 
 TJK = "https://www.tjk.org"
 GANYAN = "https://ganyan.app"
-JINA = "https://r.jina.ai/http://www.tjk.org"
+JINA = "https://r.jina.ai/"
 RESULTS_CITY = "/TR/YarisSever/Info/Sehir/GunlukYarisSonuclari"
 DOMESTIC = {
     1: "Adana", 2: "İzmir", 3: "İstanbul", 4: "Ankara", 5: "Bursa",
@@ -139,7 +139,7 @@ def fetch_ganyan_day(d: date) -> list[dict]:
         out=[]
         for href in links[:80]:
             rr=session.get(href,timeout=(5,12)); rr.raise_for_status(); rs=BeautifulSoup(rr.text,"html.parser")
-            title=text(rs.select_one("h1")) or text(rs.select_one("h2")); m=re.search(r"(\\d+)\\.?\\s*Koşu",title,re.I); rn=int(m.group(1)) if m else None
+            title=text(rs.select_one("h1")) or text(rs.select_one("h2")); m=re.search(r"(\d+)\.?\s*Koşu",title,re.I); rn=int(m.group(1)) if m else None
             if rn is None:
                 sm=re.search(r"-(\\d+)-kosu",href); rn=int(sm.group(1)) if sm else None
             if rn is None: continue
@@ -164,7 +164,7 @@ def fetch_jina_city(sid: int, name: str, d: date) -> list[dict]:
         ds = d.strftime("%d.%m.%Y")
         target = (f"{TJK}{RESULTS_CITY}?Era=yesterday&SehirId={sid}"
                   f"&QueryParameter_Tarih={ds}&SehirAdi={name}")
-        r = requests.get(f"{JINA}/{target}", headers=HEADERS, timeout=(8, 25))
+        r = requests.get(f"{JINA}{target}", headers={**HEADERS, "X-Engine": "browser", "X-Timeout": "20"}, timeout=(8, 28))
         r.raise_for_status()
         lines = [x.strip() for x in r.text.splitlines() if x.strip()]
         out = []; race_no = None; distance = 0
@@ -226,8 +226,16 @@ def main():
 
         if not any(row.get("race_date") == d.isoformat() for row in existing.values()):
             proxy_rows = []
-            for sid, name in DOMESTIC.items():
-                proxy_rows.extend(fetch_jina_city(sid, name, d))
+            with ThreadPoolExecutor(max_workers=5) as pool:
+                proxy_tasks = [
+                    pool.submit(fetch_jina_city, sid, name, d)
+                    for sid, name in DOMESTIC.items()
+                ]
+                for future in as_completed(proxy_tasks):
+                    try:
+                        proxy_rows.extend(future.result())
+                    except Exception as exc:
+                        print(f"[backfill] {d} Jina task failed: {exc}")
             for row in proxy_rows:
                 existing[(row["race_id"], row["horse"])] = row
             if proxy_rows:
