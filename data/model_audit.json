@@ -1,25 +1,30 @@
 {
-  "status": "low_data",
-  "rows": 0,
-  "races": 0,
-  "winners": 0,
-  "date_min": null,
-  "date_max": null,
+  "status": "usable",
+  "rows": 3563,
+  "races": 346,
+  "winners": 346,
+  "date_min": "2026-08-22",
+  "date_max": "2026-09-20",
   "feature_missing_rate": {
-    "race_id": NaN,
-    "race_date": NaN,
-    "finish_position": NaN,
-    "recent_form": NaN,
-    "track_form": NaN,
-    "distance_form": NaN,
-    "jockey_form": NaN,
-    "trainer_form": NaN,
-    "weight_score": NaN,
-    "agf_score": NaN,
-    "history_count": NaN,
-    "hp": NaN
+    "race_id": 0.0,
+    "race_date": 0.0,
+    "race_number": 0.0,
+    "track": 0.0,
+    "distance": 0.0,
+    "horse": 0.0,
+    "jockey": 0.0,
+    "trainer": 0.0,
+    "weight": 0.0,
+    "finish_position": 0.0,
+    "recent_form": 0.0,
+    "track_form": 0.0,
+    "distance_form": 0.0,
+    "jockey_form": 0.0,
+    "trainer_form": 0.0,
+    "weight_score": 0.0,
+    "agf_score": 0.0,
+    "history_count": 0.0,
+    "hp": 0.0
   },
-  "warnings": [
-    "20'den az tarihsel yarış: öğrenilmiş model güvenilmez olabilir"
-  ]
+  "warnings": []
 }
