@@ -101,7 +101,7 @@ def parse_full(payload, day, track):
         def collect(node):
             found = []
             if isinstance(node, dict):
-                h = pick(node, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME","ATADIADI","ADI_TR","ATADI_TR"])
+                h = pick(node, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME","ATADIADI","ADI","AD","ADI_TR","ATADI_TR"])
                 fin = extract_finish(node)
                 if is_horse_name(h) and fin:
                     found.append(node)
@@ -144,7 +144,7 @@ def parse_full(payload, day, track):
             "trainer": str(pick(node, ["ANTRENOR","ANTRENORADI","TRAINER","ANTRENOR_ADI"]) or "").strip(),
             "weight": num(pick(node, ["KILO","WEIGHT"])),
             "hp": num(pick(node, ["HC","HP","HANDIKAPPUANI","HANDIKAP","HCP"])),
-            "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN"])), 100),
+            "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN","AGF1"])), 100),
             "odds": num(pick(node, ["GNY","GANYAN","ODDS","ORAN"])),
         })
 
