@@ -84,7 +84,7 @@ def unwrap_data(payload):
     return payload
 
 def parse_full(payload, day, track):
-    """Parse the exact e-Bayi result schema: payload['kosular'][].['atlar'][]."""
+    """Parse TJK e-Bayi results using the real kosular[].atlar[] schema."""
     payload = unwrap_data(payload)
     if not isinstance(payload, dict):
         return []
@@ -93,85 +93,58 @@ def parse_full(payload, day, track):
     if not isinstance(races, list):
         return []
 
-    out, seen = [], set()
-
-    def add_row(race, horse):
-        if not isinstance(race, dict) or not isinstance(horse, dict):
-            return
-
-        race_no = integer(race.get("RACENO") or race.get("NO"))
-        finish = integer(horse.get("SONUC"))
-        distance = parse_distance(race.get("MESAFE"))
-        name = str(horse.get("AD") or "").strip()
-
-        if not race_no or not finish or not (1 <= finish <= 30):
-            return
-        if not distance or distance < 1000:
-            return
-        if not is_horse_name(name):
-            return
-
-        key = (day, track, race_no, name.casefold())
-        if key in seen:
-            return
-        seen.add(key)
-
-        out.append({
-            "race_id": f"{day}-{track}-{race_no}",
-            "race_date": day,
-            "race_number": race_no,
-            "track": track,
-            "distance": distance,
-            "horse": name,
-            "finish_position": finish,
-            "jockey": str(horse.get("JOKEYADI") or "").strip(),
-            "trainer": str(horse.get("ANTRENORADI") or "").strip(),
-            "weight": num(horse.get("KILO")),
-            "hp": num(horse.get("HANDIKAP")),
-            "agf_score": min(num(horse.get("AGF1")), 100),
-            "odds": num(horse.get("GANYAN")),
-        })
+    out = []
+    seen = set()
 
     for race in races:
         if not isinstance(race, dict):
             continue
 
-        # e-Bayi normally exposes atlar as a list. Keep a dict fallback because
-        # some cached/legacy responses serialize that container differently.
+        race_no = integer(race.get("RACENO")) or integer(race.get("NO"))
+        distance = parse_distance(race.get("MESAFE"))
         horses = race.get("atlar")
-        if isinstance(horses, dict):
-            horses = list(horses.values())
-        if not isinstance(horses, list):
+
+        if not race_no or distance < 1000:
             continue
+        if not isinstance(horses, list):
+            if isinstance(horses, dict):
+                horses = list(horses.values())
+            else:
+                continue
 
         for horse in horses:
             if not isinstance(horse, dict):
                 continue
-            # Result rows use SONUC. Some historical payload variants use
-            # SONUCNO/SIRANO, so retain those fallbacks.
-            if horse.get("SONUC") in (None, ""):
-                horse = dict(horse)
-                horse["SONUC"] = horse.get("SONUCNO") or horse.get("SIRANO") or horse.get("SIRA")
-            add_row(race, horse)
 
-    # Last-resort traversal: find nested objects carrying the exact AD+SONUC
-    # runner signature. This protects the backfill from harmless wrapper changes.
-    if not out:
-        def walk(node, race_context=None):
-            if isinstance(node, dict):
-                race_ctx = race_context
-                if isinstance(node.get("atlar"), (list, dict)):
-                    for h in (node["atlar"].values() if isinstance(node["atlar"], dict) else node["atlar"]):
-                        if isinstance(h, dict):
-                            add_row(node, h)
-                for value in node.values():
-                    if isinstance(value, (dict, list)):
-                        walk(value, race_ctx)
-            elif isinstance(node, list):
-                for value in node:
-                    if isinstance(value, (dict, list)):
-                        walk(value, race_context)
-        walk(payload)
+            name = str(horse.get("AD") or horse.get("ADKUCUK") or "").strip()
+            finish_raw = horse.get("SONUC")
+            finish = integer(finish_raw)
+
+            if not name or not finish or not (1 <= finish <= 30):
+                continue
+            if not is_horse_name(name):
+                continue
+
+            key = (day, track, race_no, name.casefold())
+            if key in seen:
+                continue
+            seen.add(key)
+
+            out.append({
+                "race_id": f"{day}-{track}-{race_no}",
+                "race_date": day,
+                "race_number": race_no,
+                "track": track,
+                "distance": distance,
+                "horse": name,
+                "finish_position": finish,
+                "jockey": str(horse.get("JOKEYADI") or "").strip(),
+                "trainer": str(horse.get("ANTRENORADI") or "").strip(),
+                "weight": num(horse.get("KILO")),
+                "hp": num(horse.get("HANDIKAP")),
+                "agf_score": min(num(horse.get("AGF1")), 100),
+                "odds": num(horse.get("GANYAN")),
+            })
 
     return out
 
