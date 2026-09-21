@@ -72,20 +72,32 @@ def extract_race_number(o):
 def extract_finish(o):
     return integer(pick(o, ["SONUCNO","SONUC","SIRANO","SIRA","FINISH","FINISHPOSITION","RESULT"]))
 
+def unwrap_data(payload):
+    # e-Bayi responses are commonly wrapped as {"status": ..., "data": ...}.
+    # Keep accepting bare lists/dicts because mirrors may return the payload directly.
+    if isinstance(payload, dict) and "data" in payload:
+        return payload["data"]
+    return payload
+
 def parse_full(payload, day, track):
     """
     Parse e-Bayi's nested result JSON with inherited race context.
-    The old parser required race number + horse + finish in the same dict;
-    e-Bayi can store race metadata on a parent object and horse data below it.
+    Race metadata and horse/result metadata may live at different nesting levels.
     """
     out, seen = [], set()
+    payload = unwrap_data(payload)
 
     def visit(node, inherited_race=None, inherited_distance=0):
         if isinstance(node, dict):
             own_race = extract_race_number(node) or inherited_race
             own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK"])) or inherited_distance
 
-            horse = pick(node, ["ATADI","AT_ADI","AT","HORSE","HORSE_NAME","ATADI3","ATADI2"])
+            horse = pick(node, [
+                "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
+                "ATADI1", "ATADI2", "ATADI3", "ATADI4", "ATADI5",
+                "ATADI6", "ATADI7", "ATADI8", "ATADI9", "ATADI10",
+                "ATADI11", "ATADI12", "ADI"
+            ])
             fin = extract_finish(node)
 
             if is_horse_name(horse) and own_race and fin and 1 <= fin <= 30:
@@ -120,14 +132,23 @@ def parse_full(payload, day, track):
     return out
 
 def get(url):
-    r = requests.get(url, headers=H, timeout=(10, 30))
-    r.raise_for_status()
-    return r.json()
+    last = None
+    for attempt in range(3):
+        try:
+            r = requests.get(url, headers=H, timeout=(10, 30))
+            r.raise_for_status()
+            return r.json()
+        except Exception as exc:
+            last = exc
+            if attempt < 2:
+                import time
+                time.sleep(1.5 * (attempt + 1))
+    raise last
 
 def day_rows(day):
     ds = day.replace("-", "")
     idx = get(f"{BASE}/sonuclar/{ds}/yarislar.json")
-    items = idx.get("data", []) if isinstance(idx, dict) else idx
+    items = unwrap_data(idx)
     tracks = []
 
     for x in items if isinstance(items, list) else []:
