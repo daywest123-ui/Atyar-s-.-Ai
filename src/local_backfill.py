@@ -84,12 +84,23 @@ def unwrap_data(payload):
     return payload
 
 def parse_full(payload, day, track):
-    """Parse TJK e-Bayi results using the real kosular[].atlar[] schema."""
+    """Parse TJK e-Bayi results defensively across the observed JSON variants."""
     payload = unwrap_data(payload)
     if not isinstance(payload, dict):
         return []
 
     races = payload.get("kosular")
+    if not isinstance(races, list):
+        # Some responses wrap the race list under a nested data/result object.
+        for key in ("data", "result", "races", "RACES", "KOSULAR"):
+            candidate = payload.get(key)
+            if isinstance(candidate, dict):
+                races = candidate.get("kosular") or candidate.get("KOSULAR") or candidate.get("races")
+            elif isinstance(candidate, list):
+                races = candidate
+            if isinstance(races, list):
+                break
+
     if not isinstance(races, list):
         return []
 
@@ -100,27 +111,30 @@ def parse_full(payload, day, track):
         if not isinstance(race, dict):
             continue
 
-        race_no = integer(race.get("RACENO")) or integer(race.get("NO"))
-        distance = parse_distance(race.get("MESAFE"))
-        horses = race.get("atlar")
+        race_no = extract_race_number(race)
+        distance = parse_distance(pick(race, ["MESAFE", "DISTANCE", "DISTANCE_METERS"]))
+        horses = pick(race, ["atlar", "ATLAR", "horses", "HORSES"])
 
         if not race_no or distance < 1000:
             continue
-        if not isinstance(horses, list):
-            if isinstance(horses, dict):
+
+        if isinstance(horses, dict):
+            # Handle either {id: horse} or a single horse object.
+            if any(isinstance(v, dict) for v in horses.values()):
                 horses = list(horses.values())
             else:
-                continue
+                horses = [horses]
+        if not isinstance(horses, list):
+            continue
 
         for horse in horses:
             if not isinstance(horse, dict):
                 continue
 
-            name = str(horse.get("AD") or horse.get("ADKUCUK") or "").strip()
-            finish_raw = horse.get("SONUC")
-            finish = integer(finish_raw)
+            name = str(pick(horse, ["AD", "ADKUCUK", "ATADI", "AT_ADI", "HORSE", "NAME"]) or "").strip()
+            finish = extract_finish(horse)
 
-            if not name or not finish or not (1 <= finish <= 30):
+            if not name or finish is None or not (1 <= finish <= 30):
                 continue
             if not is_horse_name(name):
                 continue
@@ -138,12 +152,12 @@ def parse_full(payload, day, track):
                 "distance": distance,
                 "horse": name,
                 "finish_position": finish,
-                "jockey": str(horse.get("JOKEYADI") or "").strip(),
-                "trainer": str(horse.get("ANTRENORADI") or "").strip(),
-                "weight": num(horse.get("KILO")),
-                "hp": num(horse.get("HANDIKAP")),
-                "agf_score": min(num(horse.get("AGF1")), 100),
-                "odds": num(horse.get("GANYAN")),
+                "jockey": str(pick(horse, ["JOKEYADI", "JOCKEY", "JOKEY"]) or "").strip(),
+                "trainer": str(pick(horse, ["ANTRENORADI", "TRAINER", "ANTRENOR"]) or "").strip(),
+                "weight": num(pick(horse, ["KILO", "WEIGHT"])),
+                "hp": num(pick(horse, ["HANDIKAP", "HP", "HC"])),
+                "agf_score": min(num(pick(horse, ["AGF1", "AGF", "AGFORAN"])), 100),
+                "odds": num(pick(horse, ["GANYAN", "ODDS"])),
             })
 
     return out
