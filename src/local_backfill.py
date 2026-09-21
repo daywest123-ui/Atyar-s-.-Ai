@@ -85,11 +85,35 @@ def unwrap_data(payload):
 
 def parse_full(payload, day, track):
     """
-    Parse e-Bayi's nested result JSON with inherited race context.
-    Race metadata and horse/result metadata may live at different nesting levels.
+    Parse e-Bayi result payloads with inherited race context.
+    Supports normal row dictionaries and several compact/parallel-array forms.
     """
     out, seen = [], set()
     payload = unwrap_data(payload)
+
+    def add_row(node, race_no, distance, horse, finish):
+        if not (is_horse_name(horse) and race_no and finish and 1 <= finish <= 30):
+            return
+        horse = str(horse).strip()
+        key = (day, track, race_no, horse.casefold())
+        if key in seen:
+            return
+        seen.add(key)
+        out.append({
+            "race_id": f"{day}-{track}-{race_no}",
+            "race_date": day,
+            "race_number": race_no,
+            "track": track,
+            "distance": distance,
+            "horse": horse,
+            "finish_position": finish,
+            "jockey": str(pick(node, ["JOKEY","JOKEYADI","JOCKEY","JOKEYAD","JOKEADI"]) or "").strip(),
+            "trainer": str(pick(node, ["ANTRENOR","ANTRENORADI","TRAINER","ANTRENOR_ADI"]) or "").strip(),
+            "weight": num(pick(node, ["KILO","WEIGHT"])),
+            "hp": num(pick(node, ["HC","HP","HANDIKAPPUANI","HANDIKAP","HCP"])),
+            "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN"])), 100),
+            "odds": num(pick(node, ["GNY","GANYAN","ODDS","ORAN"])),
+        })
 
     def visit(node, inherited_race=None, inherited_distance=0):
         if isinstance(node, dict):
@@ -100,30 +124,17 @@ def parse_full(payload, day, track):
                 "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
                 "ATADI1", "ATADI2", "ATADI3", "ATADI4", "ATADI5",
                 "ATADI6", "ATADI7", "ATADI8", "ATADI9", "ATADI10",
-                "ATADI11", "ATADI12", "ADI"
+                "ATADI11", "ATADI12", "ATADI13", "ATADI14", "ATADI15",
+                "ADI", "ATADIADI"
             ])
             fin = extract_finish(node)
+            add_row(node, own_race, own_distance, horse, fin)
 
-            if is_horse_name(horse) and own_race and fin and 1 <= fin <= 30:
-                horse = str(horse).strip()
-                key = (day, track, own_race, horse.casefold())
-                if key not in seen:
-                    seen.add(key)
-                    out.append({
-                        "race_id": f"{day}-{track}-{own_race}",
-                        "race_date": day,
-                        "race_number": own_race,
-                        "track": track,
-                        "distance": own_distance,
-                        "horse": horse,
-                        "finish_position": fin,
-                        "jockey": str(pick(node, ["JOKEY","JOKEYADI","JOCKEY","JOKEYAD"]) or "").strip(),
-                        "trainer": str(pick(node, ["ANTRENOR","ANTRENORADI","TRAINER"]) or "").strip(),
-                        "weight": num(pick(node, ["KILO","WEIGHT"])),
-                        "hp": num(pick(node, ["HC","HP","HANDIKAPPUANI","HANDIKAP"])),
-                        "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN"])), 100),
-                        "odds": num(pick(node, ["GNY","GANYAN","ODDS","ORAN"])),
-                    })
+            horse_vals = pick(node, ["HORSES", "ATADI", "AT_ADI"])
+            finish_vals = pick(node, ["RESULTS", "SONUCLAR", "SONUCNO", "SONUC", "SIRANO"])
+            if own_race and isinstance(horse_vals, list) and isinstance(finish_vals, list):
+                for h, f in zip(horse_vals, finish_vals):
+                    add_row(node, own_race, own_distance, h, integer(f))
 
             for v in node.values():
                 visit(v, own_race, own_distance)
@@ -170,6 +181,14 @@ def day_rows(day):
             got = parse_full(payload, day, name)
             rows.extend(got)
             races = len({r["race_id"] for r in got})
+            if not got:
+                try:
+                    raw = unwrap_data(payload)
+                    shape = type(raw).__name__
+                    keys = list(raw.keys())[:30] if isinstance(raw, dict) else []
+                    print(f"[local-backfill] {day} {name}: parser=0 payload={shape} keys={keys}")
+                except Exception:
+                    pass
             print(f"[local-backfill] {day} {name}: {len(got)} rows / {races} races")
         except Exception as e:
             print(f"[local-backfill] {day} {name}: {e}")
