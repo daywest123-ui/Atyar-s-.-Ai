@@ -632,10 +632,7 @@ def collect() -> list[dict]:
         except Exception as exc:
             errors.append(f"TJK AJAX: {exc}")
             rows = []
-    except Exception as exc:
-        errors.append(f"TJK: {exc}")
-        rows = []
-        source = ""
+            source = ""
 
     if not rows:
         try:
