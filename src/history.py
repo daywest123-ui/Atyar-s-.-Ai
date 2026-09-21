@@ -103,7 +103,7 @@ def enrich_horses(horses: list[dict]) -> list[dict]:
         history = cache[name.lower()]
         target_distance = _num(horse.get("distance")) or 0.0
         if history:
-            summary = summarize_history(history, str(horse.get("hippodrome", "")), target_distance)
+            summary = summarize_history(history, str(horse.get("track") or horse.get("hippodrome", "")), target_distance)
             # Only overwrite features when historical evidence actually exists.
             horse.update(summary)
         else:
