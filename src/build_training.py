@@ -159,7 +159,9 @@ def build():
             "race_id", "race_date", "race_number", "track", "distance",
             "horse", "jockey", "trainer", "weight", "finish_position", *FEATURES
         ]
-        w.writerows(rows)
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
 
     print(
         f"training.csv: {len(rows)} rows / {len(races)} races / {len(dates)} dates "
