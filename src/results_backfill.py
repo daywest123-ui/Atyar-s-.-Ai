@@ -36,6 +36,8 @@ R = "gunluk-GunlukYarisSonuclari"
 FIELDS = [
     "race_id", "race_date", "race_number", "track", "distance", "horse",
     "finish_position", "jockey", "trainer", "weight", "hp", "agf_score", "odds",
+    "recent_form", "track_form", "distance_form", "jockey_form",
+    "trainer_form", "weight_score", "model_probability", "history_count",
 ]
 
 
