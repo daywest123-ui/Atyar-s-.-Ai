@@ -84,94 +84,63 @@ def unwrap_data(payload):
     return payload
 
 def parse_full(payload, day, track):
-    """
-    Parse e-Bayi result payloads with inherited race context.
-    Supports normal row dictionaries and several compact/parallel-array forms.
-    """
-    out, seen = [], set()
+    """Parse the exact e-Bayi result schema: payload['kosular'][].['atlar'][]."""
     payload = unwrap_data(payload)
+    if not isinstance(payload, dict):
+        return []
 
-    def parse_kosu_entry(kosu, fallback_race=None):
-        if not isinstance(kosu, dict):
-            return []
-        race_no = extract_race_number(kosu) or fallback_race
-        distance = parse_distance(pick(kosu, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"]))
-        entries = []
-        # Recursively locate runner dictionaries inside the race metadata object.
-        def collect(node):
-            found = []
-            if isinstance(node, dict):
-                h = pick(node, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME","ATADIADI","ADI","AD","ADI_TR","ATADI_TR"])
-                fin = extract_finish(node)
-                if is_horse_name(h) and fin:
-                    found.append(node)
-                for v in node.values():
-                    if isinstance(v, (dict, list)):
-                        found.extend(collect(v))
-            elif isinstance(node, list):
-                for v in node:
-                    found.extend(collect(v))
-            return found
+    races = payload.get("kosular")
+    if not isinstance(races, list):
+        return []
 
-        for key, value in kosu.items():
-            if isinstance(value, (dict, list)):
-                entries.extend((x, race_no, distance) for x in collect(value))
+    out, seen = [], set()
 
-        if not entries:
-            h = pick(kosu, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME"])
-            fin = extract_finish(kosu)
-            if is_horse_name(h) and fin:
-                entries.append((kosu, race_no, distance))
-        return entries
-
-    def add_row(node, race_no, distance, horse, finish):
-        if not (is_horse_name(horse) and race_no and finish and 1 <= finish <= 30):
+    def add_row(race, horse):
+        if not isinstance(race, dict) or not isinstance(horse, dict):
             return
-        horse = str(horse).strip()
-        key = (day, track, race_no, horse.casefold())
+
+        race_no = integer(race.get("RACENO") or race.get("NO"))
+        finish = integer(horse.get("SONUC"))
+        distance = parse_distance(race.get("MESAFE"))
+        name = str(horse.get("AD") or "").strip()
+
+        if not race_no or not finish or not (1 <= finish <= 30):
+            return
+        if not distance or distance < 1000:
+            return
+        if not is_horse_name(name):
+            return
+
+        key = (day, track, race_no, name.casefold())
         if key in seen:
             return
         seen.add(key)
+
         out.append({
             "race_id": f"{day}-{track}-{race_no}",
             "race_date": day,
             "race_number": race_no,
             "track": track,
             "distance": distance,
-            "horse": horse,
+            "horse": name,
             "finish_position": finish,
-            "jockey": str(pick(node, ["JOKEY","JOKEYADI","JOCKEY","JOKEYAD","JOKEADI"]) or "").strip(),
-            "trainer": str(pick(node, ["ANTRENOR","ANTRENORADI","TRAINER","ANTRENOR_ADI"]) or "").strip(),
-            "weight": num(pick(node, ["KILO","WEIGHT"])),
-            "hp": num(pick(node, ["HC","HP","HANDIKAPPUANI","HANDIKAP","HCP"])),
-            "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN","AGF1"])), 100),
-            "odds": num(pick(node, ["GNY","GANYAN","ODDS","ORAN"])),
+            "jockey": str(horse.get("JOKEYADI") or "").strip(),
+            "trainer": str(horse.get("ANTRENORADI") or "").strip(),
+            "weight": num(horse.get("KILO")),
+            "hp": num(horse.get("HANDIKAP")),
+            "agf_score": min(num(horse.get("AGF1")), 100),
+            "odds": num(horse.get("GANYAN")),
         })
 
-    def visit(node, inherited_race=None, inherited_distance=0):
-        if isinstance(node, dict):
-            own_race = extract_race_number(node) or inherited_race
-            own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"])) or inherited_distance
+    for race in races:
+        if not isinstance(race, dict):
+            continue
+        horses = race.get("atlar")
+        if not isinstance(horses, list):
+            continue
+        for horse in horses:
+            add_row(race, horse)
 
-            # Race rows contain metadata plus runner data in multiple possible containers.
-            horse = pick(node, [
-                "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
-                "ADI", "ATADIADI"
-            ])
-            fin = extract_finish(node)
-            add_row(node, own_race, own_distance, horse, fin)
-
-            for key, value in node.items():
-                lk = norm(key)
-                # recurse into every nested structure; runner dictionaries inherit race context
-                if isinstance(value, (dict, list)):
-                    visit(value, own_race, own_distance)
-
-        elif isinstance(node, list):
-            for v in node:
-                visit(v, inherited_race, inherited_distance)
-
-    visit(payload)
     return out
 
 def get(url):
