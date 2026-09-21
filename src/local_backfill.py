@@ -67,14 +67,18 @@ def parse_distance(v):
     return n if n and 800 <= n <= 5000 else 0
 
 def extract_race_number(o):
-    return integer(pick(o, ["KOSUNO","KOSU_NO","RACENO","RACE_NO","RACE","KOSU","KOSUSIRASI"]))
+    return integer(pick(o, [
+        "KOSUNO","KOSU_NO","RACENO","RACE_NO","RACE","KOSU","KOSUSIRASI",
+        "KOSUNOSU","KOSUSIRASI","NO","SIRAID","SIRA_ID"
+    ]))
 
 def extract_finish(o):
-    return integer(pick(o, ["SONUCNO","SONUC","SIRANO","SIRA","FINISH","FINISHPOSITION","RESULT"]))
+    return integer(pick(o, [
+        "SONUCNO","SONUC","SIRANO","SIRA","FINISH","FINISHPOSITION","RESULT",
+        "SONUC_SIRA","SONUCNUMARASI"
+    ]))
 
 def unwrap_data(payload):
-    # e-Bayi responses are commonly wrapped as {"status": ..., "data": ...}.
-    # Keep accepting bare lists/dicts because mirrors may return the payload directly.
     if isinstance(payload, dict) and "data" in payload:
         return payload["data"]
     return payload
@@ -179,10 +183,20 @@ def main():
 
     DATA.mkdir(exist_ok=True)
     existing = {}
+    # Do not retain the legacy malformed rows (distance=0 / time-like horse names).
     if OUT.exists():
         with OUT.open(encoding="utf-8", newline="") as f:
             for r in csv.DictReader(f):
-                if is_turkish_track(r.get("track","")) and not is_time_like(r.get("horse","")):
+                try:
+                    good = (
+                        is_turkish_track(r.get("track",""))
+                        and not is_time_like(r.get("horse",""))
+                        and num(r.get("distance")) >= 1000
+                        and int(float(r.get("finish_position","0"))) >= 1
+                    )
+                except (TypeError, ValueError):
+                    good = False
+                if good:
                     existing[(r.get("race_id"), r.get("horse","").strip().casefold())] = r
 
     total_new = 0
