@@ -100,28 +100,77 @@ def _banko_eligible(race: list[dict]) -> bool:
     return top >= 0.30 and margin >= 0.10
 
 
-def _coverage_candidates(races: list[list[dict]], budget: int, unit_cost: int) -> list[list[dict]]:
-    # Banko is earned by model separation; otherwise start every leg with
-    # at least two runners.
-    counts = [1 if _banko_eligible(r) else min(2, len(r)) for r in races]
+def _candidate_value(row: dict) -> float:
+    """Selection value used only for allocating scarce coupon coverage."""
+    p = _p(row)
+    quality = max(0.35, min(1.0, float(row.get("data_quality", 1.0) or 1.0)))
+    edge = max(0.0, min(0.20, _edge(row)))
+    surprise = 0.02 if _agf(row) < 10 and edge > 0.03 else 0.0
+    return p * (0.75 + 0.25 * quality) + 0.20 * edge + surprise
+
+
+def _coverage_probability(race: list[dict], count: int) -> float:
+    """Approximate probability that the winner is covered by selected runners."""
+    ranked = sorted(race, key=_candidate_value, reverse=True)
+    return min(0.999, sum(_p(r) for r in ranked[:count]))
+
+
+def _product(counts: list[int]) -> int:
+    value = 1
+    for c in counts:
+        value *= max(1, c)
+    return value
+
+
+def _coverage_candidates(
+    races: list[list[dict]], budget: int, unit_cost: int, max_horses: int = 8
+) -> list[list[dict]]:
+    """Allocate runner counts from race structure, not a fixed template.
+
+    A single is used only when separation is meaningful. Other legs start
+    with two. Each additional runner is purchased where it increases covered
+    model probability most efficiently under the combination budget.
+    """
     target = max(1, budget // max(unit_cost, 1))
+    counts = [
+        1 if _banko_eligible(race) else min(2, len(race))
+        for race in races
+    ]
+    counts = [
+        max(1, min(c, min(max_horses, len(race))))
+        for c, race in zip(counts, races)
+    ]
+
     while True:
-        product = 1
-        for c in counts:
-            product *= max(c, 1)
-        if product >= target:
-            break
+        current_product = _product(counts)
         choices = []
         for i, race in enumerate(races):
-            if counts[i] >= min(6, len(race)):
+            limit = min(max_horses, len(race))
+            if counts[i] >= limit:
                 continue
-            choices.append((_field_uncertainty(race) / counts[i], i))
+            new_counts = list(counts)
+            new_counts[i] += 1
+            new_product = _product(new_counts)
+            if new_product > target:
+                continue
+
+            before = _coverage_probability(race, counts[i])
+            after = _coverage_probability(race, counts[i] + 1)
+            marginal = max(0.0, after - before)
+            growth = max(1.0, new_product / max(current_product, 1))
+            uncertainty = _field_uncertainty(race)
+            score = (marginal * (0.65 + 0.35 * uncertainty)) / growth
+            choices.append((score, i))
+
         if not choices:
             break
         _, idx = max(choices)
         counts[idx] += 1
-    return [select_leg_candidates(race, target_count=counts[i]) for i, race in enumerate(races)]
 
+    return [
+        select_leg_candidates(race, target_count=counts[i], max_horses=max_horses)
+        for i, race in enumerate(races)
+    ]
 
 def combination_score(combo: tuple[dict, ...]) -> float:
     # Joint score is proportional to the product of leg probabilities.
