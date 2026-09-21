@@ -115,6 +115,9 @@ def build():
     rows = []
     for r in raw:
         name = r["horse"].strip().upper()
+        # Only records strictly before the target race count as prior evidence.
+        # Same-day earlier races are intentionally excluded because ordering/time
+        # is not reliably encoded in this dataset.
         prior = [x for x in by_horse[name] if x["race_date"] < r["race_date"]]
         target_track = r.get("track", "")
         target_distance = num(r.get("distance"))
