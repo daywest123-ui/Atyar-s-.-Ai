@@ -132,31 +132,23 @@ def parse_full(payload, day, track):
         })
 
     def visit(node, inherited_race=None, inherited_distance=0):
-        # Dedicated handling for the known e-Bayi top-level shape:
-        # {"hava": ..., "kosular": [...], "agf": ...}
-        if isinstance(node, dict) and "kosular" in node:
-            kosular = node.get("kosular")
-            if isinstance(kosular, list):
-                for kosu in kosular:
-                    for entry, rn, dist in parse_kosu_entry(kosu, inherited_race):
-                        own_race = rn or inherited_race
-                        own_distance = dist or inherited_distance
-                        horse = pick(entry, [
-                            "ATADI","AT_ADI","AT","ADI","ATADIADI","HORSE","HORSE_NAME",
-                            "ATADI1","ATADI2","ATADI3","ATADI4","ATADI5","ATADI6",
-                            "ATADI7","ATADI8","ATADI9","ATADI10","ATADI11","ATADI12"
-                        ])
-                        fin = extract_finish(entry)
-                        add_row(entry, own_race, own_distance, horse, fin)
-                        visit(entry, own_race, own_distance)
-            # Still recurse into agf and other metadata, but avoid processing
-            # the same kosular list twice through the generic branch.
-            for k, v in node.items():
-                if k != "kosular":
-                    visit(v, inherited_race, inherited_distance)
-            return
-
-    def visit(node, inherited_race=None, inherited_distance=0):
+        if isinstance(node, dict):
+            own_race = extract_race_number(node) or inherited_race
+            own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"])) or inherited_distance
+            horse = pick(node, [
+                "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
+                "ATADI1", "ATADI2", "ATADI3", "ATADI4", "ATADI5",
+                "ATADI6", "ATADI7", "ATADI8", "ATADI9", "ATADI10",
+                "ATADI11", "ATADI12", "ATADI13", "ATADI14", "ATADI15",
+                "ADI", "ATADIADI"
+            ])
+            fin = extract_finish(node)
+            add_row(node, own_race, own_distance, horse, fin)
+            for key, value in node.items():
+                visit(value, own_race, own_distance)
+        elif isinstance(node, list):
+            for v in node:
+                visit(v, inherited_race, inherited_distance)
         if isinstance(node, dict):
             own_race = extract_race_number(node) or inherited_race
             own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK"])) or inherited_distance
@@ -227,7 +219,19 @@ def day_rows(day):
                     raw = unwrap_data(payload)
                     shape = type(raw).__name__
                     keys = list(raw.keys())[:30] if isinstance(raw, dict) else []
-                    print(f"[local-backfill] {day} {name}: parser=0 payload={shape} keys={keys}")
+                    extra = ""
+                    if isinstance(raw, dict) and isinstance(raw.get("kosular"), list):
+                        ks = raw["kosular"]
+                        if ks:
+                            first = ks[0]
+                            if isinstance(first, dict):
+                                nested = {str(k): type(v).__name__ for k, v in list(first.items())[:25]}
+                                extra = f" kosular_len={len(ks)} first_keys={list(first.keys())[:25]} first_types={nested}"
+                            else:
+                                extra = f" kosular_len={len(ks)} first_type={type(first).__name__}"
+                        else:
+                            extra = " kosular_len=0"
+                    print(f"[local-backfill] {day} {name}: parser=0 payload={shape} keys={keys}{extra}")
                 except Exception:
                     pass
             print(f"[local-backfill] {day} {name}: {len(got)} rows / {races} races")
