@@ -229,7 +229,7 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
         "unit_cost": unit_cost,
         "candidate_counts": counts,
         "requested_combinations": max_combos,
-        "returned_combinations": len(combinations),
+        "returned_combinations": len(combinations),\n        "budget_used": primary_product * unit_cost,\n        "primary_coverage_estimate": round(primary_probability, 8),\n        "primary_coupon": [\n            [r.get("horse") for r in selected]\n            for selected in candidates\n        ],
         "legs": [
             {
                 "race": _race_key(race[0]) if race else str(i + 1),
