@@ -97,12 +97,13 @@ def parse_full(payload, day, track):
         race_no = extract_race_number(kosu) or fallback_race
         distance = parse_distance(pick(kosu, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"]))
         entries = []
-        # TJK e-Bayi result payloads expose races under "kosular".
-        # Each race may contain horse rows under several historical key names.
+        # The race object itself is metadata; runner data may be in nested dict/list fields.
         for key, value in kosu.items():
-            lk = norm(key)
-            if lk in {"atlar","atlarlistesi","horses","horse","sonuclar","sonuc","sonuclarlistesi","koşular","kosular"} and isinstance(value, list):
-                entries.extend((x, race_no, distance) for x in value if isinstance(x, dict))
+            if isinstance(value, (dict, list)):
+                if isinstance(value, list):
+                    entries.extend((x, race_no, distance) for x in value if isinstance(x, dict))
+                else:
+                    entries.append((value, race_no, distance))
         if not entries:
             entries.append((kosu, race_no, distance))
         return entries
@@ -135,42 +136,20 @@ def parse_full(payload, day, track):
         if isinstance(node, dict):
             own_race = extract_race_number(node) or inherited_race
             own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"])) or inherited_distance
+
+            # Race rows contain metadata plus runner data in multiple possible containers.
             horse = pick(node, [
                 "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
-                "ATADI1", "ATADI2", "ATADI3", "ATADI4", "ATADI5",
-                "ATADI6", "ATADI7", "ATADI8", "ATADI9", "ATADI10",
-                "ATADI11", "ATADI12", "ATADI13", "ATADI14", "ATADI15",
                 "ADI", "ATADIADI"
             ])
             fin = extract_finish(node)
             add_row(node, own_race, own_distance, horse, fin)
+
             for key, value in node.items():
-                visit(value, own_race, own_distance)
-        elif isinstance(node, list):
-            for v in node:
-                visit(v, inherited_race, inherited_distance)
-        if isinstance(node, dict):
-            own_race = extract_race_number(node) or inherited_race
-            own_distance = parse_distance(pick(node, ["MESAFE","DISTANCE","UZUNLUK"])) or inherited_distance
-
-            horse = pick(node, [
-                "ATADI", "AT_ADI", "AT", "HORSE", "HORSE_NAME",
-                "ATADI1", "ATADI2", "ATADI3", "ATADI4", "ATADI5",
-                "ATADI6", "ATADI7", "ATADI8", "ATADI9", "ATADI10",
-                "ATADI11", "ATADI12", "ATADI13", "ATADI14", "ATADI15",
-                "ADI", "ATADIADI"
-            ])
-            fin = extract_finish(node)
-            add_row(node, own_race, own_distance, horse, fin)
-
-            horse_vals = pick(node, ["HORSES", "ATADI", "AT_ADI"])
-            finish_vals = pick(node, ["RESULTS", "SONUCLAR", "SONUCNO", "SONUC", "SIRANO"])
-            if own_race and isinstance(horse_vals, list) and isinstance(finish_vals, list):
-                for h, f in zip(horse_vals, finish_vals):
-                    add_row(node, own_race, own_distance, h, integer(f))
-
-            for v in node.values():
-                visit(v, own_race, own_distance)
+                lk = norm(key)
+                # recurse into every nested structure; runner dictionaries inherit race context
+                if isinstance(value, (dict, list)):
+                    visit(value, own_race, own_distance)
 
         elif isinstance(node, list):
             for v in node:
