@@ -97,15 +97,31 @@ def parse_full(payload, day, track):
         race_no = extract_race_number(kosu) or fallback_race
         distance = parse_distance(pick(kosu, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"]))
         entries = []
-        # The race object itself is metadata; runner data may be in nested dict/list fields.
+        # Recursively locate runner dictionaries inside the race metadata object.
+        def collect(node):
+            found = []
+            if isinstance(node, dict):
+                h = pick(node, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME","ATADIADI","ADI_TR","ATADI_TR"])
+                fin = extract_finish(node)
+                if is_horse_name(h) and fin:
+                    found.append(node)
+                for v in node.values():
+                    if isinstance(v, (dict, list)):
+                        found.extend(collect(v))
+            elif isinstance(node, list):
+                for v in node:
+                    found.extend(collect(v))
+            return found
+
         for key, value in kosu.items():
             if isinstance(value, (dict, list)):
-                if isinstance(value, list):
-                    entries.extend((x, race_no, distance) for x in value if isinstance(x, dict))
-                else:
-                    entries.append((value, race_no, distance))
+                entries.extend((x, race_no, distance) for x in collect(value))
+
         if not entries:
-            entries.append((kosu, race_no, distance))
+            h = pick(kosu, ["ATADI","AT_ADI","AT","ADI","HORSE","HORSE_NAME"])
+            fin = extract_finish(kosu)
+            if is_horse_name(h) and fin:
+                entries.append((kosu, race_no, distance))
         return entries
 
     def add_row(node, race_no, distance, horse, finish):
