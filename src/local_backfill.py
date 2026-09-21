@@ -135,11 +135,43 @@ def parse_full(payload, day, track):
     for race in races:
         if not isinstance(race, dict):
             continue
+
+        # e-Bayi normally exposes atlar as a list. Keep a dict fallback because
+        # some cached/legacy responses serialize that container differently.
         horses = race.get("atlar")
+        if isinstance(horses, dict):
+            horses = list(horses.values())
         if not isinstance(horses, list):
             continue
+
         for horse in horses:
+            if not isinstance(horse, dict):
+                continue
+            # Result rows use SONUC. Some historical payload variants use
+            # SONUCNO/SIRANO, so retain those fallbacks.
+            if horse.get("SONUC") in (None, ""):
+                horse = dict(horse)
+                horse["SONUC"] = horse.get("SONUCNO") or horse.get("SIRANO") or horse.get("SIRA")
             add_row(race, horse)
+
+    # Last-resort traversal: find nested objects carrying the exact AD+SONUC
+    # runner signature. This protects the backfill from harmless wrapper changes.
+    if not out:
+        def walk(node, race_context=None):
+            if isinstance(node, dict):
+                race_ctx = race_context
+                if isinstance(node.get("atlar"), (list, dict)):
+                    for h in (node["atlar"].values() if isinstance(node["atlar"], dict) else node["atlar"]):
+                        if isinstance(h, dict):
+                            add_row(node, h)
+                for value in node.values():
+                    if isinstance(value, (dict, list)):
+                        walk(value, race_ctx)
+            elif isinstance(node, list):
+                for value in node:
+                    if isinstance(value, (dict, list)):
+                        walk(value, race_context)
+        walk(payload)
 
     return out
 
