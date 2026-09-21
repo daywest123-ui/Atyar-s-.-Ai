@@ -1,7 +1,7 @@
 {
   "date": "2026-09-21",
   "count": 72,
-  "source": "TJK primary / Nal Sesleri fallback",
+  "source": "TJK e-Bayi JSON / TJK AJAX / PDF / HTML fallback",
   "horses": [
     {
       "horse": "ZİNCİR KOPARAN",
