@@ -41,8 +41,11 @@ def num(v):
         return 0.0
 
 def integer(v):
-    m = re.search(r"(?<!\d)(\d{1,3})(?!\d)", str(v or ""))
-    return int(m.group(1)) if m else None
+    """Parse an integer without accidentally rejecting non-ASCII text."""
+    if v is None:
+        return None
+    m = re.search(r"\d+", str(v))
+    return int(m.group(0)) if m else None
 
 def is_turkish_track(name):
     low = str(name or "").casefold()
