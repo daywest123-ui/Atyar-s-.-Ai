@@ -222,6 +222,11 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
             ],
         })
 
+    primary_product = _product(counts)
+    primary_probability = 1.0
+    for race, selected in zip(races, candidates):
+        primary_probability *= _coverage_probability(race, len(selected))
+
     return {
         "status": "ok",
         "race_count": 6,
@@ -229,7 +234,13 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
         "unit_cost": unit_cost,
         "candidate_counts": counts,
         "requested_combinations": max_combos,
-        "returned_combinations": len(combinations),\n        "budget_used": primary_product * unit_cost,\n        "primary_coverage_estimate": round(primary_probability, 8),\n        "primary_coupon": [\n            [r.get("horse") for r in selected]\n            for selected in candidates\n        ],
+        "returned_combinations": len(combinations),
+        "budget_used": primary_product * unit_cost,
+        "primary_coverage_estimate": round(primary_probability, 8),
+        "primary_coupon": [
+            [r.get("horse") for r in selected]
+            for selected in candidates
+        ],
         "legs": [
             {
                 "race": _race_key(race[0]) if race else str(i + 1),
