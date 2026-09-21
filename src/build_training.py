@@ -155,9 +155,10 @@ def build():
 
     path = DATA / "training.csv"
     with path.open("w", newline="", encoding="utf-8") as f:
-        fields = ["race_id", "race_date", "finish_position", *FEATURES]
-        w = csv.DictWriter(f, fieldnames=fields)
-        w.writeheader()
+        fields = [
+            "race_id", "race_date", "race_number", "track", "distance",
+            "horse", "jockey", "trainer", "weight", "finish_position", *FEATURES
+        ]
         w.writerows(rows)
 
     print(
