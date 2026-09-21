@@ -144,6 +144,145 @@ def _parse_tjk_program(html: str, race_date: date) -> list[dict]:
     return rows
 
 
+def _extract_index_entries(payload) -> list[dict]:
+    """Normalize the public TJK e-Bayi program index into track entries."""
+    if isinstance(payload, dict):
+        for key in ("yarislar", "Yarislar", "data", "Data", "items", "Items"):
+            value = payload.get(key)
+            if isinstance(value, list):
+                return [x for x in value if isinstance(x, dict)]
+        # Some responses are keyed by track.
+        if all(isinstance(v, dict) for v in payload.values() if v is not None):
+            return [v for v in payload.values() if isinstance(v, dict)]
+    if isinstance(payload, list):
+        return [x for x in payload if isinstance(x, dict)]
+    return []
+
+
+def _parse_ebayi_full(payload, race_date: date, fallback_track: str = "") -> list[dict]:
+    """Parse TJK's public e-Bayi full-program JSON.
+
+    This feed exposes the pre-race fields we need (AGF, HP, weight, jockey,
+    trainer, recent form, equipment, age, track and distance) in a stable JSON
+    structure and is preferred over scraping rendered HTML.
+    """
+    if not isinstance(payload, dict):
+        return []
+    races = payload.get("kosular") or payload.get("Kosular") or []
+    if not isinstance(races, list):
+        return []
+
+    rows: list[dict] = []
+    for race in races:
+        if not isinstance(race, dict):
+            continue
+        race_no = _safe_int(race.get("RACENO") or race.get("race_no") or race.get("NO"))
+        distance = _safe_int(race.get("MESAFE") or race.get("distance")) or 0
+        surface = str(race.get("PISTADI_TR") or race.get("PIST") or "").strip()
+        start_time = str(race.get("SAAT") or "").strip()
+        code = str(race.get("KOD") or "").strip()
+        horses = race.get("atlar") or race.get("Atlar") or []
+        if race_no is None or not isinstance(horses, list):
+            continue
+
+        for horse in horses:
+            if not isinstance(horse, dict):
+                continue
+            name = str(horse.get("AD") or horse.get("ad") or "").strip()
+            if not name:
+                continue
+            status = str(horse.get("START") or "").strip().lower()
+            scratched = status in {"-", "0", "koşmaz", "kosmaz"}
+            form = str(horse.get("SON6") or horse.get("SON20") or "").strip()
+            agf = _number(horse.get("AGF1") or horse.get("AGF") or horse.get("agf_score"))
+            hp = _number(horse.get("HANDIKAP") or horse.get("HP") or horse.get("H") )
+            weight = _number(horse.get("KILO") or horse.get("weight"))
+            start = _safe_int(horse.get("NO") or horse.get("START"))
+
+            rows.append({
+                "horse": name,
+                "race": str(race_no),
+                "race_number": race_no,
+                "race_id": f"{race_date.isoformat()}-{fallback_track}-{race_no}",
+                "date": race_date.isoformat(),
+                "start": start or "",
+                "gate": start or "",
+                "start_time": start_time,
+                "race_code": code,
+                "jockey": str(horse.get("JOKEYADI") or horse.get("JOKEY") or "").strip(),
+                "trainer": str(horse.get("ANTRENORADI") or horse.get("ANTRENOR") or "").strip(),
+                "owner": str(horse.get("SAHIPADI") or "").strip(),
+                "age": str(horse.get("YAS") or "").strip(),
+                "form": form,
+                "son20": str(horse.get("SON20") or "").strip(),
+                "equipment": str(horse.get("TAKI") or "").strip(),
+                "weight": weight,
+                "hp": hp,
+                "handicap": hp,
+                "agf_score": min(agf, 100.0),
+                "agf_rank": _safe_int(horse.get("AGFSIRA1")),
+                "recent_form": _form_score(form),
+                "track_form": 50.0,
+                "distance_form": 50.0,
+                "jockey_form": 50.0,
+                "trainer_form": 50.0,
+                "weight_score": 50.0,
+                "distance": distance,
+                "surface": surface,
+                "track": fallback_track,
+                "scratched": scratched,
+            })
+    return rows
+
+
+def collect_tjk_ebayi() -> list[dict]:
+    """Collect today's domestic program from TJK's public e-Bayi JSON feed."""
+    target_date = date.today()
+    base = "https://ebayi.tjk.org/s/d"
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
+    index = None
+    errors = []
+    for date_token in (target_date.isoformat(), target_date.strftime("%d-%m-%Y"), target_date.strftime("%Y%m%d")):
+        try:
+            r = session.get(f"{base}/program/{date_token}/yarislar.json", timeout=30)
+            r.raise_for_status()
+            candidate = r.json()
+            if _extract_index_entries(candidate):
+                index = candidate
+                break
+        except Exception as exc:
+            errors.append(f"{date_token}: {exc}")
+
+    if index is None:
+        raise RuntimeError("TJK e-Bayi program index alınamadı: " + "; ".join(errors[-2:]))
+
+    entries = _extract_index_entries(index)
+    all_rows: list[dict] = []
+    seen_tracks: set[str] = set()
+    for entry in entries:
+        key = str(entry.get("KEY") or entry.get("key") or "").strip()
+        track = str(entry.get("AD") or entry.get("ad") or entry.get("YER") or entry.get("yer") or "").strip()
+        if not key or not track or track.lower() in seen_tracks:
+            continue
+        seen_tracks.add(track.lower())
+        # Do not use foreign/international cards for the domestic sixli engine.
+        if track.lower() not in {"adana", "ankara", "antalya", "bursa", "diyarbakir", "diyarbakır", "elazig", "elazığ", "istanbul", "izmir", "kocaeli", "sanliurfa", "şanlıurfa"}:
+            continue
+        try:
+            r = session.get(f"{base}/program/{target_date.isoformat()}/full/{key}.json", timeout=30)
+            r.raise_for_status()
+            rows = _parse_ebayi_full(r.json(), target_date, track)
+            all_rows.extend(rows)
+        except Exception as exc:
+            errors.append(f"{track}/{key}: {exc}")
+
+    if not all_rows:
+        raise RuntimeError("TJK e-Bayi full program 0 at döndürdü: " + "; ".join(errors[-3:]))
+    return [r for r in all_rows if not r.get("scratched")]
+
+
 def collect_tjk() -> list[dict]:
     """Collect today's domestic TJK program through the public TJK AJAX pages."""
     target_date = date.today()
@@ -475,10 +614,24 @@ def collect_nalsesleri() -> list[dict]:
 def collect() -> list[dict]:
     errors: list[str] = []
 
-    # TJK is the primary source. The old source is only a fallback.
+    # TJK e-Bayi JSON is the preferred source because it exposes structured
+    # pre-race AGF/HP/jockey/trainer/form/weight/surface/distance fields.
     try:
-        rows = collect_tjk()
-        source = "TJK"
+        rows = collect_tjk_ebayi()
+        source = "TJK e-Bayi JSON"
+    except Exception as exc:
+        errors.append(f"TJK e-Bayi: {exc}")
+        rows = []
+        source = ""
+
+    # Rendered TJK AJAX page remains the first fallback.
+    if not rows:
+        try:
+            rows = collect_tjk()
+            source = "TJK AJAX"
+        except Exception as exc:
+            errors.append(f"TJK AJAX: {exc}")
+            rows = []
     except Exception as exc:
         errors.append(f"TJK: {exc}")
         rows = []
@@ -524,7 +677,7 @@ def main() -> None:
     payload = {
         "date": date.today().isoformat(),
         "count": len(rows),
-        "source": "TJK primary / Nal Sesleri fallback",
+        "source": "TJK e-Bayi JSON / TJK AJAX / PDF / HTML fallback",
         "horses": rows,
     }
     (DATA / "horses.json").write_text(
