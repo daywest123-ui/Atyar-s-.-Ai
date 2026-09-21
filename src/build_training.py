@@ -129,6 +129,13 @@ def build():
         rows.append({
             "race_id": r["race_id"],
             "race_date": r["race_date"],
+            "race_number": int(float(r["race_number"])),
+            "track": target_track,
+            "distance": target_distance,
+            "horse": r["horse"],
+            "jockey": jockey,
+            "trainer": trainer,
+            "weight": weight,
             "finish_position": int(float(r["finish_position"])),
             "recent_form": round(form_score(prior_positions), 3),
             "track_form": round(rate(prior, lambda x: x.get("track", "") == target_track), 3),
