@@ -209,11 +209,14 @@ def day_rows(day):
                             first = ks[0]
                             if isinstance(first, dict):
                                 nested = {str(k): type(v).__name__ for k, v in list(first.items())[:25]}
-                                extra = f" kosular_len={len(ks)} first_keys={list(first.keys())[:25]} first_types={nested}"
-                            else:
-                                extra = f" kosular_len={len(ks)} first_type={type(first).__name__}"
-                        else:
-                            extra = " kosular_len=0"
+                                hv = first.get("atlar") or first.get("ATLAR") or first.get("horses") or first.get("HORSES")
+                                if isinstance(hv, list) and hv:
+                                    horse_sample = f" horse_len={len(hv)} horse_keys={list(hv[0].keys())[:30]} horse_first={hv[0]}"
+                                elif isinstance(hv, dict):
+                                    horse_sample = f" horse_type=dict horse_keys={list(hv.keys())[:30]}"
+                                else:
+                                    horse_sample = f" horse_container_type={type(hv).__name__}"
+                                extra = f" kosular_len={len(ks)} first_keys={list(first.keys())[:25]} first_types={nested}{horse_sample}"
                     print(f"[local-backfill] {day} {name}: parser=0 payload={shape} keys={keys}{extra}")
                 except Exception:
                     pass
