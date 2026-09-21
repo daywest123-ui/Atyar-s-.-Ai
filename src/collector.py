@@ -20,7 +20,7 @@ DATA = BASE / "data"
 DATA.mkdir(exist_ok=True)
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/2.0)",
+    "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/2.1)",
     "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
 }
 
