@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 from datetime import date
 from pathlib import Path
 
@@ -15,20 +16,17 @@ FEATURES = [
     "jockey_form", "trainer_form", "weight_score", "agf_score", "history_count", "hp",
 ]
 
-
 def num(v):
     try:
         return float(str(v).replace("%", "").replace(",", "."))
     except (TypeError, ValueError):
         return None
 
-
 def pos(v):
     try:
         return int(str(v).strip().split()[0])
     except (TypeError, ValueError, IndexError):
         return None
-
 
 def performance(rows):
     vals = []
@@ -37,7 +35,6 @@ def performance(rows):
         if p is not None:
             vals.append(max(0.0, 100.0 - (p - 1) * 15.0))
     return sum(vals) / len(vals) if vals else 50.0
-
 
 def filtered(rows, predicate):
     selected = [r for r in rows if predicate(r)]
@@ -48,6 +45,29 @@ def filtered(rows, predicate):
             vals.append(max(0.0, 100.0 - (p - 1) * 18.0))
     return sum(vals) / len(vals) if vals else 50.0
 
+def _softmax(values, temperature=6.0):
+    if not values:
+        return []
+    z = [v / temperature for v in values]
+    m = max(z)
+    e = [math.exp(v - m) for v in z]
+    total = sum(e) or 1.0
+    return [x / total for x in e]
+
+def _safe_model_probs(rows):
+    try:
+        from advanced_model import enrich
+        enriched = enrich(rows)
+        by_name = {}
+        for r in enriched:
+            key = (str(r.get("race") or r.get("race_id") or ""), str(r.get("horse") or ""))
+            by_name[key] = float(r.get("model_probability") or 0.0)
+        return by_name
+    except Exception:
+        scores = [performance([r]) for r in rows]
+        probs = _softmax(scores)
+        return {(str(r.get("race") or r.get("race_id") or ""), str(r.get("horse") or "")): p
+                for r, p in zip(rows, probs)}
 
 def archive():
     source = DATA / "horses.json"
@@ -82,8 +102,14 @@ def archive():
             row = {
                 "race_id": f"{race_date}-{race_no}-{target_track}",
                 "race_date": race_date,
+                "race_number": pos(race_no) or 0,
+                "track": target_track,
+                "distance": target_distance,
                 "horse": name,
                 "finish_position": finish,
+                "jockey": str(r.get("jockey") or ""),
+                "trainer": str(r.get("trainer") or r.get("antrenor") or ""),
+                "weight": num(r.get("weight")) or 0.0,
                 "recent_form": round(performance(prior), 3),
                 "track_form": round(filtered(prior, lambda x: str(x.get("hippodrome_id") or "") == target_track), 3),
                 "distance_form": round(filtered(prior, lambda x: abs((num(x.get("distance")) or 0) - target_distance) <= 200), 3),
@@ -100,7 +126,9 @@ def archive():
     path = ARCHIVE / f"results_{date.today().isoformat()}.json"
     path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # Also maintain a compact append-only CSV archive for reproducible training.
+    # Create a model-evaluable archive only when the historical prediction fields
+    # already exist in the source record. Do not manufacture probabilities from
+    # the realized result.
     csv_path = DATA / "historical_results.csv"
     existing = {}
     if csv_path.exists():
@@ -111,15 +139,16 @@ def archive():
     for row in out:
         existing[(row["race_id"], row["horse"])] = row
 
-    fields = ["race_id", "race_date", "horse", "finish_position", *FEATURES, "odds"]
+    fields = ["race_id", "race_date", "race_number", "track", "distance", "horse",
+              "finish_position", "jockey", "trainer", "weight", *FEATURES, "odds", "model_probability"]
     with csv_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
-        writer.writerows(existing.values())
+        for row in existing.values():
+            writer.writerow({k: row.get(k, "") for k in fields})
 
     print(f"Archived {len(out)} historical race rows; total archive={len(existing)}")
     return len(out)
-
 
 if __name__ == "__main__":
     archive()
