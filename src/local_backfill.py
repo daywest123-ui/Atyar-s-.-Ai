@@ -91,6 +91,22 @@ def parse_full(payload, day, track):
     out, seen = [], set()
     payload = unwrap_data(payload)
 
+    def parse_kosu_entry(kosu, fallback_race=None):
+        if not isinstance(kosu, dict):
+            return []
+        race_no = extract_race_number(kosu) or fallback_race
+        distance = parse_distance(pick(kosu, ["MESAFE","DISTANCE","UZUNLUK","KOSUMESAFESI"]))
+        entries = []
+        # TJK e-Bayi result payloads expose races under "kosular".
+        # Each race may contain horse rows under several historical key names.
+        for key, value in kosu.items():
+            lk = norm(key)
+            if lk in {"atlar","atlarlistesi","horses","horse","sonuclar","sonuc","sonuclarlistesi","koşular","kosular"} and isinstance(value, list):
+                entries.extend((x, race_no, distance) for x in value if isinstance(x, dict))
+        if not entries:
+            entries.append((kosu, race_no, distance))
+        return entries
+
     def add_row(node, race_no, distance, horse, finish):
         if not (is_horse_name(horse) and race_no and finish and 1 <= finish <= 30):
             return
@@ -114,6 +130,31 @@ def parse_full(payload, day, track):
             "agf_score": min(num(pick(node, ["AGF","AGFORAN","AGF_ORAN"])), 100),
             "odds": num(pick(node, ["GNY","GANYAN","ODDS","ORAN"])),
         })
+
+    def visit(node, inherited_race=None, inherited_distance=0):
+        # Dedicated handling for the known e-Bayi top-level shape:
+        # {"hava": ..., "kosular": [...], "agf": ...}
+        if isinstance(node, dict) and "kosular" in node:
+            kosular = node.get("kosular")
+            if isinstance(kosular, list):
+                for kosu in kosular:
+                    for entry, rn, dist in parse_kosu_entry(kosu, inherited_race):
+                        own_race = rn or inherited_race
+                        own_distance = dist or inherited_distance
+                        horse = pick(entry, [
+                            "ATADI","AT_ADI","AT","ADI","ATADIADI","HORSE","HORSE_NAME",
+                            "ATADI1","ATADI2","ATADI3","ATADI4","ATADI5","ATADI6",
+                            "ATADI7","ATADI8","ATADI9","ATADI10","ATADI11","ATADI12"
+                        ])
+                        fin = extract_finish(entry)
+                        add_row(entry, own_race, own_distance, horse, fin)
+                        visit(entry, own_race, own_distance)
+            # Still recurse into agf and other metadata, but avoid processing
+            # the same kosular list twice through the generic branch.
+            for k, v in node.items():
+                if k != "kosular":
+                    visit(v, inherited_race, inherited_distance)
+            return
 
     def visit(node, inherited_race=None, inherited_distance=0):
         if isinstance(node, dict):
