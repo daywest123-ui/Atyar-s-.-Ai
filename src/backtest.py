@@ -282,7 +282,10 @@ def evaluate_lightgbm(rows, min_train_dates=12):
                 "probability": float(r["probability"]),
             })
 
-        imp = getattr(final_model, "feature_importances_", None)
+        try:
+            imp = final_model.booster_.feature_importance(importance_type="gain")
+        except Exception:
+            imp = getattr(final_model, "feature_importances_", None)
         if imp is not None:
             importances.append(dict(zip(FEATURES, [float(x) for x in imp])))
 
@@ -303,7 +306,7 @@ def evaluate_lightgbm(rows, min_train_dates=12):
         "method": "expanding-window LightGBM, strict pre-date OOS",
         "metrics": metrics,
         "calibration": calibration,
-        "feature_importance_mean_gain_proxy": feature_importance,
+        "feature_importance_mean_gain": feature_importance,
         "oos_rows": len(all_predictions),
         "oos_dates": len({x["race_date"] for x in all_predictions}),
         "skipped_dates": skipped_dates,
