@@ -42,7 +42,7 @@ def baseline_score(row: dict, field: list[dict] | None = None) -> float:
         hp_norm = 50.0 if hi <= lo else 100.0 * (hp - lo) / (hi - lo)
     else:
         hp_norm = 50.0
-    score = 0.85 * score + 0.15 * hp_norm
+    score = 0.85 * score + 0.15 * hp_norm\n    # Hidden-value layer: reward independent external support while avoiding\n    # the old failure mode of adding every longshot to the coupon.\n    ext = max(-1.0, min(1.0, (_f(row, "external_tip_score") / 100.0)))\n    consensus = max(0.0, min(1.0, _f(row, "source_consensus") / 100.0))\n    warning = max(0.0, min(1.0, _f(row, "warning_flag") / 100.0))\n    score += 4.0 * ext + 2.0 * consensus - 3.0 * warning
     # Historical depth slightly raises/lowers the score only as a confidence
     # modifier, not as a performance claim.
     depth = min(_f(row, "history_count") / 12.0, 1.0)
@@ -173,7 +173,7 @@ def enrich(rows: list[dict]) -> list[dict]:
             if _f(item, "agf_score") > 0: available += 1
             if _f(item, "history_count") > 0: available += 3
             item["data_quality"] = round(min(1.0, available / 7.0), 3)
-            item["risk_flag"] = "low_data" if item["data_quality"] < 0.45 else ("medium_data" if item["data_quality"] < 0.70 else "normal")
+            hidden = (\n                0.35 * min(1.0, _f(item, "external_tip_count") / 3.0)\n                + 0.30 * max(0.0, min(1.0, _f(item, "source_consensus") / 100.0))\n                + 0.20 * max(0.0, min(1.0, _f(item, "external_tip_score") / 100.0))\n                + 0.15 * max(0.0, min(1.0, _f(item, "pace_score") / 100.0))\n            )\n            item["hidden_value_score"] = round(hidden, 4)\n            item["surprise_alert"] = bool(hidden >= 0.55 and p < max(0.25, prior * 1.8))\n            item["risk_flag"] = "low_data" if item["data_quality"] < 0.45 else ("medium_data" if item["data_quality"] < 0.70 else "normal")
 
     return sorted(out, key=lambda x: (str(x.get("race")), -x.get("model_probability", 0)))
 
