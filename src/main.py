@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from advanced_model import enrich
+from external_intelligence import merge_external_signals
 from scoring import rank_horses
 
 BASE = Path(__file__).resolve().parents[1]
@@ -18,6 +19,8 @@ def main() -> None:
         return
 
     rows = json.loads(source.read_text(encoding="utf-8"))
+
+    rows = merge_external_signals(rows)
 
     # Keep the original transparent score for continuity.
     baseline = rank_horses(rows)
