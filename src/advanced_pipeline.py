@@ -5,6 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from advanced_model import enrich, race_summary
+from external_intelligence import merge_external_signals, build_source_report, load_signals
 from sixli_optimizer import build_budgets
 
 BASE = Path(__file__).resolve().parents[1]
@@ -19,6 +20,7 @@ def run() -> None:
         return
 
     rows = json.loads(source.read_text(encoding="utf-8"))
+    rows = merge_external_signals(rows)
     ranked = enrich(rows)
     (DATA / "advanced_ranked_horses.json").write_text(
         json.dumps(ranked, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -32,6 +34,9 @@ def run() -> None:
     summaries = [race_summary(v) for v in grouped.values()]
     (DATA / "race_analysis.json").write_text(
         json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (DATA / "external_source_report.json").write_text(
+        json.dumps(build_source_report(load_signals()), ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     sixli = build_budgets(ranked, budgets=(240, 720, 1440))
