@@ -81,7 +81,7 @@ def select_leg_candidates(race: list[dict], target_count: int | None = None, max
     target_count = max(1 if len(ranked) == 1 else 2, min(max_horses, target_count, len(ranked)))
     selected = ranked[:target_count]
     if len(ranked) > target_count:
-        surprises = [r for r in ranked[target_count:] if _edge(r) > 0.04 and _agf(r) < 15]
+        surprises = [r for r in ranked[target_count:] if (float(r.get("surprise_alert", 0) or 0) > 0.0) or (_edge(r) > 0.04 and _agf(r) < 15)]
         if surprises:
             selected[-1] = max(surprises, key=_rank_score)
     return sorted(selected, key=_rank_score, reverse=True)
@@ -105,7 +105,7 @@ def _candidate_value(row: dict) -> float:
     p = _p(row)
     quality = max(0.35, min(1.0, float(row.get("data_quality", 1.0) or 1.0)))
     edge = max(0.0, min(0.20, _edge(row)))
-    surprise = 0.02 if _agf(row) < 10 and edge > 0.03 else 0.0
+    hidden = max(0.0, min(1.0, float(row.get("hidden_value_score", 0.0) or 0.0)))\n    surprise = 0.025 if hidden >= 0.55 else (0.02 if _agf(row) < 10 and edge > 0.03 else 0.0)
     return p * (0.75 + 0.25 * quality) + 0.20 * edge + surprise
 
 
@@ -216,7 +216,7 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
                     "horse": row.get("horse"),
                     "probability": round(_p(row), 6),
                     "agf": round(_agf(row), 3),
-                    "edge": row.get("edge"),
+                    "edge": row.get("edge"),\n                    "hidden_value_score": row.get("hidden_value_score"),\n                    "surprise_alert": row.get("surprise_alert", False),
                 }
                 for row in combo
             ],
