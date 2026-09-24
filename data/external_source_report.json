@@ -1,0 +1,16 @@
+{
+  "signal_count": 0,
+  "source_count": 0,
+  "sources": {},
+  "source_weights": {
+    "timeform": 1.0,
+    "racingtv": 0.95,
+    "racing post": 0.95,
+    "at the races": 0.9,
+    "sporting life": 0.9,
+    "official": 0.9,
+    "local": 0.8,
+    "other": 0.5
+  },
+  "purpose": "External signals are corroboration features, not guaranteed outcome predictions."
+}
