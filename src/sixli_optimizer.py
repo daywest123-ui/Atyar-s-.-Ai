@@ -105,7 +105,8 @@ def _candidate_value(row: dict) -> float:
     p = _p(row)
     quality = max(0.35, min(1.0, float(row.get("data_quality", 1.0) or 1.0)))
     edge = max(0.0, min(0.20, _edge(row)))
-    hidden = max(0.0, min(1.0, float(row.get("hidden_value_score", 0.0) or 0.0)))\n    surprise = 0.025 if hidden >= 0.55 else (0.02 if _agf(row) < 10 and edge > 0.03 else 0.0)
+    hidden = max(0.0, min(1.0, float(row.get("hidden_value_score", 0.0) or 0.0)))
+    surprise = 0.025 if hidden >= 0.55 else (0.02 if _agf(row) < 10 and edge > 0.03 else 0.0)
     return p * (0.75 + 0.25 * quality) + 0.20 * edge + surprise
 
 
@@ -216,7 +217,9 @@ def optimize(rows: list[dict], budget: int = 720, unit_cost: int = 1) -> dict:
                     "horse": row.get("horse"),
                     "probability": round(_p(row), 6),
                     "agf": round(_agf(row), 3),
-                    "edge": row.get("edge"),\n                    "hidden_value_score": row.get("hidden_value_score"),\n                    "surprise_alert": row.get("surprise_alert", False),
+                    "edge": row.get("edge"),
+                    "hidden_value_score": row.get("hidden_value_score"),
+                    "surprise_alert": row.get("surprise_alert", False),
                 }
                 for row in combo
             ],
