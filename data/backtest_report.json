@@ -1,5 +1,5 @@
 {
-  "data_rows": 3988,
+  "data_rows": 4037,
   "evaluated_races_heuristic": 348,
   "heuristic": {
     "races": 348,
@@ -11,9 +11,9 @@
   "heuristic_calibration": [
     {
       "bin": "0.0-0.1",
-      "count": 2744,
-      "mean_predicted": 0.044062,
-      "observed_win_rate": 0.075073
+      "count": 2748,
+      "mean_predicted": 0.044106,
+      "observed_win_rate": 0.074964
     },
     {
       "bin": "0.1-0.2",
@@ -53,15 +53,15 @@
     },
     {
       "bin": "0.7-0.8",
-      "count": 8,
-      "mean_predicted": 0.714995,
-      "observed_win_rate": 0.25
+      "count": 9,
+      "mean_predicted": 0.713624,
+      "observed_win_rate": 0.222222
     },
     {
       "bin": "0.9-1.0",
-      "count": 3614,
-      "mean_predicted": 0.097122,
-      "observed_win_rate": 0.096846
+      "count": 3619,
+      "mean_predicted": 0.097264,
+      "observed_win_rate": 0.096712
     }
   ],
   "lightgbm_oos": {
@@ -82,15 +82,15 @@
       },
       {
         "bin": "0.1-0.2",
-        "count": 586,
-        "mean_predicted": 0.127967,
-        "observed_win_rate": 0.127986
+        "count": 589,
+        "mean_predicted": 0.128322,
+        "observed_win_rate": 0.127334
       },
       {
         "bin": "0.2-0.3",
-        "count": 33,
-        "mean_predicted": 0.236787,
-        "observed_win_rate": 0.333333
+        "count": 35,
+        "mean_predicted": 0.23488,
+        "observed_win_rate": 0.314286
       },
       {
         "bin": "0.3-0.4",
@@ -112,24 +112,24 @@
       },
       {
         "bin": "0.9-1.0",
-        "count": 2411,
-        "mean_predicted": 0.234757,
-        "observed_win_rate": 0.102447
+        "count": 2460,
+        "mean_predicted": 0.248374,
+        "observed_win_rate": 0.102846
       }
     ],
     "feature_importance_mean_gain": {
-      "agf_score": 4860.673254,
-      "hp": 2178.243083,
-      "weight_score": 1239.674969,
-      "trainer_form": 352.650368,
-      "recent_form": 321.715751,
-      "distance_form": 259.427647,
-      "track_form": 216.004477,
-      "jockey_form": 166.511654,
-      "history_count": 115.06327
+      "agf_score": 4895.208016,
+      "hp": 2184.990149,
+      "weight_score": 1248.06704,
+      "trainer_form": 367.980072,
+      "recent_form": 329.625166,
+      "distance_form": 262.463225,
+      "track_form": 224.894856,
+      "jockey_form": 174.24222,
+      "history_count": 119.967711
     },
-    "oos_rows": 2411,
-    "oos_dates": 21,
+    "oos_rows": 2460,
+    "oos_dates": 22,
     "skipped_dates": [],
     "note": "For each target date, training uses only earlier dates. The final learner is refit on all known pre-target races. Calibration is fitted on a trailing historical slice that also precedes the target date. Same-day history is excluded."
   },
