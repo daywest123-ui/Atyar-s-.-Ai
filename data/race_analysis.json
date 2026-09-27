@@ -1,27 +1,57 @@
 [
   {
     "race": "1",
-    "field_size": 10,
+    "field_size": 13,
     "top3": [
       {
-        "horse": "BAYIR EFE",
+        "horse": "ÇİLDUTAY",
         "start": 2,
-        "probability": 0.100438,
-        "fair_odds": 9.956,
+        "probability": 0.077062,
+        "fair_odds": 12.977,
         "edge": null
       },
       {
-        "horse": "GÖRKEM KAPTAN",
-        "start": 8,
-        "probability": 0.100371,
-        "fair_odds": 9.963,
+        "horse": "EFE KAPTAN",
+        "start": 4,
+        "probability": 0.077034,
+        "fair_odds": 12.981,
         "edge": null
       },
       {
-        "horse": "TYWIN LANNISTER",
-        "start": 3,
-        "probability": 0.100333,
-        "fair_odds": 9.967,
+        "horse": "SAROSLU",
+        "start": 13,
+        "probability": 0.077025,
+        "fair_odds": 12.983,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.396,
+    "banko_candidate": false
+  },
+  {
+    "race": "2",
+    "field_size": 5,
+    "top3": [
+      {
+        "horse": "LORD OF DRAGON",
+        "start": 5,
+        "probability": 0.200844,
+        "fair_odds": 4.979,
+        "edge": null
+      },
+      {
+        "horse": "LUPELIUS",
+        "start": 4,
+        "probability": 0.200135,
+        "fair_odds": 4.997,
+        "edge": null
+      },
+      {
+        "horse": "GOLDRAKHAN",
+        "start": 1,
+        "probability": 0.200015,
+        "fair_odds": 5.0,
         "edge": null
       }
     ],
@@ -30,58 +60,28 @@
     "banko_candidate": false
   },
   {
-    "race": "2",
-    "field_size": 14,
-    "top3": [
-      {
-        "horse": "GİDERLİCAN",
-        "start": 6,
-        "probability": 0.071635,
-        "fair_odds": 13.96,
-        "edge": null
-      },
-      {
-        "horse": "HASGÖKÇE",
-        "start": 14,
-        "probability": 0.071547,
-        "fair_odds": 13.977,
-        "edge": null
-      },
-      {
-        "horse": "SELÇUKZADE",
-        "start": 12,
-        "probability": 0.071505,
-        "fair_odds": 13.985,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.378,
-    "banko_candidate": false
-  },
-  {
     "race": "3",
-    "field_size": 11,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "CRAZY DILDAR",
-        "start": 8,
-        "probability": 0.091384,
-        "fair_odds": 10.943,
+        "horse": "ETSUKO",
+        "start": 9,
+        "probability": 0.111168,
+        "fair_odds": 8.995,
         "edge": null
       },
       {
-        "horse": "LALOCURA",
-        "start": 2,
-        "probability": 0.091375,
-        "fair_odds": 10.944,
-        "edge": null
-      },
-      {
-        "horse": "DESESPERADOS",
+        "horse": "RABOVO",
         "start": 5,
-        "probability": 0.091333,
-        "fair_odds": 10.949,
+        "probability": 0.111168,
+        "fair_odds": 8.995,
+        "edge": null
+      },
+      {
+        "horse": "TOR GOLD",
+        "start": 1,
+        "probability": 0.111127,
+        "fair_odds": 8.999,
         "edge": null
       }
     ],
@@ -91,87 +91,87 @@
   },
   {
     "race": "4",
-    "field_size": 14,
+    "field_size": 12,
     "top3": [
       {
-        "horse": "PRINCESS ELİF",
+        "horse": "FOREVER DALLAS",
+        "start": 12,
+        "probability": 0.083541,
+        "fair_odds": 11.97,
+        "edge": null
+      },
+      {
+        "horse": "SHA CARRI",
+        "start": 11,
+        "probability": 0.083474,
+        "fair_odds": 11.98,
+        "edge": null
+      },
+      {
+        "horse": "IVAR",
         "start": 5,
-        "probability": 0.072055,
-        "fair_odds": 13.878,
-        "edge": null
-      },
-      {
-        "horse": "YEŞİMTRON",
-        "start": 3,
-        "probability": 0.072055,
-        "fair_odds": 13.878,
-        "edge": null
-      },
-      {
-        "horse": "CHILLAX",
-        "start": 2,
-        "probability": 0.071623,
-        "fair_odds": 13.962,
+        "probability": 0.083415,
+        "fair_odds": 11.988,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.378,
+    "data_quality": 0.357,
     "banko_candidate": false
   },
   {
     "race": "5",
-    "field_size": 12,
+    "field_size": 15,
     "top3": [
       {
-        "horse": "OY YARE",
+        "horse": "QUEEN SEÇİL",
         "start": 11,
-        "probability": 0.083427,
-        "fair_odds": 11.987,
+        "probability": 0.06732,
+        "fair_odds": 14.854,
         "edge": null
       },
       {
-        "horse": "GENERAL FEMALE",
-        "start": 5,
-        "probability": 0.083416,
-        "fair_odds": 11.988,
+        "horse": "MALCOOBA",
+        "start": 2,
+        "probability": 0.067114,
+        "fair_odds": 14.9,
         "edge": null
       },
       {
-        "horse": "IMPERIAL GLOIRE",
-        "start": 12,
-        "probability": 0.083416,
-        "fair_odds": 11.988,
+        "horse": "KING GÖKALP",
+        "start": 14,
+        "probability": 0.067079,
+        "fair_odds": 14.908,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.346,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
     "race": "6",
-    "field_size": 11,
+    "field_size": 8,
     "top3": [
       {
-        "horse": "DEMİRNAL",
-        "start": 11,
-        "probability": 0.0915,
-        "fair_odds": 10.929,
+        "horse": "İSKİT ALP",
+        "start": 3,
+        "probability": 0.125833,
+        "fair_odds": 7.947,
         "edge": null
       },
       {
-        "horse": "KURUŞUN GÜCÜ",
-        "start": 2,
-        "probability": 0.091157,
-        "fair_odds": 10.97,
+        "horse": "SİYAH PENÇE",
+        "start": 7,
+        "probability": 0.12557,
+        "fair_odds": 7.964,
         "edge": null
       },
       {
-        "horse": "SANCAK TAŞIYAN",
-        "start": 1,
-        "probability": 0.090993,
-        "fair_odds": 10.99,
+        "horse": "ŞAFAK BEY",
+        "start": 5,
+        "probability": 0.125105,
+        "fair_odds": 7.993,
         "edge": null
       }
     ],
