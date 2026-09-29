@@ -1,27 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 11,
+    "field_size": 8,
     "top3": [
       {
-        "horse": "SİYAH KUŞ",
-        "start": 1,
-        "probability": 0.091402,
-        "fair_odds": 10.941,
-        "edge": null
-      },
-      {
-        "horse": "SİNSİNATEŞİ",
+        "horse": "SIRIUS BLACK",
         "start": 5,
-        "probability": 0.091244,
-        "fair_odds": 10.96,
+        "probability": 0.125415,
+        "fair_odds": 7.974,
         "edge": null
       },
       {
-        "horse": "GÜL AYALI",
-        "start": 9,
-        "probability": 0.091075,
-        "fair_odds": 10.98,
+        "horse": "LAMBERHURST",
+        "start": 3,
+        "probability": 0.125369,
+        "fair_odds": 7.976,
+        "edge": null
+      },
+      {
+        "horse": "SARI MAMBA",
+        "start": 7,
+        "probability": 0.125364,
+        "fair_odds": 7.977,
         "edge": null
       }
     ],
@@ -31,117 +31,117 @@
   },
   {
     "race": "2",
-    "field_size": 11,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "TATLI AKYÜZ",
-        "start": 2,
-        "probability": 0.091215,
-        "fair_odds": 10.963,
+        "horse": "PANCHO",
+        "start": 1,
+        "probability": 0.112031,
+        "fair_odds": 8.926,
         "edge": null
       },
       {
-        "horse": "WORKIN LADY",
-        "start": 9,
-        "probability": 0.091002,
-        "fair_odds": 10.989,
+        "horse": "STEEL STRONG",
+        "start": 4,
+        "probability": 0.111525,
+        "fair_odds": 8.967,
         "edge": null
       },
       {
-        "horse": "NEBULA STAR",
-        "start": 7,
-        "probability": 0.090988,
-        "fair_odds": 10.99,
+        "horse": "FEMALE WARRIOR",
+        "start": 5,
+        "probability": 0.111508,
+        "fair_odds": 8.968,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.325,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 13,
+    "field_size": 15,
     "top3": [
       {
-        "horse": "LION OF THE NORTH",
+        "horse": "BÜYÜK PEHLİVAN",
+        "start": 5,
+        "probability": 0.06676,
+        "fair_odds": 14.979,
+        "edge": null
+      },
+      {
+        "horse": "ABADBEY",
+        "start": 11,
+        "probability": 0.066751,
+        "fair_odds": 14.981,
+        "edge": null
+      },
+      {
+        "horse": "REYNA KIZI",
         "start": 1,
-        "probability": 0.077048,
-        "fair_odds": 12.979,
-        "edge": null
-      },
-      {
-        "horse": "JER",
-        "start": 9,
-        "probability": 0.076977,
-        "fair_odds": 12.991,
-        "edge": null
-      },
-      {
-        "horse": "KOCA ÖMER",
-        "start": 6,
-        "probability": 0.076961,
-        "fair_odds": 12.994,
+        "probability": 0.066751,
+        "fair_odds": 14.981,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.286,
+    "data_quality": 0.391,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 13,
+    "field_size": 11,
     "top3": [
       {
-        "horse": "FILIUS VENTUS",
-        "start": 11,
-        "probability": 0.077494,
-        "fair_odds": 12.904,
+        "horse": "PATARA",
+        "start": 10,
+        "probability": 0.091084,
+        "fair_odds": 10.979,
         "edge": null
       },
       {
-        "horse": "BELLA MARE",
+        "horse": "GÜNEŞMİLA",
         "start": 5,
-        "probability": 0.077373,
-        "fair_odds": 12.924,
+        "probability": 0.091016,
+        "fair_odds": 10.987,
         "edge": null
       },
       {
-        "horse": "KIZIM BERİL",
-        "start": 1,
-        "probability": 0.077356,
-        "fair_odds": 12.927,
+        "horse": "SERTESEN",
+        "start": 6,
+        "probability": 0.091007,
+        "fair_odds": 10.988,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.418,
+    "data_quality": 0.39,
     "banko_candidate": false
   },
   {
     "race": "5",
-    "field_size": 8,
+    "field_size": 17,
     "top3": [
       {
-        "horse": "EMOHELİL",
-        "start": 5,
-        "probability": 0.125099,
-        "fair_odds": 7.994,
+        "horse": "SENANİSA",
+        "start": 4,
+        "probability": 0.059378,
+        "fair_odds": 16.841,
         "edge": null
       },
       {
-        "horse": "ZEYDANTAY",
+        "horse": "LUNA",
+        "start": 15,
+        "probability": 0.059378,
+        "fair_odds": 16.841,
+        "edge": null
+      },
+      {
+        "horse": "ZAMAN HARİKA",
         "start": 3,
-        "probability": 0.125065,
-        "fair_odds": 7.996,
-        "edge": null
-      },
-      {
-        "horse": "ÇELİK ŞAHİN",
-        "start": 2,
-        "probability": 0.125063,
-        "fair_odds": 7.996,
+        "probability": 0.05934,
+        "fair_odds": 16.852,
         "edge": null
       }
     ],
@@ -151,27 +151,27 @@
   },
   {
     "race": "6",
-    "field_size": 14,
+    "field_size": 11,
     "top3": [
       {
-        "horse": "LUCKY RAIN GIRL",
-        "start": 11,
-        "probability": 0.07197,
-        "fair_odds": 13.895,
+        "horse": "DERTSAÇANKIZ",
+        "start": 3,
+        "probability": 0.091861,
+        "fair_odds": 10.886,
         "edge": null
       },
       {
-        "horse": "THON KHITCHIBA",
+        "horse": "HAYDİ SEVDA",
+        "start": 4,
+        "probability": 0.091473,
+        "fair_odds": 10.932,
+        "edge": null
+      },
+      {
+        "horse": "GÜZEL ZEHRA",
         "start": 8,
-        "probability": 0.071945,
-        "fair_odds": 13.899,
-        "edge": null
-      },
-      {
-        "horse": "ELELE",
-        "start": 7,
-        "probability": 0.071921,
-        "fair_odds": 13.904,
+        "probability": 0.090822,
+        "fair_odds": 11.011,
         "edge": null
       }
     ],
