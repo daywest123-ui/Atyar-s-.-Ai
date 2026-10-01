@@ -1,27 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 7,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "GIRALAMO",
-        "start": 3,
-        "probability": 0.143085,
-        "fair_odds": 6.989,
+        "horse": "KULAGER",
+        "start": 9,
+        "probability": 0.111566,
+        "fair_odds": 8.963,
         "edge": null
       },
       {
-        "horse": "DARK MONEY",
+        "horse": "BAKA BABA",
         "start": 6,
-        "probability": 0.143054,
-        "fair_odds": 6.99,
+        "probability": 0.111395,
+        "fair_odds": 8.977,
         "edge": null
       },
       {
-        "horse": "LOST TREASURE",
-        "start": 5,
-        "probability": 0.143026,
-        "fair_odds": 6.992,
+        "horse": "SARPER",
+        "start": 8,
+        "probability": 0.111381,
+        "fair_odds": 8.978,
         "edge": null
       }
     ],
@@ -31,32 +31,32 @@
   },
   {
     "race": "2",
-    "field_size": 11,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "SİNSİNATEŞİ",
-        "start": 5,
-        "probability": 0.091829,
-        "fair_odds": 10.89,
+        "horse": "LORD SENTINEL",
+        "start": 8,
+        "probability": 0.100657,
+        "fair_odds": 9.935,
         "edge": null
       },
       {
-        "horse": "PELİTSIRTI",
-        "start": 7,
-        "probability": 0.091063,
-        "fair_odds": 10.981,
+        "horse": "MANCUNIAN BEDİİ",
+        "start": 1,
+        "probability": 0.100552,
+        "fair_odds": 9.945,
         "edge": null
       },
       {
-        "horse": "EL QUIQUE",
-        "start": 9,
-        "probability": 0.09079,
-        "fair_odds": 11.014,
+        "horse": "COWARD QUEEN",
+        "start": 3,
+        "probability": 0.100231,
+        "fair_odds": 9.977,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.195,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
@@ -64,84 +64,84 @@
     "field_size": 9,
     "top3": [
       {
-        "horse": "EUROFIGHTER",
-        "start": 3,
-        "probability": 0.111757,
-        "fair_odds": 8.948,
+        "horse": "LONGEVITY",
+        "start": 9,
+        "probability": 0.111156,
+        "fair_odds": 8.996,
         "edge": null
       },
       {
-        "horse": "KING ANCESTOR",
-        "start": 2,
-        "probability": 0.111312,
-        "fair_odds": 8.984,
+        "horse": "PASADENA",
+        "start": 6,
+        "probability": 0.111156,
+        "fair_odds": 8.996,
         "edge": null
       },
       {
-        "horse": "VAN KALESİ",
-        "start": 1,
-        "probability": 0.111223,
-        "fair_odds": 8.991,
+        "horse": "DALLAS MUCHO",
+        "start": 5,
+        "probability": 0.11113,
+        "fair_odds": 8.998,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.397,
+    "data_quality": 0.254,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 18,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "GLONASS",
-        "start": 3,
-        "probability": 0.056232,
-        "fair_odds": 17.784,
+        "horse": "PİSA BY PİSANO",
+        "start": 9,
+        "probability": 0.111326,
+        "fair_odds": 8.983,
         "edge": null
       },
       {
-        "horse": "THIEF IN MARRAKESH",
-        "start": 17,
-        "probability": 0.055801,
-        "fair_odds": 17.921,
+        "horse": "LADY ECRİN",
+        "start": 7,
+        "probability": 0.111305,
+        "fair_odds": 8.984,
         "edge": null
       },
       {
-        "horse": "ALPHA SKY",
-        "start": 12,
-        "probability": 0.055623,
-        "fair_odds": 17.978,
+        "horse": "ICE BEAUTY",
+        "start": 4,
+        "probability": 0.111137,
+        "fair_odds": 8.998,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.389,
+    "data_quality": 0.334,
     "banko_candidate": false
   },
   {
     "race": "5",
-    "field_size": 14,
+    "field_size": 11,
     "top3": [
       {
-        "horse": "MELİHTAY",
-        "start": 5,
-        "probability": 0.071978,
-        "fair_odds": 13.893,
+        "horse": "AĞILMUS ASLANI",
+        "start": 3,
+        "probability": 0.091769,
+        "fair_odds": 10.897,
         "edge": null
       },
       {
-        "horse": "SÜRATLİ KIZ",
-        "start": 2,
-        "probability": 0.071914,
-        "fair_odds": 13.906,
+        "horse": "ALSAYFA",
+        "start": 8,
+        "probability": 0.091022,
+        "fair_odds": 10.986,
         "edge": null
       },
       {
-        "horse": "DEDE YALAZ",
-        "start": 13,
-        "probability": 0.071698,
-        "fair_odds": 13.947,
+        "horse": "KOCA AFŞUR",
+        "start": 10,
+        "probability": 0.091015,
+        "fair_odds": 10.987,
         "edge": null
       }
     ],
@@ -151,122 +151,32 @@
   },
   {
     "race": "6",
-    "field_size": 18,
+    "field_size": 5,
     "top3": [
       {
-        "horse": "GÜMBÜRSOY",
-        "start": 10,
-        "probability": 0.05616,
-        "fair_odds": 17.806,
+        "horse": "GOLDEN CITY",
+        "start": 4,
+        "probability": 0.200486,
+        "fair_odds": 4.988,
         "edge": null
       },
       {
-        "horse": "LAVİSTAKAYA",
-        "start": 5,
-        "probability": 0.055747,
-        "fair_odds": 17.938,
+        "horse": "BARBAR BARLO",
+        "start": 3,
+        "probability": 0.200422,
+        "fair_odds": 4.989,
         "edge": null
       },
       {
-        "horse": "GÖZE ÇARPAN",
-        "start": 11,
-        "probability": 0.055697,
-        "fair_odds": 17.954,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.405,
-    "banko_candidate": false
-  },
-  {
-    "race": "7",
-    "field_size": 13,
-    "top3": [
-      {
-        "horse": "FILIUS VENTUS",
-        "start": 11,
-        "probability": 0.077494,
-        "fair_odds": 12.904,
-        "edge": null
-      },
-      {
-        "horse": "BELLA MARE",
-        "start": 5,
-        "probability": 0.077373,
-        "fair_odds": 12.924,
-        "edge": null
-      },
-      {
-        "horse": "KIZIM BERİL",
-        "start": 1,
-        "probability": 0.077356,
-        "fair_odds": 12.927,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.418,
-    "banko_candidate": false
-  },
-  {
-    "race": "8",
-    "field_size": 14,
-    "top3": [
-      {
-        "horse": "MELİHTAY",
-        "start": 5,
-        "probability": 0.071978,
-        "fair_odds": 13.893,
-        "edge": null
-      },
-      {
-        "horse": "SÜRATLİ KIZ",
+        "horse": "EMPEROR",
         "start": 2,
-        "probability": 0.071914,
-        "fair_odds": 13.906,
-        "edge": null
-      },
-      {
-        "horse": "DEDE YALAZ",
-        "start": 13,
-        "probability": 0.071698,
-        "fair_odds": 13.947,
+        "probability": 0.199985,
+        "fair_odds": 5.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.429,
-    "banko_candidate": false
-  },
-  {
-    "race": "9",
-    "field_size": 13,
-    "top3": [
-      {
-        "horse": "GÜMBÜRSOY",
-        "start": 10,
-        "probability": 0.077682,
-        "fair_odds": 12.873,
-        "edge": null
-      },
-      {
-        "horse": "LAVİSTAKAYA",
-        "start": 5,
-        "probability": 0.077111,
-        "fair_odds": 12.968,
-        "edge": null
-      },
-      {
-        "horse": "GÖZE ÇARPAN",
-        "start": 11,
-        "probability": 0.077042,
-        "fair_odds": 12.98,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.429,
+    "data_quality": 0.372,
     "banko_candidate": false
   }
 ]
