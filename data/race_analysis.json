@@ -1,27 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 9,
+    "field_size": 8,
     "top3": [
       {
-        "horse": "KULAGER",
-        "start": 9,
-        "probability": 0.111566,
-        "fair_odds": 8.963,
+        "horse": "VOLITIVO",
+        "start": 1,
+        "probability": 0.125481,
+        "fair_odds": 7.969,
         "edge": null
       },
       {
-        "horse": "BAKA BABA",
+        "horse": "CRAZYBLOOD",
         "start": 6,
-        "probability": 0.111395,
-        "fair_odds": 8.977,
+        "probability": 0.125431,
+        "fair_odds": 7.972,
         "edge": null
       },
       {
-        "horse": "SARPER",
-        "start": 8,
-        "probability": 0.111381,
-        "fair_odds": 8.978,
+        "horse": "POLPOO",
+        "start": 4,
+        "probability": 0.125148,
+        "fair_odds": 7.991,
         "edge": null
       }
     ],
@@ -31,117 +31,87 @@
   },
   {
     "race": "2",
-    "field_size": 10,
+    "field_size": 6,
     "top3": [
       {
-        "horse": "LORD SENTINEL",
-        "start": 8,
-        "probability": 0.100657,
-        "fair_odds": 9.935,
+        "horse": "PONCA",
+        "start": 4,
+        "probability": 0.166941,
+        "fair_odds": 5.99,
         "edge": null
       },
       {
-        "horse": "MANCUNIAN BEDİİ",
+        "horse": "ANTIGONIA",
         "start": 1,
-        "probability": 0.100552,
-        "fair_odds": 9.945,
+        "probability": 0.166832,
+        "fair_odds": 5.994,
         "edge": null
       },
       {
-        "horse": "COWARD QUEEN",
+        "horse": "MAYBACK",
         "start": 3,
-        "probability": 0.100231,
-        "fair_odds": 9.977,
+        "probability": 0.166782,
+        "fair_odds": 5.996,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.429,
+    "data_quality": 0.405,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 9,
+    "field_size": 14,
     "top3": [
       {
-        "horse": "LONGEVITY",
-        "start": 9,
-        "probability": 0.111156,
-        "fair_odds": 8.996,
+        "horse": "AHLAT BEYİ",
+        "start": 12,
+        "probability": 0.071429,
+        "fair_odds": 14.0,
         "edge": null
       },
       {
-        "horse": "PASADENA",
-        "start": 6,
-        "probability": 0.111156,
-        "fair_odds": 8.996,
+        "horse": "ALACAHAN",
+        "start": 2,
+        "probability": 0.071429,
+        "fair_odds": 14.0,
         "edge": null
       },
       {
-        "horse": "DALLAS MUCHO",
-        "start": 5,
-        "probability": 0.11113,
-        "fair_odds": 8.998,
+        "horse": "BAŞ TABİP",
+        "start": 10,
+        "probability": 0.071429,
+        "fair_odds": 14.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.254,
+    "data_quality": 0.143,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 9,
+    "field_size": 7,
     "top3": [
       {
-        "horse": "PİSA BY PİSANO",
-        "start": 9,
-        "probability": 0.111326,
-        "fair_odds": 8.983,
-        "edge": null
-      },
-      {
-        "horse": "LADY ECRİN",
+        "horse": "PERGA",
         "start": 7,
-        "probability": 0.111305,
-        "fair_odds": 8.984,
+        "probability": 0.143636,
+        "fair_odds": 6.962,
         "edge": null
       },
       {
-        "horse": "ICE BEAUTY",
-        "start": 4,
-        "probability": 0.111137,
-        "fair_odds": 8.998,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.334,
-    "banko_candidate": false
-  },
-  {
-    "race": "5",
-    "field_size": 11,
-    "top3": [
-      {
-        "horse": "AĞILMUS ASLANI",
+        "horse": "ASLANLI OVA",
         "start": 3,
-        "probability": 0.091769,
-        "fair_odds": 10.897,
+        "probability": 0.143326,
+        "fair_odds": 6.977,
         "edge": null
       },
       {
-        "horse": "ALSAYFA",
-        "start": 8,
-        "probability": 0.091022,
-        "fair_odds": 10.986,
-        "edge": null
-      },
-      {
-        "horse": "KOCA AFŞUR",
-        "start": 10,
-        "probability": 0.091015,
-        "fair_odds": 10.987,
+        "horse": "ÖZTATMAR",
+        "start": 2,
+        "probability": 0.143115,
+        "fair_odds": 6.987,
         "edge": null
       }
     ],
@@ -150,33 +120,63 @@
     "banko_candidate": false
   },
   {
-    "race": "6",
-    "field_size": 5,
+    "race": "5",
+    "field_size": 10,
     "top3": [
       {
-        "horse": "GOLDEN CITY",
-        "start": 4,
-        "probability": 0.200486,
-        "fair_odds": 4.988,
+        "horse": "TILO GIRL",
+        "start": 1,
+        "probability": 0.100725,
+        "fair_odds": 9.928,
         "edge": null
       },
       {
-        "horse": "BARBAR BARLO",
-        "start": 3,
-        "probability": 0.200422,
-        "fair_odds": 4.989,
-        "edge": null
-      },
-      {
-        "horse": "EMPEROR",
+        "horse": "MAKUL",
         "start": 2,
-        "probability": 0.199985,
-        "fair_odds": 5.0,
+        "probability": 0.100201,
+        "fair_odds": 9.98,
+        "edge": null
+      },
+      {
+        "horse": "SMART CHILDREN",
+        "start": 7,
+        "probability": 0.100197,
+        "fair_odds": 9.98,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.372,
+    "data_quality": 0.415,
+    "banko_candidate": false
+  },
+  {
+    "race": "6",
+    "field_size": 11,
+    "top3": [
+      {
+        "horse": "SON CESİ",
+        "start": 6,
+        "probability": 0.091096,
+        "fair_odds": 10.977,
+        "edge": null
+      },
+      {
+        "horse": "SHERIFF IS BACK",
+        "start": 9,
+        "probability": 0.091096,
+        "fair_odds": 10.977,
+        "edge": null
+      },
+      {
+        "horse": "RAŞAMO",
+        "start": 4,
+        "probability": 0.090994,
+        "fair_odds": 10.99,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.377,
     "banko_candidate": false
   }
 ]
