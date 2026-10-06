@@ -1,27 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 13,
+    "field_size": 12,
     "top3": [
       {
-        "horse": "BEBEĞİM OLDUN",
+        "horse": "KIZIM BİNDAL",
         "start": 8,
-        "probability": 0.077497,
-        "fair_odds": 12.904,
+        "probability": 0.083558,
+        "fair_odds": 11.968,
         "edge": null
       },
       {
-        "horse": "STAIN FREE",
-        "start": 2,
-        "probability": 0.077428,
-        "fair_odds": 12.915,
+        "horse": "LİSBOA",
+        "start": 10,
+        "probability": 0.083484,
+        "fair_odds": 11.978,
         "edge": null
       },
       {
-        "horse": "JESKO",
-        "start": 11,
-        "probability": 0.077192,
-        "fair_odds": 12.955,
+        "horse": "AFRİKA ATEŞİ",
+        "start": 5,
+        "probability": 0.083471,
+        "fair_odds": 11.98,
         "edge": null
       }
     ],
@@ -31,87 +31,87 @@
   },
   {
     "race": "2",
-    "field_size": 10,
+    "field_size": 8,
     "top3": [
       {
-        "horse": "TERKAN GÜZELİ",
-        "start": 9,
-        "probability": 0.100136,
-        "fair_odds": 9.986,
-        "edge": null
-      },
-      {
-        "horse": "GÜLÜMSE KIZIM",
-        "start": 6,
-        "probability": 0.100054,
-        "fair_odds": 9.995,
-        "edge": null
-      },
-      {
-        "horse": "ADDISON",
+        "horse": "SIBLINGS",
         "start": 3,
-        "probability": 0.100033,
-        "fair_odds": 9.997,
+        "probability": 0.125925,
+        "fair_odds": 7.941,
+        "edge": null
+      },
+      {
+        "horse": "MYONEDAY",
+        "start": 6,
+        "probability": 0.12553,
+        "fair_odds": 7.966,
+        "edge": null
+      },
+      {
+        "horse": "BEAUTIFUL LIGHT",
+        "start": 4,
+        "probability": 0.124952,
+        "fair_odds": 8.003,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.357,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 13,
+    "field_size": 8,
     "top3": [
       {
-        "horse": "İCLAL HANIM",
-        "start": 11,
-        "probability": 0.077117,
-        "fair_odds": 12.967,
+        "horse": "EZ ÇEKVARIM",
+        "start": 2,
+        "probability": 0.125,
+        "fair_odds": 8.0,
         "edge": null
       },
       {
-        "horse": "UÇAN DULO",
-        "start": 13,
-        "probability": 0.077048,
-        "fair_odds": 12.979,
-        "edge": null
-      },
-      {
-        "horse": "ŞADİNİN GÜLÜ",
+        "horse": "JOHNY BLAZE",
         "start": 6,
-        "probability": 0.076993,
-        "fair_odds": 12.988,
+        "probability": 0.125,
+        "fair_odds": 8.0,
+        "edge": null
+      },
+      {
+        "horse": "SANGARYAN",
+        "start": 4,
+        "probability": 0.125,
+        "fair_odds": 8.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.374,
+    "data_quality": 0.143,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 6,
+    "field_size": 15,
     "top3": [
       {
-        "horse": "LION OF THE NORTH",
-        "start": 1,
-        "probability": 0.167072,
-        "fair_odds": 5.985,
+        "horse": "QUEEN SEÇİL",
+        "start": 12,
+        "probability": 0.067254,
+        "fair_odds": 14.869,
         "edge": null
       },
       {
-        "horse": "LOVESICK GRILS",
-        "start": 2,
-        "probability": 0.167067,
-        "fair_odds": 5.986,
+        "horse": "MALCOOBA",
+        "start": 4,
+        "probability": 0.06704,
+        "fair_odds": 14.916,
         "edge": null
       },
       {
-        "horse": "MAYBE FOR US",
+        "horse": "WOLF BROTHERS",
         "start": 5,
-        "probability": 0.166702,
-        "fair_odds": 5.999,
+        "probability": 0.06704,
+        "fair_odds": 14.916,
         "edge": null
       }
     ],
@@ -121,62 +121,62 @@
   },
   {
     "race": "5",
-    "field_size": 19,
+    "field_size": 7,
     "top3": [
       {
-        "horse": "SANCAKALAN",
-        "start": 15,
-        "probability": 0.05292,
-        "fair_odds": 18.896,
+        "horse": "PUYOL",
+        "start": 7,
+        "probability": 0.143814,
+        "fair_odds": 6.953,
         "edge": null
       },
       {
-        "horse": "EL FURAT",
-        "start": 3,
-        "probability": 0.052911,
-        "fair_odds": 18.9,
+        "horse": "INNERBLOOM",
+        "start": 1,
+        "probability": 0.143133,
+        "fair_odds": 6.987,
         "edge": null
       },
       {
-        "horse": "PRENSES DI",
-        "start": 6,
-        "probability": 0.052893,
-        "fair_odds": 18.906,
+        "horse": "NALDÖKEN",
+        "start": 4,
+        "probability": 0.142666,
+        "fair_odds": 7.009,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.421,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
     "race": "6",
-    "field_size": 11,
+    "field_size": 14,
     "top3": [
       {
-        "horse": "QUEEN IQRA",
-        "start": 1,
-        "probability": 0.090953,
-        "fair_odds": 10.995,
+        "horse": "HEAVEN LIGHT",
+        "start": 11,
+        "probability": 0.071901,
+        "fair_odds": 13.908,
         "edge": null
       },
       {
-        "horse": "PEARL GRAIN",
-        "start": 8,
-        "probability": 0.090938,
-        "fair_odds": 10.997,
+        "horse": "HAMMERWICH",
+        "start": 4,
+        "probability": 0.071522,
+        "fair_odds": 13.982,
         "edge": null
       },
       {
-        "horse": "SHUEN",
-        "start": 5,
-        "probability": 0.090938,
-        "fair_odds": 10.997,
+        "horse": "MY CHAKRA",
+        "start": 10,
+        "probability": 0.071451,
+        "fair_odds": 13.996,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.299,
+    "data_quality": 0.429,
     "banko_candidate": false
   }
 ]
