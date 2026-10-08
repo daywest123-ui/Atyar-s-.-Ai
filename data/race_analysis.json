@@ -4,24 +4,24 @@
     "field_size": 7,
     "top3": [
       {
-        "horse": "FISTIK ÇAMI",
-        "start": 6,
-        "probability": 0.143591,
-        "fair_odds": 6.964,
+        "horse": "QUEEN AZRA",
+        "start": 3,
+        "probability": 0.143487,
+        "fair_odds": 6.969,
         "edge": null
       },
       {
-        "horse": "SERHUNEFE",
-        "start": 2,
-        "probability": 0.14316,
-        "fair_odds": 6.985,
-        "edge": null
-      },
-      {
-        "horse": "AYAZ DEFNE",
+        "horse": "OĞLUM GALİBEY",
         "start": 7,
-        "probability": 0.142985,
-        "fair_odds": 6.994,
+        "probability": 0.143324,
+        "fair_odds": 6.977,
+        "edge": null
+      },
+      {
+        "horse": "KALİ STRATA",
+        "start": 2,
+        "probability": 0.142936,
+        "fair_odds": 6.996,
         "edge": null
       }
     ],
@@ -31,87 +31,27 @@
   },
   {
     "race": "2",
-    "field_size": 10,
-    "top3": [
-      {
-        "horse": "EQUALIZER",
-        "start": 3,
-        "probability": 0.100174,
-        "fair_odds": 9.983,
-        "edge": null
-      },
-      {
-        "horse": "GRAVITAS",
-        "start": 9,
-        "probability": 0.100157,
-        "fair_odds": 9.984,
-        "edge": null
-      },
-      {
-        "horse": "LO SIENTO BB",
-        "start": 7,
-        "probability": 0.100147,
-        "fair_odds": 9.985,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.315,
-    "banko_candidate": false
-  },
-  {
-    "race": "3",
     "field_size": 9,
     "top3": [
       {
-        "horse": "INFERNO BLAZE",
-        "start": 7,
-        "probability": 0.111299,
-        "fair_odds": 8.985,
-        "edge": null
-      },
-      {
-        "horse": "GANADORES",
-        "start": 8,
-        "probability": 0.111192,
-        "fair_odds": 8.993,
-        "edge": null
-      },
-      {
-        "horse": "GLACIUS BOREAS",
-        "start": 9,
-        "probability": 0.111174,
-        "fair_odds": 8.995,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.318,
-    "banko_candidate": false
-  },
-  {
-    "race": "4",
-    "field_size": 14,
-    "top3": [
-      {
-        "horse": "İLKUTHAN",
+        "horse": "YILDIZTEPE",
         "start": 2,
-        "probability": 0.07211,
-        "fair_odds": 13.868,
+        "probability": 0.112339,
+        "fair_odds": 8.902,
         "edge": null
       },
       {
-        "horse": "LEONİDAS",
-        "start": 8,
-        "probability": 0.07183,
-        "fair_odds": 13.922,
-        "edge": null
-      },
-      {
-        "horse": "OLGUN VEDAT",
+        "horse": "DEMİRNAL",
         "start": 5,
-        "probability": 0.071663,
-        "fair_odds": 13.954,
+        "probability": 0.111305,
+        "fair_odds": 8.984,
+        "edge": null
+      },
+      {
+        "horse": "DEMON HUNTER",
+        "start": 8,
+        "probability": 0.111063,
+        "fair_odds": 9.004,
         "edge": null
       }
     ],
@@ -120,28 +60,88 @@
     "banko_candidate": false
   },
   {
-    "race": "5",
-    "field_size": 9,
+    "race": "3",
+    "field_size": 8,
     "top3": [
       {
-        "horse": "ASPUWA",
-        "start": 3,
-        "probability": 0.111339,
-        "fair_odds": 8.982,
-        "edge": null
-      },
-      {
-        "horse": "GHOSHA",
-        "start": 5,
-        "probability": 0.111247,
-        "fair_odds": 8.989,
-        "edge": null
-      },
-      {
-        "horse": "POWER OF IRON",
+        "horse": "TUMBULKARAÜZÜM",
         "start": 7,
-        "probability": 0.111234,
-        "fair_odds": 8.99,
+        "probability": 0.125426,
+        "fair_odds": 7.973,
+        "edge": null
+      },
+      {
+        "horse": "MOTOR",
+        "start": 8,
+        "probability": 0.125375,
+        "fair_odds": 7.976,
+        "edge": null
+      },
+      {
+        "horse": "ABDİ BABA",
+        "start": 6,
+        "probability": 0.125189,
+        "fair_odds": 7.988,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.429,
+    "banko_candidate": false
+  },
+  {
+    "race": "4",
+    "field_size": 13,
+    "top3": [
+      {
+        "horse": "ÇENGER",
+        "start": 2,
+        "probability": 0.077034,
+        "fair_odds": 12.981,
+        "edge": null
+      },
+      {
+        "horse": "DENİZOVA",
+        "start": 3,
+        "probability": 0.077004,
+        "fair_odds": 12.986,
+        "edge": null
+      },
+      {
+        "horse": "BERRUNAZ",
+        "start": 1,
+        "probability": 0.076982,
+        "fair_odds": 12.99,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.385,
+    "banko_candidate": false
+  },
+  {
+    "race": "5",
+    "field_size": 17,
+    "top3": [
+      {
+        "horse": "GÜNGELDİ AĞA",
+        "start": 9,
+        "probability": 0.059223,
+        "fair_odds": 16.885,
+        "edge": null
+      },
+      {
+        "horse": "ALŞUBATHAN",
+        "start": 15,
+        "probability": 0.059194,
+        "fair_odds": 16.894,
+        "edge": null
+      },
+      {
+        "horse": "SAKARBAŞI KIZI",
+        "start": 6,
+        "probability": 0.059175,
+        "fair_odds": 16.899,
         "edge": null
       }
     ],
@@ -151,27 +151,27 @@
   },
   {
     "race": "6",
-    "field_size": 11,
+    "field_size": 6,
     "top3": [
       {
-        "horse": "GÜMBÜRSOY",
-        "start": 11,
-        "probability": 0.091779,
-        "fair_odds": 10.896,
+        "horse": "LAST SWORD",
+        "start": 4,
+        "probability": 0.167478,
+        "fair_odds": 5.971,
         "edge": null
       },
       {
-        "horse": "TAM BİR SAVAŞÇI",
+        "horse": "THUNDER JEST",
         "start": 3,
-        "probability": 0.091366,
-        "fair_odds": 10.945,
+        "probability": 0.167197,
+        "fair_odds": 5.981,
         "edge": null
       },
       {
-        "horse": "LAVİSTAKAYA",
-        "start": 6,
-        "probability": 0.090967,
-        "fair_odds": 10.993,
+        "horse": "EMREEFE",
+        "start": 1,
+        "probability": 0.167009,
+        "fair_odds": 5.988,
         "edge": null
       }
     ],
