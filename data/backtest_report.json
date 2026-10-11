@@ -1,5 +1,5 @@
 {
-  "data_rows": 4545,
+  "data_rows": 4584,
   "evaluated_races_heuristic": 352,
   "heuristic": {
     "races": 352,
@@ -112,24 +112,24 @@
       },
       {
         "bin": "0.9-1.0",
-        "count": 2968,
-        "mean_predicted": 0.369609,
-        "observed_win_rate": 0.107817
+        "count": 3007,
+        "mean_predicted": 0.377785,
+        "observed_win_rate": 0.107749
       }
     ],
     "feature_importance_mean_gain": {
-      "agf_score": 5178.428755,
-      "hp": 2157.504788,
-      "weight_score": 1322.917676,
-      "trainer_form": 496.9059,
-      "recent_form": 375.57989,
-      "track_form": 320.750918,
-      "distance_form": 304.116703,
-      "jockey_form": 246.013733,
-      "history_count": 183.366571
+      "agf_score": 5188.896324,
+      "hp": 2152.740775,
+      "weight_score": 1323.621492,
+      "trainer_form": 504.456794,
+      "recent_form": 378.089418,
+      "track_form": 325.968414,
+      "distance_form": 308.440516,
+      "jockey_form": 248.326355,
+      "history_count": 185.287819
     },
-    "oos_rows": 2968,
-    "oos_dates": 36,
+    "oos_rows": 3007,
+    "oos_dates": 37,
     "skipped_dates": [],
     "note": "For each target date, training uses only earlier dates. The final learner is refit on all known pre-target races. Calibration is fitted on a trailing historical slice that also precedes the target date. Same-day history is excluded."
   },
