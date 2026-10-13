@@ -1,27 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 13,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "HAZBALIK",
-        "start": 5,
-        "probability": 0.077252,
-        "fair_odds": 12.945,
+        "horse": "REFLECTED GLORY",
+        "start": 10,
+        "probability": 0.100867,
+        "fair_odds": 9.914,
         "edge": null
       },
       {
-        "horse": "AYCASA",
-        "start": 9,
-        "probability": 0.077226,
-        "fair_odds": 12.949,
+        "horse": "NIGHTFLYERS",
+        "start": 4,
+        "probability": 0.100841,
+        "fair_odds": 9.917,
         "edge": null
       },
       {
-        "horse": "PRENSES DI",
+        "horse": "GÖRKEM KAPTAN",
         "start": 8,
-        "probability": 0.077199,
-        "fair_odds": 12.953,
+        "probability": 0.100272,
+        "fair_odds": 9.973,
         "edge": null
       }
     ],
@@ -31,92 +31,92 @@
   },
   {
     "race": "2",
-    "field_size": 11,
+    "field_size": 15,
     "top3": [
       {
-        "horse": "TATLI AKYÜZ",
-        "start": 2,
-        "probability": 0.091183,
-        "fair_odds": 10.967,
-        "edge": null
-      },
-      {
-        "horse": "ARROW STORM",
-        "start": 9,
-        "probability": 0.090983,
-        "fair_odds": 10.991,
-        "edge": null
-      },
-      {
-        "horse": "HOLD ON TO LIFE",
+        "horse": "ABADBEY",
         "start": 7,
-        "probability": 0.090977,
-        "fair_odds": 10.992,
+        "probability": 0.066785,
+        "fair_odds": 14.973,
+        "edge": null
+      },
+      {
+        "horse": "ASTAKOS",
+        "start": 5,
+        "probability": 0.066785,
+        "fair_odds": 14.973,
+        "edge": null
+      },
+      {
+        "horse": "ARKANBERK",
+        "start": 14,
+        "probability": 0.066741,
+        "fair_odds": 14.983,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.351,
+    "data_quality": 0.372,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 15,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "BABA AKİF",
+        "horse": "I RO",
+        "start": 10,
+        "probability": 0.100421,
+        "fair_odds": 9.958,
+        "edge": null
+      },
+      {
+        "horse": "MEGA LOVE",
+        "start": 3,
+        "probability": 0.1004,
+        "fair_odds": 9.96,
+        "edge": null
+      },
+      {
+        "horse": "LORD PROTECTOR",
         "start": 4,
-        "probability": 0.06673,
-        "fair_odds": 14.986,
-        "edge": null
-      },
-      {
-        "horse": "KETRİN",
-        "start": 2,
-        "probability": 0.066716,
-        "fair_odds": 14.989,
-        "edge": null
-      },
-      {
-        "horse": "ÇEÇAN BEY",
-        "start": 12,
-        "probability": 0.066677,
-        "fair_odds": 14.998,
+        "probability": 0.100018,
+        "fair_odds": 9.998,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.343,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 20,
+    "field_size": 18,
     "top3": [
       {
-        "horse": "MEVLÜDE HATUN",
-        "start": 4,
-        "probability": 0.050131,
-        "fair_odds": 19.948,
+        "horse": "MALCOOBA",
+        "start": 1,
+        "probability": 0.055989,
+        "fair_odds": 17.861,
         "edge": null
       },
       {
-        "horse": "EMEĞİN KARŞILIĞI",
-        "start": 11,
-        "probability": 0.05012,
-        "fair_odds": 19.952,
+        "horse": "QUEEN SEÇİL",
+        "start": 8,
+        "probability": 0.055663,
+        "fair_odds": 17.965,
         "edge": null
       },
       {
-        "horse": "MY HAZEL EYES",
-        "start": 5,
-        "probability": 0.050087,
-        "fair_odds": 19.965,
+        "horse": "LEADER TULIP",
+        "start": 6,
+        "probability": 0.055651,
+        "fair_odds": 17.969,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.415,
+    "data_quality": 0.429,
     "banko_candidate": false
   },
   {
@@ -124,24 +124,24 @@
     "field_size": 7,
     "top3": [
       {
-        "horse": "BECENE REİS",
-        "start": 3,
-        "probability": 0.143887,
-        "fair_odds": 6.95,
+        "horse": "RİGEL",
+        "start": 1,
+        "probability": 0.14312,
+        "fair_odds": 6.987,
         "edge": null
       },
       {
-        "horse": "MR ÇINAR",
-        "start": 2,
-        "probability": 0.143884,
-        "fair_odds": 6.95,
+        "horse": "BAKA BABA",
+        "start": 7,
+        "probability": 0.143062,
+        "fair_odds": 6.99,
         "edge": null
       },
       {
-        "horse": "PAPA CLAS",
+        "horse": "CEBEBEY",
         "start": 4,
-        "probability": 0.142619,
-        "fair_odds": 7.012,
+        "probability": 0.142971,
+        "fair_odds": 6.994,
         "edge": null
       }
     ],
@@ -151,27 +151,27 @@
   },
   {
     "race": "6",
-    "field_size": 14,
+    "field_size": 13,
     "top3": [
       {
-        "horse": "PATPAT",
-        "start": 4,
-        "probability": 0.071826,
-        "fair_odds": 13.922,
+        "horse": "EL ALACRAN",
+        "start": 9,
+        "probability": 0.077639,
+        "fair_odds": 12.88,
         "edge": null
       },
       {
-        "horse": "SAKLIKAPI",
-        "start": 5,
-        "probability": 0.071826,
-        "fair_odds": 13.922,
+        "horse": "MERCİA",
+        "start": 6,
+        "probability": 0.077603,
+        "fair_odds": 12.886,
         "edge": null
       },
       {
-        "horse": "MARDİ GRAS",
-        "start": 3,
-        "probability": 0.071557,
-        "fair_odds": 13.975,
+        "horse": "İCRA",
+        "start": 13,
+        "probability": 0.076921,
+        "fair_odds": 13.0,
         "edge": null
       }
     ],
