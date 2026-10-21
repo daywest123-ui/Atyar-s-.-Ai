@@ -1,87 +1,27 @@
 [
   {
     "race": "1",
-    "field_size": 9,
+    "field_size": 7,
     "top3": [
       {
-        "horse": "SERAHİRA",
-        "start": 1,
-        "probability": 0.112045,
-        "fair_odds": 8.925,
+        "horse": "FINAL LEGEND",
+        "start": 3,
+        "probability": 0.143886,
+        "fair_odds": 6.95,
         "edge": null
       },
       {
-        "horse": "RESTAURADORES",
-        "start": 8,
-        "probability": 0.111965,
-        "fair_odds": 8.931,
+        "horse": "SHADE OF AMIDALA",
+        "start": 2,
+        "probability": 0.143709,
+        "fair_odds": 6.958,
         "edge": null
       },
       {
-        "horse": "WOLF BROTHERS",
-        "start": 7,
-        "probability": 0.111052,
-        "fair_odds": 9.005,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.413,
-    "banko_candidate": false
-  },
-  {
-    "race": "2",
-    "field_size": 10,
-    "top3": [
-      {
-        "horse": "SHA CARRI",
-        "start": 1,
-        "probability": 0.100172,
-        "fair_odds": 9.983,
-        "edge": null
-      },
-      {
-        "horse": "PIPO DAYI",
-        "start": 4,
-        "probability": 0.100102,
-        "fair_odds": 9.99,
-        "edge": null
-      },
-      {
-        "horse": "TIMEWARDEN",
-        "start": 7,
-        "probability": 0.100088,
-        "fair_odds": 9.991,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.372,
-    "banko_candidate": false
-  },
-  {
-    "race": "3",
-    "field_size": 10,
-    "top3": [
-      {
-        "horse": "TILO GIRL",
-        "start": 4,
-        "probability": 0.100894,
-        "fair_odds": 9.911,
-        "edge": null
-      },
-      {
-        "horse": "HEAVEN LIGHT",
-        "start": 7,
-        "probability": 0.100198,
-        "fair_odds": 9.98,
-        "edge": null
-      },
-      {
-        "horse": "MY CHAKRA",
+        "horse": "ART OF VICTORY",
         "start": 6,
-        "probability": 0.100062,
-        "fair_odds": 9.994,
+        "probability": 0.142742,
+        "fair_odds": 7.006,
         "edge": null
       }
     ],
@@ -90,28 +30,88 @@
     "banko_candidate": false
   },
   {
-    "race": "4",
-    "field_size": 12,
+    "race": "2",
+    "field_size": 10,
     "top3": [
       {
-        "horse": "GÜRLEYİK",
-        "start": 9,
-        "probability": 0.083596,
-        "fair_odds": 11.962,
+        "horse": "SABRİNİN KIZI",
+        "start": 5,
+        "probability": 0.10009,
+        "fair_odds": 9.991,
         "edge": null
       },
       {
-        "horse": "SALAMCI HAYRETTİN",
-        "start": 11,
-        "probability": 0.083445,
-        "fair_odds": 11.984,
+        "horse": "BAYANBADEŞAN",
+        "start": 3,
+        "probability": 0.10003,
+        "fair_odds": 9.997,
         "edge": null
       },
       {
-        "horse": "CENGEBEY",
-        "start": 8,
-        "probability": 0.083425,
-        "fair_odds": 11.987,
+        "horse": "ULU EZGİ",
+        "start": 2,
+        "probability": 0.10003,
+        "fair_odds": 9.997,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.343,
+    "banko_candidate": false
+  },
+  {
+    "race": "3",
+    "field_size": 18,
+    "top3": [
+      {
+        "horse": "HEAVEN TIME",
+        "start": 10,
+        "probability": 0.055626,
+        "fair_odds": 17.977,
+        "edge": null
+      },
+      {
+        "horse": "DANCING KING",
+        "start": 16,
+        "probability": 0.055618,
+        "fair_odds": 17.98,
+        "edge": null
+      },
+      {
+        "horse": "NO MORE SORROW",
+        "start": 4,
+        "probability": 0.055616,
+        "fair_odds": 17.98,
+        "edge": null
+      }
+    ],
+    "skip_gate": true,
+    "data_quality": 0.405,
+    "banko_candidate": false
+  },
+  {
+    "race": "4",
+    "field_size": 7,
+    "top3": [
+      {
+        "horse": "THON KHITCHIBA",
+        "start": 2,
+        "probability": 0.143494,
+        "fair_odds": 6.969,
+        "edge": null
+      },
+      {
+        "horse": "ERULİNA",
+        "start": 3,
+        "probability": 0.14342,
+        "fair_odds": 6.973,
+        "edge": null
+      },
+      {
+        "horse": "LEO MELO",
+        "start": 6,
+        "probability": 0.142817,
+        "fair_odds": 7.002,
         "edge": null
       }
     ],
@@ -121,27 +121,27 @@
   },
   {
     "race": "5",
-    "field_size": 9,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "JIMDEMA",
-        "start": 6,
-        "probability": 0.111461,
-        "fair_odds": 8.972,
+        "horse": "SEDERİ GÜZELİ",
+        "start": 1,
+        "probability": 0.100308,
+        "fair_odds": 9.969,
         "edge": null
       },
       {
-        "horse": "RACING RAPTURE",
+        "horse": "ÖZGÜRAK",
+        "start": 2,
+        "probability": 0.100135,
+        "fair_odds": 9.987,
+        "edge": null
+      },
+      {
+        "horse": "YAZ MELTEMİ",
         "start": 7,
-        "probability": 0.11137,
-        "fair_odds": 8.979,
-        "edge": null
-      },
-      {
-        "horse": "MEGA LOVE",
-        "start": 3,
-        "probability": 0.111279,
-        "fair_odds": 8.986,
+        "probability": 0.09998,
+        "fair_odds": 10.002,
         "edge": null
       }
     ],
@@ -151,27 +151,27 @@
   },
   {
     "race": "6",
-    "field_size": 10,
+    "field_size": 11,
     "top3": [
       {
-        "horse": "DİPLOMAT ZAFER",
-        "start": 6,
-        "probability": 0.100635,
-        "fair_odds": 9.937,
+        "horse": "ESSANCAR",
+        "start": 4,
+        "probability": 0.091395,
+        "fair_odds": 10.942,
         "edge": null
       },
       {
-        "horse": "LIVE YOUR FREEDOM",
-        "start": 8,
-        "probability": 0.100364,
-        "fair_odds": 9.964,
+        "horse": "DERBEDER ALİ",
+        "start": 1,
+        "probability": 0.091262,
+        "fair_odds": 10.957,
         "edge": null
       },
       {
-        "horse": "AL SAROUT",
-        "start": 7,
-        "probability": 0.100333,
-        "fair_odds": 9.967,
+        "horse": "OLGUNADAM",
+        "start": 10,
+        "probability": 0.091183,
+        "fair_odds": 10.967,
         "edge": null
       }
     ],
