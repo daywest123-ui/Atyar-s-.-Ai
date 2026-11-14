@@ -440,16 +440,18 @@ def collect_tjk_pdf() -> list[dict]:
     all_rows: list[dict] = []
     errors: list[str] = []
 
-    for track in tracks:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def fetch_track(track: str) -> tuple[str, list[dict], str]:
         url = (
             f"https://medya-cdn.tjk.org/raporftp/TJKPDF/{target_date:%Y}/"
             f"{day}/PDFOzet/GunlukYarisProgrami/"
             f"{target_date:%d.%m.%Y}-{track}-GunlukYarisProgrami-TR.pdf"
         )
         try:
-            response = requests.get(url, headers=HEADERS, timeout=(10, 35))
+            response = requests.get(url, headers=HEADERS, timeout=(8, 18))
             if response.status_code == 404:
-                continue
+                return track, [], ""
             response.raise_for_status()
             if not response.content.startswith(b"%PDF"):
                 raise RuntimeError("CDN response is not a PDF")
@@ -459,15 +461,25 @@ def collect_tjk_pdf() -> list[dict]:
                 pdf_path.write_bytes(response.content)
                 reader = PdfReader(str(pdf_path))
                 pdf_text = "\n".join(page.extract_text() or "" for page in reader.pages)
+                page_count = len(reader.pages)
 
             parsed = _parse_current_tjk_pdf_text(pdf_text, target_date, track)
+            if not parsed:
+                return track, [], "PDF downloaded but current table rows were not recognized"
+            return track, parsed, f"{len(parsed)} horses | {page_count} pages"
+        except Exception as exc:
+            return track, [], str(exc)
+
+    # Parallel requests keep the fallback bounded even when one CDN endpoint stalls.
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = [pool.submit(fetch_track, track) for track in tracks]
+        for future in as_completed(futures):
+            track, parsed, error = future.result()
             if parsed:
                 all_rows.extend(parsed)
-                print(f"TJK PDF parsed: {track} | {len(parsed)} horses | {len(reader.pages)} pages")
-            else:
-                errors.append(f"{track}: PDF downloaded but current table rows were not recognized")
-        except Exception as exc:
-            errors.append(f"{track}: {exc}")
+                print(f"TJK PDF parsed: {track} | {error}")
+            elif error:
+                errors.append(f"{track}: {error}")
 
     if not all_rows:
         raise RuntimeError(
