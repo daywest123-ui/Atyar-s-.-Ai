@@ -14,6 +14,11 @@ on:
 permissions:
   contents: write
 
+# Prevent overlapping scheduled/manual runs from racing on shared data commits.
+concurrency:
+  group: at-yarisi-ai-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -61,8 +66,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "Backfill TJK historical results and retrain dataset"
-          git push || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Backfill TJK historical results and retrain dataset"
+          fi
+          git pull --rebase origin main
+          git push origin HEAD:main
       - name: Upload analysis data
         uses: actions/upload-artifact@v4
         with:
