@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 from io import StringIO
 from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import requests
@@ -18,6 +19,11 @@ from history import enrich_horses
 BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / "data"
 DATA.mkdir(exist_ok=True)
+
+
+def _today_tr() -> date:
+    """Return the Turkish local calendar date, independent of the UTC runner."""
+    return datetime.now(ZoneInfo("Europe/Istanbul")).date()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; AtYarisiAI/2.1)",
@@ -237,7 +243,7 @@ def _parse_ebayi_full(payload, race_date: date, fallback_track: str = "") -> lis
 
 def collect_tjk_ebayi() -> list[dict]:
     """Collect today's domestic program from TJK's public e-Bayi JSON feed."""
-    target_date = date.today()
+    target_date = _today_tr()
     base = "https://ebayi.tjk.org/s/d"
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -285,7 +291,7 @@ def collect_tjk_ebayi() -> list[dict]:
 
 def collect_tjk() -> list[dict]:
     """Collect today's domestic TJK program through the public TJK AJAX pages."""
-    target_date = date.today()
+    target_date = _today_tr()
     date_str = target_date.strftime("%d.%m.%Y")
 
     session = requests.Session()
@@ -347,106 +353,138 @@ def collect_tjk() -> list[dict]:
 
 
 
-def collect_tjk_pdf() -> list[dict]:
-    """Fallback: parse TJK daily PDF from the public CDN when AJAX times out."""
-    target_date = date.today()
-    day = target_date.isoformat()
-    url = (
-        f"https://medya-cdn.tjk.org/raporftp/TJKPDF/{target_date:%Y}/"
-        f"{day}/PDFOzet/GunlukYarisProgrami/"
-        f"{target_date:%d.%m.%Y}-Karma-GunlukYarisProgrami-TR.pdf"
+def _parse_current_tjk_pdf_text(text: str, race_date: date, track: str) -> list[dict]:
+    """Parse the current TJK PDF's table-like horse rows.
+
+    The current official PDF no longer matches the old one-line regex. It uses
+    rows beginning with start number (gate), then horse/equipment/age/weight,
+    jockey, owner and performance columns. Parse the stable identity fields
+    first and retain the original row text for diagnostics.
+    """
+    normalized = re.sub(r"[ \t]+", " ", text.replace("\u00a0", " "))
+    row_pattern = re.compile(
+        r"(?P<no>\d{1,2})\((?P<gate>\d{1,2})\)\s+"
+        r"(?P<pre>.*?)\s+(?P<age>\d{1,2}[yY])\s+"
+        r"(?P<weight>\d{1,2}(?:[.,]\d)?)\s+"
+        r"(?P<jockey>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜİ.]+)\s+"
+        r"(?P<tail>.*?)(?=(?:\s+\d{1,2}\(\d{1,2}\)\s+)|$)",
+        re.S,
     )
-    response = requests.get(url, headers=HEADERS, timeout=(15, 60))
-    response.raise_for_status()
-
-    from pypdf import PdfReader
-    with tempfile.TemporaryDirectory() as tmp:
-        pdf_path = Path(tmp) / "program.pdf"
-        pdf_path.write_bytes(response.content)
-        reader = PdfReader(str(pdf_path))
-        text = "\n".join((page.extract_text() or "") for page in reader.pages)
-
+    equipment = {"KG", "DB", "SKG", "SK", "K", "GKR", "YP", "G", "Ç"}
     rows: list[dict] = []
-    race_no = None
-    distance = None
-    track = ""
-    for raw_line in text.splitlines():
-        line = re.sub(r"\s+", " ", raw_line).strip()
-        if not line:
+
+    for match in row_pattern.finditer(normalized):
+        no = match.group("no")
+        gate = match.group("gate")
+        pre_tokens = match.group("pre").strip().split()
+        while pre_tokens and pre_tokens[-1].upper() in equipment:
+            pre_tokens.pop()
+        horse = " ".join(pre_tokens).strip(" -*")
+        if not horse or len(horse) < 2:
             continue
 
-        title = re.search(r"^(\d{2}\.\d{2}\.\d{4})\s+(.+?)\s*-\s*Yarış Programı", line)
-        if title:
-            track = title.group(2).strip()
-            continue
+        tail = re.sub(r"\s+", " ", match.group("tail")).strip()
+        form_match = re.search(r"(?:^|\s)([0-9][0-9-]{2,7})\s*$", tail)
+        form = form_match.group(1) if form_match else ""
+        owner_part = tail[:form_match.start()].strip() if form_match else tail
+        owner_part = re.sub(r"(?:\s+\d{1,4}){1,4}\s*$", "", owner_part).strip()
+        owner_part = re.sub(r"\s+", " ", owner_part)
 
-        race = re.match(r"^(\d+)\.\s*Koşu$", line)
-        if race:
-            race_no = int(race.group(1))
-            distance = None
-            continue
-
-        if race_no is None:
-            continue
-
-        dist = re.search(r"(\d{3,4})m\.", line)
-        if dist:
-            distance = int(dist.group(1))
-
-        m = re.match(
-            r"^(\d+)\((\d+)\)\s+(.+?)\s+(\d+[yY])\s+"
-            r"([\d]+(?:[.,]\d+)?)\s+"
-            r"([A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜ.\-]+)\s+"
-            r"(.+?)\s+"
-            r"(\d+(?:[.,]\d+)?)\s+"
-            r"(\d+(?:[.,]\d+)?)\s+"
-            r"(\d+(?:[.,]\d+)?)"
-            r"(?:\s+([0-9\-]+))?$",
-            line,
-        )
-        if not m:
-            continue
-
-        no, gate, horse_raw, age, weight, jockey, owner, hp, kgs, s20, form = m.groups()
-        horse = re.sub(r"\s+(?:KG|DB|SKG|SK|K|GKR)(?=\s|$)", " ", horse_raw).strip()
-        if not horse:
-            continue
+        prefix = normalized[:match.start()]
+        race_matches = list(re.finditer(r"(\d{1,2})\.\s*Koşu", prefix, re.I))
+        race_no = int(race_matches[-1].group(1)) if race_matches else 0
+        distance_matches = list(re.finditer(r"(\d{3,4})\s*m\.", prefix, re.I))
+        distance = int(distance_matches[-1].group(1)) if distance_matches else 0
 
         rows.append({
             "horse": horse,
-            "race": str(race_no),
-            "race_number": race_no,
-            "date": target_date.isoformat(),
+            "race": str(race_no) if race_no else "",
+            "race_number": race_no or None,
+            "date": race_date.isoformat(),
             "start": no,
             "gate": gate,
             "track": track,
-            "jockey": jockey.strip(),
+            "jockey": match.group("jockey").strip(),
             "trainer": "",
-            "owner": owner.strip(),
-            "form": form or "",
-            "weight": _number(weight),
+            "owner": owner_part,
+            "age": match.group("age").lower(),
+            "form": form,
+            "weight": _number(match.group("weight")),
             "agf_score": 0.0,
-            "recent_form": _form_score(form or ""),
+            "recent_form": _form_score(form),
             "track_form": 50.0,
             "distance_form": 50.0,
             "jockey_form": 50.0,
             "trainer_form": 50.0,
             "weight_score": 50.0,
-            "distance": distance or 0,
-            "hp": _number(hp),
-            "kgs": _number(kgs),
-            "s20": _number(s20),
+            "distance": distance,
             "scratched": False,
         })
 
-    if not rows:
-        raise RuntimeError("TJK günlük PDF indirildi fakat at satırları ayrıştırılamadı.")
-    return rows
+    # Reject accidental matches from headers, prize tables or betting text.
+    return [
+        row for row in rows
+        if row["race_number"] and row["horse"]
+        and row["jockey"] and row["weight"] > 0
+    ]
 
+
+def collect_tjk_pdf() -> list[dict]:
+    """Fallback: collect the official track-specific TJK daily PDFs."""
+    target_date = _today_tr()
+    day = target_date.isoformat()
+    tracks = (
+        "Adana", "Ankara", "Antalya", "Bursa", "Diyarbakir",
+        "Elazig", "Istanbul", "Izmir", "Kocaeli", "Sanliurfa",
+    )
+    all_rows: list[dict] = []
+    errors: list[str] = []
+
+    for track in tracks:
+        url = (
+            f"https://medya-cdn.tjk.org/raporftp/TJKPDF/{target_date:%Y}/"
+            f"{day}/PDFOzet/GunlukYarisProgrami/"
+            f"{target_date:%d.%m.%Y}-{track}-GunlukYarisProgrami-TR.pdf"
+        )
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=(10, 35))
+            if response.status_code == 404:
+                continue
+            response.raise_for_status()
+            if not response.content.startswith(b"%PDF"):
+                raise RuntimeError("CDN response is not a PDF")
+            from pypdf import PdfReader
+            with tempfile.TemporaryDirectory() as tmp:
+                pdf_path = Path(tmp) / f"{track}.pdf"
+                pdf_path.write_bytes(response.content)
+                reader = PdfReader(str(pdf_path))
+                pdf_text = "\n".join(page.extract_text() or "" for page in reader.pages)
+
+            parsed = _parse_current_tjk_pdf_text(pdf_text, target_date, track)
+            if parsed:
+                all_rows.extend(parsed)
+                print(f"TJK PDF parsed: {track} | {len(parsed)} horses | {len(reader.pages)} pages")
+            else:
+                errors.append(f"{track}: PDF downloaded but current table rows were not recognized")
+        except Exception as exc:
+            errors.append(f"{track}: {exc}")
+
+    if not all_rows:
+        raise RuntimeError(
+            "TJK resmi günlük PDF'leri indirildi/denendi fakat geçerli at satırı çıkarılamadı. "
+            + "; ".join(errors[-5:])
+        )
+
+    # A horse can appear only once per track/race/start combination.
+    unique: dict[tuple[str, str, str, str], dict] = {}
+    for row in all_rows:
+        key = (row["date"], row["track"], str(row["race_number"]), str(row["start"]))
+        unique[key] = row
+    return [row for row in unique.values() if not row.get("scratched")]
 
 def collect_public_html_fallback() -> list[dict]:
     """Robust HTML fallback using the site's rendered table structure, not pandas column inference."""
-    target_date = date.today()
+    target_date = _today_tr()
     month_names = {
         1: "ocak", 2: "subat", 3: "mart", 4: "nisan", 5: "mayis", 6: "haziran",
         7: "temmuz", 8: "agustos", 9: "eylul", 10: "ekim", 11: "kasim", 12: "aralik",
@@ -672,7 +710,7 @@ def collect() -> list[dict]:
 def main() -> None:
     rows = collect()
     payload = {
-        "date": date.today().isoformat(),
+        "date": _today_tr().isoformat(),
         "count": len(rows),
         "source": "TJK e-Bayi JSON / TJK AJAX / PDF / HTML fallback",
         "horses": rows,
