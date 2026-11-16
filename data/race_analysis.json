@@ -1,177 +1,147 @@
 [
   {
     "race": "1",
-    "field_size": 11,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "AĞASAÇAN",
-        "start": "1",
-        "probability": 0.091034,
-        "fair_odds": 10.985,
-        "edge": null
-      },
-      {
-        "horse": "ŞAHKAYA",
-        "start": "2",
-        "probability": 0.090999,
-        "fair_odds": 10.989,
-        "edge": null
-      },
-      {
-        "horse": "SEVDA MEVSİMİ",
+        "horse": "RAŞAMO",
         "start": "5",
-        "probability": 0.090915,
-        "fair_odds": 10.999,
+        "probability": 0.111145,
+        "fair_odds": 8.997,
+        "edge": null
+      },
+      {
+        "horse": "ARSLANBEYLİ",
+        "start": "1",
+        "probability": 0.11112,
+        "fair_odds": 8.999,
+        "edge": null
+      },
+      {
+        "horse": "KUMKADI ASLANI",
+        "start": "2",
+        "probability": 0.11112,
+        "fair_odds": 8.999,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.441,
+    "data_quality": 0.333,
     "banko_candidate": false
   },
   {
     "race": "2",
-    "field_size": 8,
+    "field_size": 11,
     "top3": [
       {
-        "horse": "SUFERING",
+        "horse": "TM BATAILE",
         "start": "7",
-        "probability": 0.125091,
-        "fair_odds": 7.994,
+        "probability": 0.091133,
+        "fair_odds": 10.973,
         "edge": null
       },
       {
-        "horse": "DALLAS MAN",
-        "start": "1",
-        "probability": 0.124989,
-        "fair_odds": 8.001,
+        "horse": "ALPS FIRE",
+        "start": "6",
+        "probability": 0.090951,
+        "fair_odds": 10.995,
         "edge": null
       },
       {
-        "horse": "DİONER",
-        "start": "2",
-        "probability": 0.124989,
-        "fair_odds": 8.001,
+        "horse": "İŞİN ASLI",
+        "start": "8",
+        "probability": 0.090908,
+        "fair_odds": 11.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.286,
+    "data_quality": 0.532,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 12,
+    "field_size": 14,
     "top3": [
       {
-        "horse": "PİSİFORMİS",
-        "start": "1",
-        "probability": 0.083476,
-        "fair_odds": 11.979,
+        "horse": "TEKNİKTAKTİK",
+        "start": "2",
+        "probability": 0.07162,
+        "fair_odds": 13.963,
         "edge": null
       },
       {
-        "horse": "KING ULUDAĞ",
-        "start": "4",
-        "probability": 0.083476,
-        "fair_odds": 11.979,
-        "edge": null
-      },
-      {
-        "horse": "EYLÜLSEL",
+        "horse": "KAYALARIN ASLANI",
         "start": "5",
-        "probability": 0.083455,
-        "fair_odds": 11.983,
+        "probability": 0.071472,
+        "fair_odds": 13.991,
+        "edge": null
+      },
+      {
+        "horse": "TÜMERK",
+        "start": "9",
+        "probability": 0.071438,
+        "fair_odds": 13.998,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.464,
+    "data_quality": 0.418,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 9,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "HÜLYA ÇİÇEĞİ",
-        "start": "8",
-        "probability": 0.111135,
-        "fair_odds": 8.998,
+        "horse": "NOBIL BIGTIME",
+        "start": "7",
+        "probability": 0.100012,
+        "fair_odds": 9.999,
         "edge": null
       },
       {
-        "horse": "BALTAZARR",
-        "start": "1",
-        "probability": 0.111117,
-        "fair_odds": 9.0,
-        "edge": null
-      },
-      {
-        "horse": "HYPER ROCKER",
+        "horse": "ALBORA KHAN",
         "start": "2",
-        "probability": 0.111117,
-        "fair_odds": 9.0,
+        "probability": 0.100003,
+        "fair_odds": 10.0,
+        "edge": null
+      },
+      {
+        "horse": "COLLECTOR MAN",
+        "start": "3",
+        "probability": 0.100003,
+        "fair_odds": 10.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.397,
+    "data_quality": 0.257,
     "banko_candidate": false
   },
   {
     "race": "5",
-    "field_size": 9,
+    "field_size": 6,
     "top3": [
       {
-        "horse": "RUNNER ON RIVER",
-        "start": "9",
-        "probability": 0.11127,
-        "fair_odds": 8.987,
+        "horse": "KEÇİKHAN",
+        "start": "4",
+        "probability": 0.167042,
+        "fair_odds": 5.987,
         "edge": null
       },
       {
-        "horse": "DOLCE MARE",
-        "start": "3",
-        "probability": 0.111177,
-        "fair_odds": 8.995,
+        "horse": "LORD OF YILDIZER",
+        "start": "5",
+        "probability": 0.166716,
+        "fair_odds": 5.998,
         "edge": null
       },
       {
-        "horse": "LEVERO",
+        "horse": "LOST TREASURE",
         "start": "1",
-        "probability": 0.111088,
-        "fair_odds": 9.002,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.46,
-    "banko_candidate": false
-  },
-  {
-    "race": "6",
-    "field_size": 8,
-    "top3": [
-      {
-        "horse": "REFLECTED GLORY",
-        "start": "3",
-        "probability": 0.125153,
-        "fair_odds": 7.99,
-        "edge": null
-      },
-      {
-        "horse": "NIGHTFLYERS",
-        "start": "6",
-        "probability": 0.125056,
-        "fair_odds": 7.996,
-        "edge": null
-      },
-      {
-        "horse": "BLACK PABLO",
-        "start": "2",
-        "probability": 0.124991,
-        "fair_odds": 8.001,
+        "probability": 0.166562,
+        "fair_odds": 6.004,
         "edge": null
       }
     ],
@@ -180,63 +150,63 @@
     "banko_candidate": false
   },
   {
-    "race": "7",
-    "field_size": 7,
+    "race": "6",
+    "field_size": 10,
     "top3": [
       {
-        "horse": "FIRE OF VALERIA",
-        "start": "2",
-        "probability": 0.143036,
-        "fair_odds": 6.991,
-        "edge": null
-      },
-      {
-        "horse": "ASPUWA",
-        "start": "1",
-        "probability": 0.142832,
-        "fair_odds": 7.001,
-        "edge": null
-      },
-      {
-        "horse": "TORYUMLU",
+        "horse": "DESPOTLU",
         "start": "5",
-        "probability": 0.142832,
-        "fair_odds": 7.001,
+        "probability": 0.100092,
+        "fair_odds": 9.991,
+        "edge": null
+      },
+      {
+        "horse": "VİZİGOT",
+        "start": "8",
+        "probability": 0.100009,
+        "fair_odds": 9.999,
+        "edge": null
+      },
+      {
+        "horse": "AYTEKİNBEY",
+        "start": "1",
+        "probability": 0.1,
+        "fair_odds": 10.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.388,
+    "data_quality": 0.343,
     "banko_candidate": false
   },
   {
-    "race": "8",
-    "field_size": 11,
+    "race": "7",
+    "field_size": 14,
     "top3": [
       {
-        "horse": "QUEIMADA GRANDE",
-        "start": "1",
-        "probability": 0.0911,
-        "fair_odds": 10.977,
+        "horse": "TATARUŞAĞI",
+        "start": "2",
+        "probability": 0.071521,
+        "fair_odds": 13.982,
         "edge": null
       },
       {
-        "horse": "GENGAR",
-        "start": "9",
-        "probability": 0.090938,
-        "fair_odds": 10.996,
+        "horse": "ÇUBUKLU",
+        "start": "10",
+        "probability": 0.07147,
+        "fair_odds": 13.992,
         "edge": null
       },
       {
-        "horse": "FALCONGIRL",
-        "start": "11",
-        "probability": 0.090932,
-        "fair_odds": 10.997,
+        "horse": "KOPUK UÇURTMA",
+        "start": "4",
+        "probability": 0.071446,
+        "fair_odds": 13.997,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.519,
+    "data_quality": 0.5,
     "banko_candidate": false
   }
 ]
