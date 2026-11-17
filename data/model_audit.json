@@ -1,8 +1,8 @@
 {
   "status": "usable",
-  "rows": 3688,
-  "races": 437,
-  "winners": 359,
+  "rows": 3838,
+  "races": 519,
+  "winners": 366,
   "date_min": "2026-08-22",
   "date_max": "2026-09-20",
   "feature_missing_rate": {
