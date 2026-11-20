@@ -1,160 +1,160 @@
 {
-  "data_rows": 5818,
-  "evaluated_races_heuristic": 368,
+  "data_rows": 5912,
+  "evaluated_races_heuristic": 374,
   "heuristic": {
-    "races": 368,
-    "top1_hit_rate": 0.24728260869565216,
-    "top3_coverage": 0.49184782608695654,
-    "brier_score": 0.09210966434158797,
-    "log_loss": 0.32666189052123545
+    "races": 374,
+    "top1_hit_rate": 0.24866310160427807,
+    "top3_coverage": 0.5,
+    "brier_score": 0.0931527367511907,
+    "log_loss": 0.3291378659764498
   },
   "heuristic_calibration": [
     {
       "bin": "0.0-0.1",
-      "count": 2801,
-      "mean_predicted": 0.044628,
-      "observed_win_rate": 0.074616
+      "count": 2805,
+      "mean_predicted": 0.044696,
+      "observed_win_rate": 0.07451
     },
     {
       "bin": "0.1-0.2",
-      "count": 518,
-      "mean_predicted": 0.141848,
-      "observed_win_rate": 0.098456
+      "count": 539,
+      "mean_predicted": 0.142185,
+      "observed_win_rate": 0.09833
     },
     {
       "bin": "0.2-0.3",
-      "count": 177,
-      "mean_predicted": 0.245298,
-      "observed_win_rate": 0.186441
+      "count": 184,
+      "mean_predicted": 0.24535,
+      "observed_win_rate": 0.190217
     },
     {
       "bin": "0.3-0.4",
-      "count": 111,
-      "mean_predicted": 0.340241,
-      "observed_win_rate": 0.171171
+      "count": 117,
+      "mean_predicted": 0.34069,
+      "observed_win_rate": 0.162393
     },
     {
       "bin": "0.4-0.5",
-      "count": 81,
-      "mean_predicted": 0.446859,
-      "observed_win_rate": 0.271605
+      "count": 83,
+      "mean_predicted": 0.447253,
+      "observed_win_rate": 0.26506
     },
     {
       "bin": "0.5-0.6",
-      "count": 71,
-      "mean_predicted": 0.549487,
-      "observed_win_rate": 0.211268
+      "count": 72,
+      "mean_predicted": 0.54978,
+      "observed_win_rate": 0.208333
     },
     {
       "bin": "0.6-0.7",
-      "count": 64,
-      "mean_predicted": 0.6523,
-      "observed_win_rate": 0.21875
+      "count": 70,
+      "mean_predicted": 0.651681,
+      "observed_win_rate": 0.2
     },
     {
       "bin": "0.7-0.8",
-      "count": 38,
-      "mean_predicted": 0.74222,
-      "observed_win_rate": 0.157895
+      "count": 46,
+      "mean_predicted": 0.743181,
+      "observed_win_rate": 0.173913
     },
     {
       "bin": "0.8-0.9",
-      "count": 27,
-      "mean_predicted": 0.821305,
-      "observed_win_rate": 0.037037
+      "count": 31,
+      "mean_predicted": 0.821743,
+      "observed_win_rate": 0.032258
     },
     {
       "bin": "0.9-1.0",
-      "count": 3888,
-      "mean_predicted": 0.114969,
-      "observed_win_rate": 0.095165
+      "count": 3947,
+      "mean_predicted": 0.118824,
+      "observed_win_rate": 0.095262
     }
   ],
   "lightgbm_oos": {
     "method": "expanding-window LightGBM, strict pre-date OOS",
     "metrics": {
-      "races": 205,
-      "top1_hit_rate": 0.24390243902439024,
-      "top3_coverage": 0.551219512195122,
-      "brier_score": 0.08396551371632205,
-      "log_loss": 0.30129277360766776
+      "races": 207,
+      "top1_hit_rate": 0.2463768115942029,
+      "top3_coverage": 0.5555555555555556,
+      "brier_score": 0.08453160915491222,
+      "log_loss": 0.30285202484065415
     },
     "calibration": [
       {
         "bin": "0.0-0.1",
-        "count": 1417,
-        "mean_predicted": 0.07318,
-        "observed_win_rate": 0.066337
+        "count": 1410,
+        "mean_predicted": 0.073357,
+        "observed_win_rate": 0.068794
       },
       {
         "bin": "0.1-0.2",
-        "count": 612,
-        "mean_predicted": 0.131484,
-        "observed_win_rate": 0.133987
+        "count": 616,
+        "mean_predicted": 0.130142,
+        "observed_win_rate": 0.133117
       },
       {
         "bin": "0.2-0.3",
-        "count": 76,
-        "mean_predicted": 0.238965,
-        "observed_win_rate": 0.197368
+        "count": 93,
+        "mean_predicted": 0.243231,
+        "observed_win_rate": 0.150538
       },
       {
         "bin": "0.3-0.4",
-        "count": 62,
-        "mean_predicted": 0.334492,
-        "observed_win_rate": 0.177419
+        "count": 70,
+        "mean_predicted": 0.335209,
+        "observed_win_rate": 0.142857
       },
       {
         "bin": "0.4-0.5",
-        "count": 38,
-        "mean_predicted": 0.473582,
-        "observed_win_rate": 0.078947
+        "count": 42,
+        "mean_predicted": 0.477375,
+        "observed_win_rate": 0.095238
       },
       {
         "bin": "0.5-0.6",
-        "count": 37,
-        "mean_predicted": 0.520026,
-        "observed_win_rate": 0.054054
+        "count": 40,
+        "mean_predicted": 0.517088,
+        "observed_win_rate": 0.05
       },
       {
         "bin": "0.6-0.7",
-        "count": 1,
-        "mean_predicted": 0.698275,
+        "count": 4,
+        "mean_predicted": 0.645084,
         "observed_win_rate": 0.0
       },
       {
         "bin": "0.9-1.0",
-        "count": 4116,
-        "mean_predicted": 0.518465,
-        "observed_win_rate": 0.112245
+        "count": 4183,
+        "mean_predicted": 0.521396,
+        "observed_win_rate": 0.111881
       }
     ],
     "feature_importance_mean_gain": {
-      "agf_score": 5562.638919,
-      "hp": 2188.743158,
-      "weight_score": 1399.076524,
-      "trainer_form": 684.037932,
-      "recent_form": 590.360694,
-      "distance_form": 511.147409,
-      "track_form": 482.643769,
-      "history_count": 358.554546,
-      "jockey_form": 357.041201
+      "agf_score": 5607.526125,
+      "hp": 2159.183582,
+      "weight_score": 1463.839298,
+      "trainer_form": 692.562976,
+      "recent_form": 582.312048,
+      "distance_form": 571.798053,
+      "track_form": 501.336764,
+      "history_count": 397.297764,
+      "jockey_form": 365.671012
     },
-    "oos_rows": 4116,
-    "oos_dates": 60,
+    "oos_rows": 4183,
+    "oos_dates": 61,
     "skipped_dates": [],
     "note": "For each target date, training uses only earlier dates. The final learner is refit on all known pre-target races. Calibration is fitted on a trailing historical slice that also precedes the target date. Same-day history is excluded."
   },
   "comparison": {
-    "heuristic_top1": 0.24728260869565216,
-    "lightgbm_top1": 0.24390243902439024,
-    "heuristic_top3": 0.49184782608695654,
-    "lightgbm_top3": 0.551219512195122,
-    "heuristic_brier": 0.09210966434158797,
-    "lightgbm_brier": 0.08396551371632205,
-    "heuristic_log_loss": 0.32666189052123545,
-    "lightgbm_log_loss": 0.30129277360766776,
-    "lightgbm_evaluated_races": 205
+    "heuristic_top1": 0.24866310160427807,
+    "lightgbm_top1": 0.2463768115942029,
+    "heuristic_top3": 0.5,
+    "lightgbm_top3": 0.5555555555555556,
+    "heuristic_brier": 0.0931527367511907,
+    "lightgbm_brier": 0.08453160915491222,
+    "heuristic_log_loss": 0.3291378659764498,
+    "lightgbm_log_loss": 0.30285202484065415,
+    "lightgbm_evaluated_races": 207
   },
   "method": "strict pre-date leakage-free historical backtest",
   "data_note": "historical_results.csv contains 2026-08-22 through 2026-09-20 Turkish race results. Same-day prior races are excluded because reliable intra-day ordering is not encoded in the training features."

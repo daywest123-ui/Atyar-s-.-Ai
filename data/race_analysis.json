@@ -4,171 +4,141 @@
     "field_size": 7,
     "top3": [
       {
-        "horse": "YONAGUNI",
-        "start": "2",
-        "probability": 0.14309,
-        "fair_odds": 6.989,
-        "edge": null
-      },
-      {
-        "horse": "BERNAMCAN",
-        "start": "7",
-        "probability": 0.142868,
+        "horse": "MY MOON",
+        "start": "3",
+        "probability": 0.142875,
         "fair_odds": 6.999,
         "edge": null
       },
       {
-        "horse": "DRAGON IS FATHER",
+        "horse": "DEEP IRON",
+        "start": "2",
+        "probability": 0.142867,
+        "fair_odds": 6.999,
+        "edge": null
+      },
+      {
+        "horse": "BLACK RUBY",
         "start": "4",
-        "probability": 0.14284,
-        "fair_odds": 7.001,
+        "probability": 0.142867,
+        "fair_odds": 6.999,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.551,
+    "data_quality": 0.388,
     "banko_candidate": false
   },
   {
     "race": "2",
-    "field_size": 10,
+    "field_size": 9,
     "top3": [
       {
-        "horse": "KONGUR",
-        "start": "3",
-        "probability": 0.100013,
-        "fair_odds": 9.999,
-        "edge": null
-      },
-      {
-        "horse": "SÜLEYMAN AĞA",
-        "start": "5",
-        "probability": 0.100013,
-        "fair_odds": 9.999,
-        "edge": null
-      },
-      {
-        "horse": "ASUMAN ABLA",
+        "horse": "SABIRLI RIBELLA",
         "start": "6",
-        "probability": 0.100013,
-        "fair_odds": 9.999,
+        "probability": 0.111153,
+        "fair_odds": 8.997,
+        "edge": null
+      },
+      {
+        "horse": "MADAME ELİS",
+        "start": "3",
+        "probability": 0.111135,
+        "fair_odds": 8.998,
+        "edge": null
+      },
+      {
+        "horse": "ANATOLIAN SEA",
+        "start": "1",
+        "probability": 0.111102,
+        "fair_odds": 9.001,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.371,
+    "data_quality": 0.27,
     "banko_candidate": false
   },
   {
     "race": "3",
-    "field_size": 11,
+    "field_size": 13,
     "top3": [
       {
-        "horse": "DEĞERHAN",
-        "start": "10",
-        "probability": 0.090987,
-        "fair_odds": 10.991,
+        "horse": "LIFE AND LIGHT",
+        "start": "7",
+        "probability": 0.077036,
+        "fair_odds": 12.981,
         "edge": null
       },
       {
-        "horse": "RAVENCO",
-        "start": "1",
-        "probability": 0.090907,
-        "fair_odds": 11.0,
+        "horse": "NORTH DANCER",
+        "start": "9",
+        "probability": 0.076968,
+        "fair_odds": 12.992,
         "edge": null
       },
       {
-        "horse": "KIRKLAR DAĞI",
-        "start": "3",
-        "probability": 0.090907,
-        "fair_odds": 11.0,
+        "horse": "SPEEDTAIL",
+        "start": "2",
+        "probability": 0.076943,
+        "fair_odds": 12.997,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.286,
+    "data_quality": 0.439,
     "banko_candidate": false
   },
   {
     "race": "4",
-    "field_size": 11,
+    "field_size": 10,
     "top3": [
       {
-        "horse": "ASTAKOS",
-        "start": "8",
-        "probability": 0.090964,
-        "fair_odds": 10.993,
+        "horse": "YOU ARE GREAT",
+        "start": "10",
+        "probability": 0.10007,
+        "fair_odds": 9.993,
         "edge": null
       },
       {
-        "horse": "ÇİLDUTAY",
-        "start": "7",
-        "probability": 0.090949,
-        "fair_odds": 10.995,
+        "horse": "MAGIC SURPRISE",
+        "start": "3",
+        "probability": 0.100002,
+        "fair_odds": 10.0,
         "edge": null
       },
       {
-        "horse": "MUKATOVİÇ",
+        "horse": "HASTA FINAL",
         "start": "1",
-        "probability": 0.090899,
-        "fair_odds": 11.001,
+        "probability": 0.099997,
+        "fair_odds": 10.0,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.247,
+    "data_quality": 0.357,
     "banko_candidate": false
   },
   {
     "race": "5",
-    "field_size": 10,
-    "top3": [
-      {
-        "horse": "BIG HONEY",
-        "start": "3",
-        "probability": 0.10004,
-        "fair_odds": 9.996,
-        "edge": null
-      },
-      {
-        "horse": "CHOSEN ONE DB SKG SK (K)",
-        "start": "4",
-        "probability": 0.100004,
-        "fair_odds": 10.0,
-        "edge": null
-      },
-      {
-        "horse": "TANGÜL HANIM",
-        "start": "5",
-        "probability": 0.100004,
-        "fair_odds": 10.0,
-        "edge": null
-      }
-    ],
-    "skip_gate": true,
-    "data_quality": 0.343,
-    "banko_candidate": false
-  },
-  {
-    "race": "6",
     "field_size": 7,
     "top3": [
       {
-        "horse": "BLACK BLAZE",
-        "start": "6",
-        "probability": 0.142958,
-        "fair_odds": 6.995,
+        "horse": "SİHİRLİ JOVANKA",
+        "start": "2",
+        "probability": 0.142877,
+        "fair_odds": 6.999,
         "edge": null
       },
       {
-        "horse": "BAHRİYELİ ÇİKOK",
+        "horse": "TOULAYNA",
         "start": "3",
-        "probability": 0.142908,
-        "fair_odds": 6.998,
+        "probability": 0.142877,
+        "fair_odds": 6.999,
         "edge": null
       },
       {
-        "horse": "EL ALACRAN",
+        "horse": "WALTZ WITH DREAMS",
         "start": "4",
         "probability": 0.142877,
         "fair_odds": 6.999,
@@ -176,32 +146,32 @@
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.53,
+    "data_quality": 0.306,
     "banko_candidate": false
   },
   {
-    "race": "7",
-    "field_size": 5,
+    "race": "6",
+    "field_size": 10,
     "top3": [
       {
-        "horse": "WHISPER OF VICTORY",
-        "start": "5",
-        "probability": 0.20015,
-        "fair_odds": 4.996,
-        "edge": null
-      },
-      {
-        "horse": "KING OF MUNZUR",
+        "horse": "EŞAY",
         "start": "2",
-        "probability": 0.199987,
-        "fair_odds": 5.0,
+        "probability": 0.100042,
+        "fair_odds": 9.996,
         "edge": null
       },
       {
-        "horse": "SWORD MASTER",
+        "horse": "LAVİN FIRTINASI",
         "start": "3",
-        "probability": 0.199987,
-        "fair_odds": 5.0,
+        "probability": 0.100009,
+        "fair_odds": 9.999,
+        "edge": null
+      },
+      {
+        "horse": "ZAMAN HARİKA",
+        "start": "7",
+        "probability": 0.100009,
+        "fair_odds": 9.999,
         "edge": null
       }
     ],
@@ -210,33 +180,33 @@
     "banko_candidate": false
   },
   {
-    "race": "8",
-    "field_size": 11,
+    "race": "7",
+    "field_size": 14,
     "top3": [
       {
-        "horse": "BAŞKUT ANA",
-        "start": "6",
-        "probability": 0.090987,
-        "fair_odds": 10.991,
+        "horse": "HUN DAY",
+        "start": "5",
+        "probability": 0.07152,
+        "fair_odds": 13.982,
         "edge": null
       },
       {
-        "horse": "ASİLİN GÜCÜ",
-        "start": "1",
-        "probability": 0.090907,
-        "fair_odds": 11.0,
-        "edge": null
-      },
-      {
-        "horse": "KANDIRALI",
+        "horse": "KARAKÖPRÜ ATEŞİ",
         "start": "2",
-        "probability": 0.090907,
-        "fair_odds": 11.0,
+        "probability": 0.071461,
+        "fair_odds": 13.994,
+        "edge": null
+      },
+      {
+        "horse": "KÖKBURŞUN",
+        "start": "14",
+        "probability": 0.071451,
+        "fair_odds": 13.996,
         "edge": null
       }
     ],
     "skip_gate": true,
-    "data_quality": 0.286,
+    "data_quality": 0.52,
     "banko_candidate": false
   }
 ]
