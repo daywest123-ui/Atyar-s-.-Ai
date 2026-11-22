@@ -41,6 +41,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,GECENİN ATEŞİ,MEHMET KESKİN,ÖMER FARUK TAN,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,29.59,0,65.0
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,GENERAL SHERMAN,MÜSLÜM ÇELİK,UMUT ÇİÇEK,53.0,1,0.0,50.0,50.0,50.0,50.0,72.0,22.3,0,55.0
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,ONE PAGE,HIŞMAN ÇİZİK,ERGÜN ÇETİNKURT,58.5,3,0.0,50.0,50.0,50.0,50.0,94.0,12.15,0,66.0
+2026-08-22-6-Ankara 75. Yıl Hipodromu,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,ONE PAGE,HIŞMAN ÇİZİK,ERGÜN ÇETİNKURT,58.5,3,0.0,50.0,50.0,50.0,50.0,94.0,12.15,0,66.0
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,SECRET MAN,MEHMET AKYAVUZ,ERDAL AKYAVUZ,60.5,2,0.0,50.0,50.0,50.0,50.0,98.0,8.89,0,70.0
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,SIRIUS BLACK,SERHAT ÇELİK,MEHMET DEMİROL,60.0,8,0.0,50.0,50.0,50.0,50.0,100.0,7.59,0,75.0
 2026-08-22-Ankara 75. Yıl Hipodromu-6,2026-08-22,6,Ankara 75. Yıl Hipodromu,1400.0,TURBO FANI,MÜCAHİT BAYIR,YUNUS TUNCAY,54.5,6,0.0,50.0,50.0,50.0,50.0,78.0,2.96,0,58.0
@@ -80,6 +81,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-22-Diyarbakır Hipodromu-2,2026-08-22,2,Diyarbakır Hipodromu,1800.0,PIRATE OF THE SEA,AZİZ AKDEMİR,MEHRİBAN ÇİÇEK,60.0,12,0.0,50.0,50.0,50.0,50.0,100.0,2.63,0,87.0
 2026-08-22-Diyarbakır Hipodromu-2,2026-08-22,2,Diyarbakır Hipodromu,1800.0,SEEK AND DESTROY,REMZİ DOĞAN,ELİF AÇMAZ,56.5,1,0.0,50.0,50.0,50.0,50.0,86.0,23.3,0,77.0
 2026-08-22-Diyarbakır Hipodromu-2,2026-08-22,2,Diyarbakır Hipodromu,1800.0,SELANİK PRENSİ,İSA AKYAVUZ,MEHMET ALTIN,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,16.74,0,78.0
+2026-08-22-2-Diyarbakır Hipodromu,2026-08-22,2,Diyarbakır Hipodromu,1800.0,SELANİK PRENSİ,İSA AKYAVUZ,MEHMET ALTIN,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,16.74,0,78.0
 2026-08-22-Diyarbakır Hipodromu-2,2026-08-22,2,Diyarbakır Hipodromu,1800.0,SPEEDING BULLET,SAMİ KAPLAN,HASAN TEKİNALP,56.0,4,0.0,50.0,50.0,50.0,50.0,84.0,1.96,0,63.0
 2026-08-22-2-Diyarbakır Hipodromu,2026-08-22,2,Diyarbakır Hipodromu,1800.0,SPEEDING BULLET,SAMİ KAPLAN,HASAN TEKİNALP,56.0,4,0.0,50.0,50.0,50.0,50.0,84.0,1.96,0,63.0
 2026-08-22-Diyarbakır Hipodromu-3,2026-08-22,3,Diyarbakır Hipodromu,1200.0,APOLACYPSE,ABDULLAH ÇANKAYA,ELİF AÇMAZ,61.5,10,0.0,50.0,50.0,50.0,50.0,94.0,3.29,0,52.0
@@ -129,6 +131,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,PRENSES DİLARA,AZİZ AKDEMİR,MEHMET ASLAN,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,3.62,0,75.0
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,TARGUTAY,ABDULLAH ÇANKAYA,SÜLEYMAN KARAKEÇİLİ,56.0,8,0.0,50.0,50.0,50.0,50.0,84.0,1.72,0,72.0
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,YEDİKARDEŞLER,LEVENT TAPTIK,MEHMET KAYA,58.0,14,0.0,50.0,50.0,50.0,50.0,92.0,1.23,0,65.0
+2026-08-22-6-Diyarbakır Hipodromu,2026-08-22,6,Diyarbakır Hipodromu,1200.0,YEDİKARDEŞLER,LEVENT TAPTIK,MEHMET KAYA,58.0,14,0.0,50.0,50.0,50.0,50.0,92.0,1.23,0,65.0
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,YOLKIRAN,REMZİ DOĞAN,MEHMET ALTIN,61.0,11,0.0,50.0,50.0,50.0,50.0,96.0,2.64,0,60.0
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,ÖMERİNOĞLU,İLKER AKIN,ELİF AÇMAZ,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,3.57,0,56.0
 2026-08-22-Diyarbakır Hipodromu-6,2026-08-22,6,Diyarbakır Hipodromu,1200.0,ÖZARAS,ÇETİN CANPOLAT,BAHATTİN DEMİRKAPU,56.0,12,0.0,50.0,50.0,50.0,50.0,84.0,0.61,0,59.0
@@ -256,6 +259,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-24-Elazığ Hipodromu-2,2026-08-24,2,Elazığ Hipodromu,1800.0,MELONI,METE GÖL,ELİF AÇMAZ,51.5,2,0.0,50.0,50.0,50.0,50.0,66.0,8.21,0,31.0
 2026-08-24-Elazığ Hipodromu-2,2026-08-24,2,Elazığ Hipodromu,1800.0,MELİS HANIM,MAZLUM PİR DEMİR,MUHAMMED BULUÇ,63.0,7,0.0,50.0,50.0,50.0,50.0,88.0,13.13,0,54.0
 2026-08-24-Elazığ Hipodromu-2,2026-08-24,2,Elazığ Hipodromu,1800.0,THON KHITCHIBA,HAKİM YÖNDEN,HAKAN ATAKAYA,52.5,5,0.0,50.0,50.0,50.0,50.0,70.0,18.16,0,42.0
+2026-08-24-2-Elazığ Hipodromu,2026-08-24,2,Elazığ Hipodromu,1800.0,THON KHITCHIBA,HAKİM YÖNDEN,HAKAN ATAKAYA,52.5,5,0.0,50.0,50.0,50.0,50.0,70.0,18.16,0,42.0
 2026-08-24-Elazığ Hipodromu-2,2026-08-24,2,Elazığ Hipodromu,1800.0,TRUST MY SPEED,ÇAĞLAR TAŞCI,MAHMUT DOĞAN,57.0,1,0.0,50.0,50.0,50.0,50.0,88.0,7.88,0,44.0
 2026-08-24-Elazığ Hipodromu-3,2026-08-24,3,Elazığ Hipodromu,1200.0,ADANALI DEMİR,AZİZ AKDEMİR,İBRAHİM ATMACA,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,13.09,0,25.0
 2026-08-24-3-Elazığ Hipodromu,2026-08-24,3,Elazığ Hipodromu,1200.0,ADANALI DEMİR,AZİZ AKDEMİR,İBRAHİM ATMACA,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,13.09,0,25.0
@@ -284,6 +288,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-24-Elazığ Hipodromu-4,2026-08-24,4,Elazığ Hipodromu,2000.0,SAKAMOTO,AHMET HASAN BAYAR,ERCAN ALTIN,56.0,10,0.0,50.0,50.0,50.0,50.0,84.0,0.58,0,18.0
 2026-08-24-Elazığ Hipodromu-4,2026-08-24,4,Elazığ Hipodromu,2000.0,VERMİTHRAX,HAKİM YÖNDEN,ERCAN ALTIN,52.0,7,0.0,50.0,50.0,50.0,50.0,68.0,1.18,0,62.0
 2026-08-24-Elazığ Hipodromu-4,2026-08-24,4,Elazığ Hipodromu,2000.0,ŞERDİL,NECMİ ALTIN,ZEKERİYA AKDEMİR,56.0,8,0.0,50.0,50.0,50.0,50.0,84.0,6.91,0,69.0
+2026-08-24-4-Elazığ Hipodromu,2026-08-24,4,Elazığ Hipodromu,2000.0,ŞERDİL,NECMİ ALTIN,ZEKERİYA AKDEMİR,56.0,8,0.0,50.0,50.0,50.0,50.0,84.0,6.91,0,69.0
 2026-08-24-Elazığ Hipodromu-5,2026-08-24,5,Elazığ Hipodromu,1200.0,ALELADE HEJA,SAMİ KAPLAN,EYYÜP YARDIMCI,55.0,10,0.0,50.0,50.0,50.0,50.0,80.0,0.82,0,10.0
 2026-08-24-Elazığ Hipodromu-5,2026-08-24,5,Elazığ Hipodromu,1200.0,ATAKAYA HÜKÜMDARI,MUHAMMED BARAN ÇAKMAK,HAKAN ATAKAYA,54.0,5,0.0,50.0,50.0,50.0,50.0,76.0,2.23,0,14.0
 2026-08-24-Elazığ Hipodromu-5,2026-08-24,5,Elazığ Hipodromu,1200.0,CANU CİGER,AZİZ AKDEMİR,SÜLEYMAN KARAKEÇİLİ,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,7.41,0,24.0
@@ -311,6 +316,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-24-7-Elazığ Hipodromu,2026-08-24,7,Elazığ Hipodromu,1200.0,ALPERİN KIZI,MUHAMMED BARAN ÇAKMAK,FİGEN BAKIR,56.0,7,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,31.0
 2026-08-24-Elazığ Hipodromu-7,2026-08-24,7,Elazığ Hipodromu,1200.0,AŞAN STAR,FERİT YARDIMCI,EYYÜP YARDIMCI,59.0,1,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,31.0
 2026-08-24-Elazığ Hipodromu-7,2026-08-24,7,Elazığ Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,VELİ ÇİZİK,59.0,2,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,32.0
+2026-08-24-7-Elazığ Hipodromu,2026-08-24,7,Elazığ Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,VELİ ÇİZİK,59.0,2,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,32.0
 2026-08-24-Elazığ Hipodromu-7,2026-08-24,7,Elazığ Hipodromu,1200.0,GODDESS OF BEAUTY,REMZİ DOĞAN,VELİ ÇİZİK,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,31.0
 2026-08-24-Elazığ Hipodromu-7,2026-08-24,7,Elazığ Hipodromu,1200.0,LEYDİ STARK,İSA AKYAVUZ,MUHAMMED BULUÇ,59.0,6,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,32.0
 2026-08-24-Elazığ Hipodromu-7,2026-08-24,7,Elazığ Hipodromu,1200.0,VOOYASUB,AZİZ AKDEMİR,İBRAHİM ATMACA,59.0,4,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,31.0
@@ -423,6 +429,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-25-Ankara 75. Yıl Hipodromu-9,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,URAZ,MERT ALİ SOLMAZ,VEDAT YILDIRIM,57.0,8,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-25-Ankara 75. Yıl Hipodromu-9,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,UÇAN DERAY,MEHMET KESKİN,MEHMET ARSLAN,55.0,15,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,0.0
 2026-08-25-Ankara 75. Yıl Hipodromu-9,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,ZUBİR,MÜSLÜM ÇELİK,YUSUF UÇAR,57.0,9,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
+2026-08-25-9-Ankara 75. Yıl Hipodromu,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,ZUBİR,MÜSLÜM ÇELİK,YUSUF UÇAR,57.0,9,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-25-Ankara 75. Yıl Hipodromu-9,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,ÖZMİRDAS,FESİH ÇETİNBAŞ,SERVET DOĞAN,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-25-Ankara 75. Yıl Hipodromu-9,2026-08-25,9,Ankara 75. Yıl Hipodromu,1200.0,İSKENDEROVA,ROJHAT KURT,HÜSEYİN ATAŞ,53.0,14,0.0,50.0,50.0,50.0,50.0,72.0,0.0,0,0.0
 2026-08-25-Kocaeli Kartepe Hipodromu-1,2026-08-25,1,Kocaeli Kartepe Hipodromu,1200.0,ALL THE STARS,TOLGA YILDIZ,HASAN DOLMAZ,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,2.39,0,22.0
@@ -451,6 +458,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,ARZUDAR,MEHMET TAHA COŞKUN,MEHMET ALİ İNCESOY,63.0,11,0.0,50.0,50.0,50.0,50.0,88.0,4.17,0,64.0
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,GÜMBÜRBERK,MEHMET ÇELİK,SERHAT POLAT,61.5,7,0.0,50.0,50.0,50.0,50.0,94.0,16.23,0,61.0
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,HİVE SULTAN,İZETTİN GÜREKE,TUBA ÖZTÜRK TİMUR,62.5,8,0.0,50.0,50.0,50.0,50.0,90.0,9.79,0,63.0
+2026-08-25-3-Kocaeli Kartepe Hipodromu,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,HİVE SULTAN,İZETTİN GÜREKE,TUBA ÖZTÜRK TİMUR,62.5,8,0.0,50.0,50.0,50.0,50.0,90.0,9.79,0,63.0
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,KIVIRCIKKIZ,YASİN ŞEREF GÜMÜŞ,DAVUT SAV,54.5,4,0.0,50.0,50.0,50.0,50.0,78.0,10.71,0,47.0
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,KURUÇAY,AHMET EFEKAN ELMAS,TEKİN BİRİCİK,53.5,2,0.0,50.0,50.0,50.0,50.0,74.0,1.73,0,42.0
 2026-08-25-Kocaeli Kartepe Hipodromu-3,2026-08-25,3,Kocaeli Kartepe Hipodromu,1500.0,MEVHİDE HANIM,SERHAT ÇELİK,ŞEVVAL ŞİMAL DEMİR,52.0,6,0.0,50.0,50.0,50.0,50.0,68.0,5.19,0,38.0
@@ -521,10 +529,12 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-25-Kocaeli Kartepe Hipodromu-8,2026-08-25,8,Kocaeli Kartepe Hipodromu,1400.0,YEŞİL İNCİ,GÖKHAN BEKTAŞ,HÜSEYİN KARABULUT,56.0,16,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,39.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,BANDID,MUHAMMED BARAN ÇAKMAK,VELİ ÇİZİK,52.0,1,0.0,50.0,50.0,50.0,50.0,68.0,10.19,0,36.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,BERMEDEE,MEHMET ALİ AKTÜRK,BÜNYAMİN CENGİZ,61.5,4,0.0,50.0,50.0,50.0,50.0,94.0,13.72,0,55.0
+2026-08-26-1-Elazığ Hipodromu,2026-08-26,1,Elazığ Hipodromu,1700.0,BERMEDEE,MEHMET ALİ AKTÜRK,BÜNYAMİN CENGİZ,61.5,4,0.0,50.0,50.0,50.0,50.0,94.0,13.72,0,55.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,CAPTIVATING,FERİT YARDIMCI,MUHAMMED BULUÇ,60.5,6,0.0,50.0,50.0,50.0,50.0,98.0,25.01,0,53.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,EUROFIGHTER,MEHMET TAŞKAYA,MEHMET KAYA,57.5,5,0.0,50.0,50.0,50.0,50.0,90.0,17.49,0,47.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,KING BOREAS,SAMİ KAPLAN,MEHMET KAYA,52.0,3,0.0,50.0,50.0,50.0,50.0,68.0,6.84,0,36.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,SILVEN,İSA AKYAVUZ,KADİR TAŞDEMİR,53.5,2,0.0,50.0,50.0,50.0,50.0,74.0,20.24,0,39.0
+2026-08-26-1-Elazığ Hipodromu,2026-08-26,1,Elazığ Hipodromu,1700.0,SILVEN,İSA AKYAVUZ,KADİR TAŞDEMİR,53.5,2,0.0,50.0,50.0,50.0,50.0,74.0,20.24,0,39.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,ZAEDNO,ÇETİN CANPOLAT,SÜLEYMAN KARAKEÇİLİ,52.0,7,0.0,50.0,50.0,50.0,50.0,68.0,4.5,0,34.0
 2026-08-26-Elazığ Hipodromu-1,2026-08-26,1,Elazığ Hipodromu,1700.0,ŞÜKRÜ ABİ,İLKER AKIN,MEHMET ALTIN,52.0,8,0.0,50.0,50.0,50.0,50.0,68.0,2.02,0,9.0
 2026-08-26-Elazığ Hipodromu-2,2026-08-26,2,Elazığ Hipodromu,1200.0,ADDISON,YUNUS ÇELİKBAŞ,SALİH BECENE,55.0,9,0.0,50.0,50.0,50.0,50.0,80.0,7.74,0,19.0
@@ -549,6 +559,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-26-Elazığ Hipodromu-3,2026-08-26,3,Elazığ Hipodromu,1800.0,SULTAN ASİYE,MEHMET ALİ AKTÜRK,MEHMET ALİ SUBAY,56.0,4,0.0,50.0,50.0,50.0,50.0,84.0,4.69,0,67.0
 2026-08-26-Elazığ Hipodromu-3,2026-08-26,3,Elazığ Hipodromu,1800.0,YALNIZ TURBO,NECMİ ALTIN,ERCAN ALTIN,56.0,3,0.0,50.0,50.0,50.0,50.0,84.0,23.93,0,55.0
 2026-08-26-Elazığ Hipodromu-3,2026-08-26,3,Elazığ Hipodromu,1800.0,ÇIĞGİBİ,ABDULLAH ÇANKAYA,MAHMUT DOĞAN,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,2.7,0,28.0
+2026-08-26-3-Elazığ Hipodromu,2026-08-26,3,Elazığ Hipodromu,1800.0,ÇIĞGİBİ,ABDULLAH ÇANKAYA,MAHMUT DOĞAN,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,2.7,0,28.0
 2026-08-26-Elazığ Hipodromu-3,2026-08-26,3,Elazığ Hipodromu,1800.0,ÇİÇEKMAST,MUSTAFA IŞIK,MAHMUT DOĞAN,56.0,9,0.0,50.0,50.0,50.0,50.0,84.0,5.26,0,48.0
 2026-08-26-Elazığ Hipodromu-4,2026-08-26,4,Elazığ Hipodromu,1200.0,ALİMENDER,İLKER AKIN,KADİR TAŞDEMİR,53.0,7,0.0,50.0,50.0,50.0,50.0,72.0,18.29,0,49.0
 2026-08-26-4-Elazığ Hipodromu,2026-08-26,4,Elazığ Hipodromu,1200.0,ALİMENDER,İLKER AKIN,KADİR TAŞDEMİR,53.0,7,0.0,50.0,50.0,50.0,50.0,72.0,18.29,0,49.0
@@ -631,6 +642,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-27-Ankara 75. Yıl Hipodromu-1,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,EURO POWER,FURKAN ÇETİN,AYKUT ECEVİT BAŞ,60.0,7,0.0,50.0,50.0,50.0,50.0,100.0,3.12,0,39.0
 2026-08-27-Ankara 75. Yıl Hipodromu-1,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,EİKO,MEHMET TAHA COŞKUN,SAVAŞ GÜRKAN,56.5,6,0.0,50.0,50.0,50.0,50.0,86.0,45.96,0,44.0
 2026-08-27-Ankara 75. Yıl Hipodromu-1,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,NAMASTE,MERT UYAR,ARZU KILIÇ,51.5,5,0.0,50.0,50.0,50.0,50.0,66.0,2.67,0,34.0
+2026-08-27-1-Ankara 75. Yıl Hipodromu,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,NAMASTE,MERT UYAR,ARZU KILIÇ,51.5,5,0.0,50.0,50.0,50.0,50.0,66.0,2.67,0,34.0
 2026-08-27-Ankara 75. Yıl Hipodromu-1,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,NART THE BATTLE,BERKANT GÖKÇE,İBRAHİM BEKİROĞULLARI,62.0,2,0.0,50.0,50.0,50.0,50.0,92.0,20.72,0,53.0
 2026-08-27-Ankara 75. Yıl Hipodromu-1,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,THUNDER HORSE,MENNAN BAL,HİKMET TURAN,59.0,8,0.0,50.0,50.0,50.0,50.0,96.0,1.79,0,39.0
 2026-08-27-1-Ankara 75. Yıl Hipodromu,2026-08-27,1,Ankara 75. Yıl Hipodromu,2200.0,THUNDER HORSE,MENNAN BAL,HİKMET TURAN,59.0,8,0.0,50.0,50.0,50.0,50.0,96.0,1.79,0,39.0
@@ -699,6 +711,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-27-Ankara 75. Yıl Hipodromu-9,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,LADY SOVEREIGN,MÜSLÜM ÇELİK,İBRAHİM BEKİROĞULLARI,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-27-9-Ankara 75. Yıl Hipodromu,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,LADY SOVEREIGN,MÜSLÜM ÇELİK,İBRAHİM BEKİROĞULLARI,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-27-Ankara 75. Yıl Hipodromu-9,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,PERIWINKLE,MEHMET AKYAVUZ,ŞEFİK AYDEMİR,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
+2026-08-27-9-Ankara 75. Yıl Hipodromu,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,PERIWINKLE,MEHMET AKYAVUZ,ŞEFİK AYDEMİR,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-08-27-Ankara 75. Yıl Hipodromu-9,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,POTOCHNITSA,ERAY ÇİZİK,MÜCAHİT KAYA,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,28.0
 2026-08-27-Ankara 75. Yıl Hipodromu-9,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,QUEEN ELA,FATİH SULTAN MEHMET SANSAR,KADİR BALTACI,57.0,8,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,17.0
 2026-08-27-Ankara 75. Yıl Hipodromu-9,2026-08-27,9,Ankara 75. Yıl Hipodromu,1400.0,SPIRIT OF LUX,SALİH ÇELİK,İBRAHİM BEKİROĞULLARI,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,29.0
@@ -752,6 +765,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-27-Kocaeli Kartepe Hipodromu-4,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,KIRMÜJDE,UĞUR LEVENT,HAYRİ YILDIRIM,57.5,1,0.0,50.0,50.0,50.0,50.0,90.0,2.02,0,63.0
 2026-08-27-Kocaeli Kartepe Hipodromu-4,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,NUMANIM,MUSTAFA ÇİÇEK,NİHAT KAYA,55.5,12,0.0,50.0,50.0,50.0,50.0,82.0,3.41,0,53.0
 2026-08-27-Kocaeli Kartepe Hipodromu-4,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,ODABAŞI,NİZAMETTİN DEMİR,MEHMET DAŞ,58.0,3,0.0,50.0,50.0,50.0,50.0,92.0,6.42,0,58.0
+2026-08-27-4-Kocaeli Kartepe Hipodromu,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,ODABAŞI,NİZAMETTİN DEMİR,MEHMET DAŞ,58.0,3,0.0,50.0,50.0,50.0,50.0,92.0,6.42,0,58.0
 2026-08-27-Kocaeli Kartepe Hipodromu-4,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,SALAHİYET,YİĞİTCAN GÖKÇE,MEHMET DAŞ,58.5,6,0.0,50.0,50.0,50.0,50.0,94.0,14.68,0,66.0
 2026-08-27-4-Kocaeli Kartepe Hipodromu,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,SALAHİYET,YİĞİTCAN GÖKÇE,MEHMET DAŞ,58.5,6,0.0,50.0,50.0,50.0,50.0,94.0,14.68,0,66.0
 2026-08-27-Kocaeli Kartepe Hipodromu-4,2026-08-27,4,Kocaeli Kartepe Hipodromu,1400.0,SAMET EFENDİ,SERHAT ÇELİK,AYCAN POLAT,58.5,5,0.0,50.0,50.0,50.0,50.0,94.0,17.32,0,68.0
@@ -931,6 +945,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-29-Ankara 75. Yıl Hipodromu-1,2026-08-29,1,Ankara 75. Yıl Hipodromu,1500.0,KARASERHAN,ENES ATLAMAZ,AYKUT AYDIN,53.0,6,0.0,50.0,50.0,50.0,50.0,72.0,2.06,0,0.0
 2026-08-29-Ankara 75. Yıl Hipodromu-1,2026-08-29,1,Ankara 75. Yıl Hipodromu,1500.0,KIZIM SAFİR,MEHMET NURİ SUNKAR,ÜMİT ARSLAN,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,1.43,0,0.0
 2026-08-29-Ankara 75. Yıl Hipodromu-2,2026-08-29,2,Ankara 75. Yıl Hipodromu,1300.0,AKIN BEYLİ,MERT ALİ SOLMAZ,CUMALİ KARATAŞ,52.0,5,0.0,50.0,50.0,50.0,50.0,68.0,1.23,0,42.0
+2026-08-29-2-Ankara 75. Yıl Hipodromu,2026-08-29,2,Ankara 75. Yıl Hipodromu,1300.0,AKIN BEYLİ,MERT ALİ SOLMAZ,CUMALİ KARATAŞ,52.0,5,0.0,50.0,50.0,50.0,50.0,68.0,1.23,0,42.0
 2026-08-29-Ankara 75. Yıl Hipodromu-2,2026-08-29,2,Ankara 75. Yıl Hipodromu,1300.0,CALL ME FREE,MÜCAHİT BAYIR,SATILMIŞ GÖKDEMİR,50.0,2,0.0,50.0,50.0,50.0,50.0,60.0,13.63,0,43.0
 2026-08-29-Ankara 75. Yıl Hipodromu-2,2026-08-29,2,Ankara 75. Yıl Hipodromu,1300.0,EL REY ESCORPİON,FESİH ÇETİNBAŞ,MÜSLÜM DOLAK,53.0,8,0.0,50.0,50.0,50.0,50.0,72.0,0.76,0,49.0
 2026-08-29-2-Ankara 75. Yıl Hipodromu,2026-08-29,2,Ankara 75. Yıl Hipodromu,1300.0,EL REY ESCORPİON,FESİH ÇETİNBAŞ,MÜSLÜM DOLAK,53.0,8,0.0,50.0,50.0,50.0,50.0,72.0,0.76,0,49.0
@@ -960,7 +975,9 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-29-Ankara 75. Yıl Hipodromu-4,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,KIZIL ARYA,FATİH SULTAN MEHMET SANSAR,ÖMER FARUK ERTUĞRUL,55.0,1,0.0,50.0,50.0,50.0,50.0,80.0,1.89,0,10.0
 2026-08-29-Ankara 75. Yıl Hipodromu-4,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,KIZILKULE,MEHMET TAHA COŞKUN,RAMAZAN KAYA,59.0,6,0.0,50.0,50.0,50.0,50.0,96.0,15.04,0,34.0
 2026-08-29-Ankara 75. Yıl Hipodromu-4,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,MADAM DAISY,ENES ATLAMAZ,YUSUF CAN KARATOPRAK,52.0,2,0.0,50.0,50.0,50.0,50.0,68.0,19.71,0,33.0
+2026-08-29-4-Ankara 75. Yıl Hipodromu,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,MADAM DAISY,ENES ATLAMAZ,YUSUF CAN KARATOPRAK,52.0,2,0.0,50.0,50.0,50.0,50.0,68.0,19.71,0,33.0
 2026-08-29-Ankara 75. Yıl Hipodromu-4,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,ÇİRKİN VE GÜZEL,SERHAT ÇELİK,RAMAZAN KAYA,55.0,7,0.0,50.0,50.0,50.0,50.0,80.0,7.35,0,30.0
+2026-08-29-4-Ankara 75. Yıl Hipodromu,2026-08-29,4,Ankara 75. Yıl Hipodromu,1500.0,ÇİRKİN VE GÜZEL,SERHAT ÇELİK,RAMAZAN KAYA,55.0,7,0.0,50.0,50.0,50.0,50.0,80.0,7.35,0,30.0
 2026-08-29-Ankara 75. Yıl Hipodromu-5,2026-08-29,5,Ankara 75. Yıl Hipodromu,1600.0,ASİL MİR,FATİH SULTAN MEHMET SANSAR,MEHMET ALİ CANPOLATLI,60.5,8,0.0,50.0,50.0,50.0,50.0,98.0,3.58,0,83.0
 2026-08-29-Ankara 75. Yıl Hipodromu-5,2026-08-29,5,Ankara 75. Yıl Hipodromu,1600.0,BERAY SULTAN,SALİH ÇELİK,MEHMET DEMİROL,56.5,5,0.0,50.0,50.0,50.0,50.0,86.0,9.05,0,79.0
 2026-08-29-Ankara 75. Yıl Hipodromu-5,2026-08-29,5,Ankara 75. Yıl Hipodromu,1600.0,DENİZ KASIRGASI,AYHAN KURŞUN,SERVET DOĞAN,59.0,1,0.0,50.0,50.0,50.0,50.0,96.0,37.52,0,84.0
@@ -973,6 +990,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,ATAMANBEY,GÖKHAN KOCAKAYA,VEDAT YILDIRIM,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,12.55,0,89.0
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,CEVAHİRKAN,MEHMET SALİH ÇELİK,MÜSLÜM DOLAK,58.0,5,0.0,50.0,50.0,50.0,50.0,92.0,11.19,0,92.0
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,CEZZAR BEY,NİZAMETTİN DEMİR,KEMAL YILMAZ,58.0,8,0.0,50.0,50.0,50.0,50.0,92.0,0.71,0,66.0
+2026-08-29-6-Ankara 75. Yıl Hipodromu,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,CEZZAR BEY,NİZAMETTİN DEMİR,KEMAL YILMAZ,58.0,8,0.0,50.0,50.0,50.0,50.0,92.0,0.71,0,66.0
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,KESKİN KUŞ,SALİH ÇELİK,MEHMET ÇELİK,56.0,7,0.0,50.0,50.0,50.0,50.0,84.0,7.05,0,85.0
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,KETHÜDA,ÖZCAN YILDIRIM,HİKMET TURAN,58.0,1,70.0,64.0,50.0,50.0,64.0,92.0,3.49,1,78.0
 2026-08-29-Ankara 75. Yıl Hipodromu-6,2026-08-29,6,Ankara 75. Yıl Hipodromu,1500.0,NUSRET OĞLU,AHMET ÇELİK,MEHMET ALİ CANPOLATLI,58.0,2,85.0,82.0,50.0,82.0,82.0,92.0,12.0,1,91.0
@@ -1064,6 +1082,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,CRAZY RIVER,İSA KATAR,SÜLEYMAN KARAKEÇİLİ,59.0,14,0.0,50.0,50.0,50.0,50.0,96.0,2.39,0,26.0
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,EAGLE BORAN,FERİT YARDIMCI,VELİ ÇİZİK,56.0,15,0.0,50.0,50.0,50.0,50.0,84.0,12.26,0,0.0
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,KARACI,NECMİ ALTIN,KADİR TAŞDEMİR,56.0,1,0.0,50.0,50.0,50.0,50.0,84.0,4.52,0,7.0
+2026-08-29-6-Diyarbakır Hipodromu,2026-08-29,6,Diyarbakır Hipodromu,1200.0,KARACI,NECMİ ALTIN,KADİR TAŞDEMİR,56.0,1,0.0,50.0,50.0,50.0,50.0,84.0,4.52,0,7.0
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,KİKAZARU,AZİZ AKDEMİR,ESER YILDIRIM,60.0,3,0.0,50.0,50.0,50.0,50.0,100.0,18.07,0,32.0
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,LIGHT TO VICTORY,LEVENT TAPTIK,YELİZ BAYSAL,56.0,8,0.0,50.0,50.0,50.0,50.0,84.0,2.33,0,21.0
 2026-08-29-Diyarbakır Hipodromu-6,2026-08-29,6,Diyarbakır Hipodromu,1200.0,LORD SEYFO,EMRE AKKILIÇ,MEHRİBAN ÇİÇEK,56.0,2,0.0,50.0,50.0,50.0,50.0,84.0,2.34,0,7.0
@@ -1102,8 +1121,10 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,LEGANDARY WARRIOR,FESİH ÇETİNBAŞ,MURAT DOĞAN,60.0,5,0.0,50.0,50.0,50.0,50.0,100.0,13.18,0,66.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,MY ARES,İSA KATAR,MEHMET KAYA,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,9.71,0,62.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,PRINCESS BALA,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,56.0,6,0.0,50.0,50.0,50.0,50.0,84.0,2.59,0,43.0
+2026-08-30-2-Adana Yeşiloba Hipodromu,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,PRINCESS BALA,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,56.0,6,0.0,50.0,50.0,50.0,50.0,84.0,2.59,0,43.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,SUN OF MY HOME,UĞUR TEMUR,YELİZ BAYSAL,54.0,9,0.0,50.0,50.0,50.0,50.0,76.0,0.91,0,37.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,TAKEACHANCEONME,MEHMET TAHA COŞKUN,YAKUP MİSDİK,52.0,10,0.0,50.0,50.0,50.0,50.0,68.0,2.0,0,31.0
+2026-08-30-2-Adana Yeşiloba Hipodromu,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,TAKEACHANCEONME,MEHMET TAHA COŞKUN,YAKUP MİSDİK,52.0,10,0.0,50.0,50.0,50.0,50.0,68.0,2.0,0,31.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,TALADRRO,SERHAT ÇELİK,MUHAMMED AKYAVUZ,53.0,2,0.0,50.0,50.0,50.0,50.0,72.0,0.76,0,37.0
 2026-08-30-2-Adana Yeşiloba Hipodromu,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,TALADRRO,SERHAT ÇELİK,MUHAMMED AKYAVUZ,53.0,2,0.0,50.0,50.0,50.0,50.0,72.0,0.76,0,37.0
 2026-08-30-Adana Yeşiloba Hipodromu-2,2026-08-30,2,Adana Yeşiloba Hipodromu,1400.0,THAT BEATS ALL,REMZİ DOĞAN,MEHMET TEKİNALP,58.0,14,0.0,50.0,50.0,50.0,50.0,92.0,2.77,0,40.0
@@ -1200,7 +1221,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,OĞUZBEYİ,ERCAN ÇANKAYA,YELİZ BAYSAL,58.5,10,0.0,50.0,50.0,50.0,50.0,94.0,0.0,0,61.0
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,TOS FER,MEHMET TİBET MURTOĞLU,YAKUP ÇAĞLAR,50.0,18,0.0,50.0,50.0,50.0,50.0,60.0,0.0,0,42.0
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,VETCİHAN,FATİH SULTAN MEHMET SANSAR,MEHMET GÜNEŞ,52.0,4,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,34.0
-2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,YEDİKARDEŞLER,MEHMET TAHA COŞKUN,MEHMET KAYA,58.5,17,0.0,50.0,50.0,50.0,0.0,94.0,0.0,1,63.0
+2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,YEDİKARDEŞLER,MEHMET TAHA COŞKUN,MEHMET KAYA,58.5,17,0.0,50.0,50.0,50.0,0.0,94.0,0.0,2,63.0
+2026-08-30-9-Adana Yeşiloba Hipodromu,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,YEDİKARDEŞLER,MEHMET TAHA COŞKUN,MEHMET KAYA,58.5,17,0.0,50.0,50.0,50.0,0.0,94.0,0.0,2,63.0
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,YUSUF KAPTAN,SALİH ÇELİK,YELİZ BAYSAL,61.5,2,0.0,50.0,50.0,50.0,50.0,94.0,0.0,0,67.0
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,ÇELİK PARÇASI,MURAT AKDAĞ,YUNUS TUNCAY,50.0,5,0.0,50.0,50.0,50.0,50.0,60.0,0.0,0,44.0
 2026-08-30-Adana Yeşiloba Hipodromu-9,2026-08-30,9,Adana Yeşiloba Hipodromu,1900.0,ÇİMENGÖZ,İLKER AKIN,OSMAN DEMİR,52.0,16,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,36.0
@@ -1258,6 +1280,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-31-Bursa Osmangazi Hipodromu-4,2026-08-31,4,Bursa Osmangazi Hipodromu,1300.0,UMUDUNU KAYBETME,MEHMET KAYA,VELAT KARAKUŞ,59.0,12,0.0,50.0,50.0,50.0,50.0,96.0,8.83,0,68.0
 2026-08-31-Bursa Osmangazi Hipodromu-4,2026-08-31,4,Bursa Osmangazi Hipodromu,1300.0,YANACAK,BEKİR MERT MIRIK,EKREM TURAN,55.0,11,0.0,50.0,50.0,50.0,50.0,80.0,3.18,0,72.0
 2026-08-31-Bursa Osmangazi Hipodromu-5,2026-08-31,5,Bursa Osmangazi Hipodromu,2000.0,ESENYIL,BEKİR MERT MIRIK,FERHAT ALTIN,58.0,1,0.0,50.0,50.0,50.0,50.0,92.0,4.09,0,50.0
+2026-08-31-5-Bursa Osmangazi Hipodromu,2026-08-31,5,Bursa Osmangazi Hipodromu,2000.0,ESENYIL,BEKİR MERT MIRIK,FERHAT ALTIN,58.0,1,0.0,50.0,50.0,50.0,50.0,92.0,4.09,0,50.0
 2026-08-31-Bursa Osmangazi Hipodromu-5,2026-08-31,5,Bursa Osmangazi Hipodromu,2000.0,ESRABO,EREN KADİRLER,TUNCAY ATEŞ,53.5,9,0.0,50.0,50.0,50.0,50.0,74.0,4.17,0,36.0
 2026-08-31-Bursa Osmangazi Hipodromu-5,2026-08-31,5,Bursa Osmangazi Hipodromu,2000.0,GEWRE,ONUR YILDIZ,HAKAN DEMİRBAŞ,56.0,6,0.0,50.0,50.0,50.0,50.0,84.0,8.34,0,46.0
 2026-08-31-Bursa Osmangazi Hipodromu-5,2026-08-31,5,Bursa Osmangazi Hipodromu,2000.0,KURUÇAY,AHMET EFEKAN ELMAS,TEKİN BİRİCİK,57.0,2,85.0,50.0,50.0,82.0,82.0,88.0,16.57,1,43.0
@@ -1372,7 +1395,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,PROBABLY THE BEST,MEHMET ALİ AKTÜRK,MEHMET KAYA,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,2.93,0,39.0
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,RANIL OĞLU,HÜSEYİN ALTUNKILIÇ,MEHMET ALTIN,54.0,6,0.0,0.0,50.0,50.0,0.0,76.0,1.21,1,23.0
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,ROYAL WARRIOR,FERİT YARDIMCI,ZEKERİYA AKDEMİR,60.0,3,0.0,50.0,50.0,50.0,50.0,100.0,13.86,0,56.0
-2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,SILVEN,YUSUF CENGİZ,KADİR TAŞDEMİR,60.0,2,85.0,82.0,82.0,50.0,82.0,100.0,16.22,1,41.0
+2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,SILVEN,YUSUF CENGİZ,KADİR TAŞDEMİR,60.0,2,85.0,82.0,82.0,50.0,82.0,100.0,16.22,2,41.0
+2026-08-31-4-Elazığ Hipodromu,2026-08-31,4,Elazığ Hipodromu,1900.0,SILVEN,YUSUF CENGİZ,KADİR TAŞDEMİR,60.0,2,85.0,82.0,82.0,50.0,82.0,100.0,16.22,2,41.0
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,TALEBE,NECMİ ALTIN,ERCAN ALTIN,55.0,7,0.0,50.0,50.0,50.0,50.0,80.0,16.04,0,28.0
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,VALLEY OF HONOUR,MEHMET TAŞKAYA,MEHMET ALTIN,55.0,10,0.0,50.0,50.0,50.0,50.0,80.0,7.05,0,27.0
 2026-08-31-Elazığ Hipodromu-4,2026-08-31,4,Elazığ Hipodromu,1900.0,ÇEVİK DEVRANI,MEHMET DOĞAN,MUHAMMED BULUÇ,55.0,5,0.0,50.0,50.0,50.0,50.0,80.0,3.5,0,36.0
@@ -1385,7 +1409,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-08-31-Elazığ Hipodromu-5,2026-08-31,5,Elazığ Hipodromu,1500.0,IŞIKALP,FERİT YARDIMCI,MEHMET ALTIN,57.0,7,55.0,50.0,50.0,50.0,46.0,88.0,15.02,1,20.0
 2026-08-31-Elazığ Hipodromu-5,2026-08-31,5,Elazığ Hipodromu,1500.0,MİRZACAN,NECMİ ALTIN,RAMAZAN BARMAN,57.0,2,10.0,0.0,50.0,0.0,0.0,88.0,5.36,1,10.0
 2026-08-31-Elazığ Hipodromu-5,2026-08-31,5,Elazığ Hipodromu,1500.0,ŞAH TUNALI,HÜSEYİN ALTUNKILIÇ,HAKAN ATAKAYA,57.0,6,0.0,0.0,50.0,50.0,50.0,88.0,3.57,1,21.0
-2026-08-31-Elazığ Hipodromu-6,2026-08-31,6,Elazığ Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,VELİ ÇİZİK,57.5,4,85.0,82.0,82.0,82.0,82.0,90.0,12.51,1,33.0
+2026-08-31-Elazığ Hipodromu-6,2026-08-31,6,Elazığ Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,VELİ ÇİZİK,57.5,4,85.0,82.0,82.0,82.0,82.0,90.0,12.51,2,33.0
+2026-08-31-6-Elazığ Hipodromu,2026-08-31,6,Elazığ Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,VELİ ÇİZİK,57.5,4,85.0,82.0,82.0,82.0,82.0,90.0,12.51,2,33.0
 2026-08-31-Elazığ Hipodromu-6,2026-08-31,6,Elazığ Hipodromu,1200.0,KING RHAEGAL,NECMİ ALTIN,SALİH BECENE,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,23.25,0,32.0
 2026-08-31-Elazığ Hipodromu-6,2026-08-31,6,Elazığ Hipodromu,1200.0,PINAR,AHMET HASAN BAYAR,KADİR TAŞDEMİR,58.0,2,0.0,50.0,50.0,50.0,50.0,92.0,25.2,0,34.0
 2026-08-31-Elazığ Hipodromu-6,2026-08-31,6,Elazığ Hipodromu,1200.0,VOOYASUB,HAKİM YÖNDEN,İBRAHİM ATMACA,53.5,5,55.0,46.0,46.0,50.0,46.0,74.0,7.57,1,31.0
@@ -1442,6 +1467,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-01-Ankara 75. Yıl Hipodromu-3,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,EŞAY,NİZAMETTİN DEMİR,OSMAN İPEK,58.0,5,0.0,50.0,50.0,50.0,50.0,92.0,10.79,0,54.0
 2026-09-01-3-Ankara 75. Yıl Hipodromu,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,EŞAY,NİZAMETTİN DEMİR,OSMAN İPEK,58.0,5,0.0,50.0,50.0,50.0,50.0,92.0,10.79,0,54.0
 2026-09-01-Ankara 75. Yıl Hipodromu-3,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,KUZGUNİ YEŞİL,MEHMET KESKİN,CASIM KATI,52.0,2,0.0,50.0,50.0,50.0,50.0,68.0,8.18,0,43.0
+2026-09-01-3-Ankara 75. Yıl Hipodromu,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,KUZGUNİ YEŞİL,MEHMET KESKİN,CASIM KATI,52.0,2,0.0,50.0,50.0,50.0,50.0,68.0,8.18,0,43.0
 2026-09-01-Ankara 75. Yıl Hipodromu-3,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,KÜÇÜKCEVER,ERAY ÇİZİK,CASIM KATI,52.0,9,0.0,50.0,50.0,50.0,50.0,68.0,11.57,0,47.0
 2026-09-01-Ankara 75. Yıl Hipodromu-3,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,OYAZADE,ROJHAT KURT,MEHMET DEMİROL,56.5,8,0.0,50.0,50.0,50.0,50.0,86.0,1.56,0,57.0
 2026-09-01-Ankara 75. Yıl Hipodromu-3,2026-09-01,3,Ankara 75. Yıl Hipodromu,2200.0,PERVARİ,ALİ KAÇMAZ,MEHMET DEMİROL,52.0,4,0.0,50.0,50.0,50.0,50.0,68.0,1.37,0,45.0
@@ -1621,7 +1647,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-02-Elazığ Hipodromu-4,2026-09-02,4,Elazığ Hipodromu,1900.0,PIRATE OF THE SEA,AHMET HASAN BAYAR,BÜNYAMİN CENGİZ,60.0,6,0.0,50.0,0.0,50.0,50.0,100.0,1.97,1,87.0
 2026-09-02-Elazığ Hipodromu-4,2026-09-02,4,Elazığ Hipodromu,1900.0,SECRET ROYAL,MEHMET TAŞKAYA,ESER YILDIRIM,56.5,2,0.0,50.0,50.0,50.0,50.0,86.0,16.74,0,82.0
 2026-09-02-4-Elazığ Hipodromu,2026-09-02,4,Elazığ Hipodromu,1900.0,SECRET ROYAL,MEHMET TAŞKAYA,ESER YILDIRIM,56.5,2,0.0,50.0,50.0,50.0,50.0,86.0,16.74,0,82.0
-2026-09-02-Elazığ Hipodromu-4,2026-09-02,4,Elazığ Hipodromu,1900.0,SELANİK PRENSİ,YUSUF CENGİZ,MEHMET ALTIN,60.0,7,25.0,50.0,10.0,50.0,10.0,100.0,3.04,1,78.0
+2026-09-02-Elazığ Hipodromu-4,2026-09-02,4,Elazığ Hipodromu,1900.0,SELANİK PRENSİ,YUSUF CENGİZ,MEHMET ALTIN,60.0,7,25.0,50.0,10.0,50.0,10.0,100.0,3.04,2,78.0
+2026-09-02-4-Elazığ Hipodromu,2026-09-02,4,Elazığ Hipodromu,1900.0,SELANİK PRENSİ,YUSUF CENGİZ,MEHMET ALTIN,60.0,7,25.0,50.0,10.0,50.0,10.0,100.0,3.04,2,78.0
 2026-09-02-Elazığ Hipodromu-4,2026-09-02,4,Elazığ Hipodromu,1900.0,TRIBAL CHIEF,MEHMET DOĞAN,FİGEN BAKIR,60.0,1,0.0,50.0,50.0,50.0,50.0,100.0,29.39,0,95.0
 2026-09-02-Elazığ Hipodromu-5,2026-09-02,5,Elazığ Hipodromu,1200.0,ETIQUETTE,MEHMET TAŞKAYA,TEMÜR AYDIN,59.0,6,0.0,50.0,50.0,50.0,50.0,96.0,50.96,0,45.0
 2026-09-02-5-Elazığ Hipodromu,2026-09-02,5,Elazığ Hipodromu,1200.0,ETIQUETTE,MEHMET TAŞKAYA,TEMÜR AYDIN,59.0,6,0.0,50.0,50.0,50.0,50.0,96.0,50.96,0,45.0
@@ -1706,6 +1733,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,KÜÇÜK ZERYA,NİZAMETTİN DEMİR,CEM CİHAT ÇETİN,55.0,6,0.0,50.0,50.0,50.0,50.0,80.0,4.17,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,OSKAYBEY,SALİH ÇELİK,SERHAT POLAT,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,10.55,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,SELİM USTA,MERT ALİ SOLMAZ,ENVER MUTLU,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,6.24,0,0.0
+2026-09-03-3-Ankara 75. Yıl Hipodromu,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,SELİM USTA,MERT ALİ SOLMAZ,ENVER MUTLU,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,6.24,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,SEYRAN HANIM,MEHMET SALİH ÇELİK,CASIM KATI,55.0,2,0.0,50.0,50.0,50.0,50.0,80.0,21.01,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,VENEDİKZADE,MEHMET AKYAVUZ,MEHMET DEMİROL,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,15.58,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-3,2026-09-03,3,Ankara 75. Yıl Hipodromu,1200.0,YAVUZALİ,HIŞMAN ÇİZİK,SERHAT POLAT,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,9.62,0,0.0
@@ -1728,13 +1756,16 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,BAŞ DAĞYUDAN,MEHMET AKYAVUZ,MEHMET KORKMAZ,59.5,7,0.0,50.0,50.0,50.0,50.0,98.0,10.4,0,55.0
 2026-09-03-5-Ankara 75. Yıl Hipodromu,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,BAŞ DAĞYUDAN,MEHMET AKYAVUZ,MEHMET KORKMAZ,59.5,7,0.0,50.0,50.0,50.0,50.0,98.0,10.4,0,55.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,BOĞAZİÇİ BEYİ,ERCAN ÇANKAYA,İSMET TEKİNALP,59.5,9,0.0,50.0,50.0,50.0,50.0,98.0,6.15,0,55.0
+2026-09-03-5-Ankara 75. Yıl Hipodromu,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,BOĞAZİÇİ BEYİ,ERCAN ÇANKAYA,İSMET TEKİNALP,59.5,9,0.0,50.0,50.0,50.0,50.0,98.0,6.15,0,55.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,FERAT,MEHMET TAHA COŞKUN,ADEM GÜVEN,60.0,4,100.0,50.0,100.0,50.0,50.0,100.0,16.92,1,62.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,GAZNELİ,HIŞMAN ÇİZİK,ÜMİT ARSLAN,60.0,6,0.0,50.0,50.0,50.0,50.0,100.0,16.59,0,56.0
+2026-09-03-5-Ankara 75. Yıl Hipodromu,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,GAZNELİ,HIŞMAN ÇİZİK,ÜMİT ARSLAN,60.0,6,0.0,50.0,50.0,50.0,50.0,100.0,16.59,0,56.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,GÜMBÜRBERK,NİZAMETTİN DEMİR,SERHAT POLAT,62.5,5,10.0,50.0,0.0,50.0,0.0,90.0,3.65,1,61.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,HARŞİT BEYİ,MEHMET ALİ AKGÖBEK,MÜSLÜM ÖRTÜNÇ,57.5,8,0.0,50.0,50.0,50.0,50.0,90.0,6.1,0,51.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,KRAKEN,GÖKHAN KOCAKAYA,HÜSEYİN TEKİNALP,55.0,1,0.0,50.0,50.0,50.0,50.0,80.0,28.79,0,46.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,UMUTSER,MERT UYAR,CUMALİ KARATAŞ,50.0,2,0.0,50.0,50.0,50.0,50.0,60.0,2.29,0,36.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,ÖZGÜNVERA,MEHMET KESKİN,HÜSEYİN ATAŞ,53.0,3,0.0,50.0,50.0,50.0,50.0,72.0,1.47,0,42.0
+2026-09-03-5-Ankara 75. Yıl Hipodromu,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,ÖZGÜNVERA,MEHMET KESKİN,HÜSEYİN ATAŞ,53.0,3,0.0,50.0,50.0,50.0,50.0,72.0,1.47,0,42.0
 2026-09-03-Ankara 75. Yıl Hipodromu-5,2026-09-03,5,Ankara 75. Yıl Hipodromu,1500.0,ŞAHLANTAY,AYHAN KURŞUN,TOLGA SÜSLÜ,61.5,10,0.0,50.0,50.0,50.0,50.0,94.0,7.63,0,59.0
 2026-09-03-Ankara 75. Yıl Hipodromu-6,2026-09-03,6,Ankara 75. Yıl Hipodromu,1400.0,AYDIN DAYI,MEHMET AKYAVUZ,MÜSLÜM DOLAK,57.0,6,55.0,46.0,46.0,50.0,46.0,88.0,0.67,1,44.0
 2026-09-03-Ankara 75. Yıl Hipodromu-6,2026-09-03,6,Ankara 75. Yıl Hipodromu,1400.0,BAYDARBEY,GÖKHAN KOCAKAYA,MÜSLÜM DOLAK,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,7.64,0,68.0
@@ -1754,10 +1785,13 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,BALCIDEDE,ERCAN ÇANKAYA,CUMA DEMİR,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,ETMAN,SALİH ÇELİK,UĞUR KULAK,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,HIZLI ÖZGÜN,MEHMET AKYAVUZ,AYKUT ECEVİT BAŞ,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
+2026-09-03-8-Ankara 75. Yıl Hipodromu,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,HIZLI ÖZGÜN,MEHMET AKYAVUZ,AYKUT ECEVİT BAŞ,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,PİSİFORMİS,FATİH SULTAN MEHMET SANSAR,CUMA DEMİR,57.0,1,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-8-Ankara 75. Yıl Hipodromu,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,PİSİFORMİS,FATİH SULTAN MEHMET SANSAR,CUMA DEMİR,57.0,1,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,RAYNART,MEHMET SALİH ÇELİK,MEHMET GÜNEŞ,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
+2026-09-03-8-Ankara 75. Yıl Hipodromu,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,RAYNART,MEHMET SALİH ÇELİK,MEHMET GÜNEŞ,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,YARKAYA,HIŞMAN ÇİZİK,ADNAN POLAT,57.0,8,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
+2026-09-03-8-Ankara 75. Yıl Hipodromu,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,YARKAYA,HIŞMAN ÇİZİK,ADNAN POLAT,57.0,8,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-03-Ankara 75. Yıl Hipodromu-8,2026-09-03,8,Ankara 75. Yıl Hipodromu,1200.0,ÖRNEKKAN,AYHAN KURŞUN,ŞEFİK AYDEMİR,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,0.0
 2026-09-04-Bursa Osmangazi Hipodromu-1,2026-09-04,1,Bursa Osmangazi Hipodromu,1200.0,BATTLECAT,BEKİR MERT MIRIK,EYÜPHAN AVCI,58.0,9,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,55.0
 2026-09-04-Bursa Osmangazi Hipodromu-1,2026-09-04,1,Bursa Osmangazi Hipodromu,1200.0,BEBEĞİM OLDUN,CEM ALTUN,AHMET MANTAŞ,58.0,6,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,38.0
@@ -1834,7 +1868,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,EMİRAY DAFNE,SALİH ÇELİK,CANSU ŞİMŞEK,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,5.77,0,68.0
 2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,LAMBERHURST,MEHMET SALİH ÇELİK,SERKAN SÜSLÜ,60.0,3,0.0,50.0,50.0,50.0,50.0,100.0,45.69,0,89.0
 2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,MAVİ TOPAZ,SERHAT ÇELİK,MÜSLÜM ÖRTÜNÇ,56.0,7,0.0,50.0,50.0,50.0,50.0,84.0,11.63,0,75.0
-2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,54.0,5,70.0,64.0,64.0,50.0,64.0,76.0,1.96,1,66.0
+2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,54.0,5,70.0,64.0,64.0,50.0,64.0,76.0,1.96,2,66.0
+2026-09-05-1-Ankara 75. Yıl Hipodromu,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,54.0,5,70.0,64.0,64.0,50.0,64.0,76.0,1.96,2,66.0
 2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,SECRET MAN,MEHMET AKYAVUZ,ERDAL AKYAVUZ,58.0,2,85.0,82.0,82.0,82.0,82.0,92.0,21.27,1,71.0
 2026-09-05-Ankara 75. Yıl Hipodromu-1,2026-09-05,1,Ankara 75. Yıl Hipodromu,1500.0,ÇAĞANIM,MÜCAHİT BAYIR,İLKER KÖROĞLU,57.0,1,0.0,50.0,50.0,50.0,50.0,88.0,8.48,0,79.0
 2026-09-05-Ankara 75. Yıl Hipodromu-2,2026-09-05,2,Ankara 75. Yıl Hipodromu,1600.0,DEJAME,ERCAN ÇANKAYA,MÜSLÜM DOLAK,59.5,5,0.0,0.0,0.0,50.0,0.0,98.0,5.77,1,73.0
@@ -1908,10 +1943,12 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,LAGARİ,ERCAN ÇANKAYA,KADİR BALTACI,58.0,6,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,28.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,MAGGIE,BERKANT GÖKÇE,AHMET ÖZDOĞAN,57.0,8,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,36.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,O PAPATYA,MEHMET SALİH ÇELİK,YUNUS TUNCAY,58.0,5,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,32.0
+2026-09-05-9-Ankara 75. Yıl Hipodromu,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,O PAPATYA,MEHMET SALİH ÇELİK,YUNUS TUNCAY,58.0,5,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,32.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,SHIRIN WARRIOR,MÜSLÜM ÇELİK,AYHAN DİNÇ,54.0,9,0.0,50.0,50.0,50.0,50.0,76.0,0.0,0,29.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,SPRING TIME,SAMETCAN YAZICIOĞLU,SATILMIŞ GÖKDEMİR,52.0,14,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,0.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,SULTANA,MEHMET AKYAVUZ,YUNUS TUNCAY,59.0,12,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,41.0
 2026-09-05-Ankara 75. Yıl Hipodromu-9,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,TIME CHANGER,NİZAMETTİN DEMİR,SAVAŞ GÜRKAN,60.0,4,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,31.0
+2026-09-05-9-Ankara 75. Yıl Hipodromu,2026-09-05,9,Ankara 75. Yıl Hipodromu,1400.0,TIME CHANGER,NİZAMETTİN DEMİR,SAVAŞ GÜRKAN,60.0,4,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,31.0
 2026-09-06-Adana Yeşiloba Hipodromu-1,2026-09-06,1,Adana Yeşiloba Hipodromu,1400.0,ADDISON,MEHMET NURİ SUNKAR,SÜLEYMAN KARAKEÇİLİ,57.0,6,0.0,50.0,0.0,50.0,50.0,88.0,1.76,1,19.0
 2026-09-06-Adana Yeşiloba Hipodromu-1,2026-09-06,1,Adana Yeşiloba Hipodromu,1400.0,AGRESİF LADY,YUSUF CENGİZ,AHMET AKBABA,57.0,11,40.0,28.0,28.0,50.0,28.0,88.0,2.97,1,0.0
 2026-09-06-Adana Yeşiloba Hipodromu-1,2026-09-06,1,Adana Yeşiloba Hipodromu,1400.0,DRAGON STAR,FESİH ÇETİNBAŞ,YUNUS TUNCAY,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,0.52,0,0.0
@@ -1954,9 +1991,11 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,LUNA DE FUEGO,İLKER AKIN,VELİ ÇİZİK,52.0,16,0.0,50.0,50.0,50.0,50.0,68.0,0.65,0,22.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,LUXUARY,MURAT AKDAĞ,SÜLEYMAN KARAKEÇİLİ,51.0,14,85.0,50.0,82.0,50.0,82.0,64.0,2.48,1,33.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,MALCOOBA,SERHAT ÇELİK,ALİ ÇIKMAN,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,18.74,0,45.0
+2026-09-06-4-Adana Yeşiloba Hipodromu,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,MALCOOBA,SERHAT ÇELİK,ALİ ÇIKMAN,57.0,2,0.0,50.0,50.0,50.0,50.0,88.0,18.74,0,45.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,MY DREAM HORSE,ROJHAT KURT,ERTAN ACER,52.0,13,0.0,50.0,50.0,50.0,50.0,68.0,0.34,0,28.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,MİRA CETİ,LEVENT TAPTIK,HASAN TEKİNALP,59.0,8,10.0,50.0,0.0,0.0,0.0,96.0,7.84,1,49.0
-2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,PRINCESS BALA,MEHMET TAHA COŞKUN,TAMER OĞUZHAN KARA,56.0,6,25.0,10.0,50.0,50.0,10.0,84.0,2.4,1,43.0
+2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,PRINCESS BALA,MEHMET TAHA COŞKUN,TAMER OĞUZHAN KARA,56.0,6,25.0,10.0,50.0,50.0,10.0,84.0,2.4,2,43.0
+2026-09-06-4-Adana Yeşiloba Hipodromu,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,PRINCESS BALA,MEHMET TAHA COŞKUN,TAMER OĞUZHAN KARA,56.0,6,25.0,10.0,50.0,50.0,10.0,84.0,2.4,2,43.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,PİTON KIZ,MEHMET ALİ AKGÖBEK,İBRAHİM ATMACA,54.5,10,0.0,50.0,50.0,50.0,50.0,78.0,3.8,0,34.0
 2026-09-06-4-Adana Yeşiloba Hipodromu,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,PİTON KIZ,MEHMET ALİ AKGÖBEK,İBRAHİM ATMACA,54.5,10,0.0,50.0,50.0,50.0,50.0,78.0,3.8,0,34.0
 2026-09-06-Adana Yeşiloba Hipodromu-4,2026-09-06,4,Adana Yeşiloba Hipodromu,1900.0,QUEEN SEÇİL,VELAT DEMİR,MUZAFFER KILIÇSEREN,60.5,5,0.0,50.0,50.0,50.0,50.0,98.0,4.8,0,46.0
@@ -1979,11 +2018,13 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-06-Adana Yeşiloba Hipodromu-5,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,MİRŞEŞEN,MEHMET SALİH ÇELİK,YUNUS TUNCAY,57.0,1,100.0,50.0,100.0,50.0,50.0,88.0,16.64,2,68.0
 2026-09-06-5-Adana Yeşiloba Hipodromu,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,MİRŞEŞEN,MEHMET SALİH ÇELİK,YUNUS TUNCAY,57.0,1,100.0,50.0,100.0,50.0,50.0,88.0,16.64,2,68.0
 2026-09-06-Adana Yeşiloba Hipodromu-5,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,PALA SALİH,SALİH ÇELİK,AHMET AKBABA,59.0,13,0.0,50.0,50.0,50.0,50.0,96.0,2.48,0,76.0
+2026-09-06-5-Adana Yeşiloba Hipodromu,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,PALA SALİH,SALİH ÇELİK,AHMET AKBABA,59.0,13,0.0,50.0,50.0,50.0,50.0,96.0,2.48,0,76.0
 2026-09-06-Adana Yeşiloba Hipodromu-5,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,TOS FER,MEHMET TİBET MURTOĞLU,YAKUP ÇAĞLAR,52.0,8,0.0,0.0,50.0,0.0,0.0,68.0,0.53,1,40.0
 2026-09-06-Adana Yeşiloba Hipodromu-5,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,ÇİMENGÖZ,İSA KATAR,RESUL KAYA,56.0,14,0.0,0.0,50.0,50.0,50.0,84.0,0.32,1,36.0
 2026-09-06-Adana Yeşiloba Hipodromu-5,2026-09-06,5,Adana Yeşiloba Hipodromu,1200.0,İSKİT ALP,FATİH RÜSTEM BEBEK,YUNUS TUNCAY,57.0,10,10.0,50.0,50.0,50.0,50.0,88.0,4.34,1,73.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,BÜYÜKATAK,ÖZGÜR ORDU,MEVLÜT TEK,55.0,2,0.0,0.0,0.0,50.0,0.0,80.0,0.58,1,31.0
-2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,CEZZAR BEY,MEHMET AKYAVUZ,KEMAL YILMAZ,60.0,1,0.0,50.0,50.0,50.0,0.0,100.0,17.47,1,66.0
+2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,CEZZAR BEY,MEHMET AKYAVUZ,KEMAL YILMAZ,60.0,1,0.0,50.0,50.0,50.0,0.0,100.0,17.47,2,66.0
+2026-09-06-6-Adana Yeşiloba Hipodromu,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,CEZZAR BEY,MEHMET AKYAVUZ,KEMAL YILMAZ,60.0,1,0.0,50.0,50.0,50.0,0.0,100.0,17.47,2,66.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,HARPUT MUHAFIZI,MERT ALİ SOLMAZ,YAVUZ AKDAŞ,54.0,8,0.0,50.0,50.0,50.0,50.0,76.0,2.32,0,45.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,KRALİÇEANNA,İSA KATAR,YELİZ BAYSAL,56.0,10,40.0,50.0,28.0,50.0,50.0,84.0,1.23,1,36.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,SADIKEFE,NECMİ ALTIN,YELİZ BAYSAL,55.0,11,0.0,50.0,50.0,50.0,50.0,80.0,1.58,0,45.0
@@ -1994,17 +2035,20 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,TUSEM KIZ,SERHAT ÇELİK,KEMAL YILMAZ,52.0,9,0.0,50.0,50.0,50.0,50.0,68.0,5.94,0,39.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,YUSUF KAPTAN,SALİH ÇELİK,YELİZ BAYSAL,58.0,5,85.0,82.0,82.0,82.0,82.0,92.0,28.01,1,69.0
 2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,ÇAPUTHAN,ERCAN ÇANKAYA,HAKAN ATAKAYA,58.0,3,0.0,50.0,50.0,50.0,50.0,92.0,14.11,0,76.0
-2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,ÇIĞGİBİ,NİZAMETTİN DEMİR,YELİZ BAYSAL,53.0,7,40.0,50.0,28.0,50.0,50.0,72.0,1.97,1,28.0
+2026-09-06-Adana Yeşiloba Hipodromu-6,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,ÇIĞGİBİ,NİZAMETTİN DEMİR,YELİZ BAYSAL,53.0,7,40.0,50.0,28.0,50.0,50.0,72.0,1.97,2,28.0
+2026-09-06-6-Adana Yeşiloba Hipodromu,2026-09-06,6,Adana Yeşiloba Hipodromu,1900.0,ÇIĞGİBİ,NİZAMETTİN DEMİR,YELİZ BAYSAL,53.0,7,40.0,50.0,28.0,50.0,50.0,72.0,1.97,2,28.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,BEST OF ANADOLU,SALİH ÇELİK,YELİZ BAYSAL,56.0,1,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,71.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,DOUBLE HEART,MEHMET ALİ AKGÖBEK,VEYSEL TEKİN,56.0,6,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,60.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,FEMALE EAGLE,MÜCAHİT BAYIR,ABDULLAH ÇİFTÇİ,55.0,7,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,61.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,JAN AQUA,MEHMET AKYAVUZ,MUHAMMED AKYAVUZ,56.0,4,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,97.0
+2026-09-06-7-Adana Yeşiloba Hipodromu,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,JAN AQUA,MEHMET AKYAVUZ,MUHAMMED AKYAVUZ,56.0,4,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,97.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,LAST LEVEL,MEHMET SALİH ÇELİK,MEHMET DAŞ,56.5,3,0.0,50.0,50.0,50.0,50.0,86.0,0.0,0,42.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,LION GOLD,MURAT AKDAĞ,YUNUS TUNCAY,50.5,9,0.0,0.0,50.0,0.0,0.0,62.0,0.0,1,25.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,PALURİ MAN,MEHMET TAHA COŞKUN,AYHAN DİNÇ,56.0,8,70.0,64.0,64.0,50.0,64.0,84.0,0.0,1,48.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,SUNDANCE,SERHAT ÇELİK,ALİ ÇIKMAN,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,69.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,TORTUGA,ROJHAT KURT,ERTAN ACER,52.0,10,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,70.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,WE ARE THE STAR,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,60.0,2,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,85.0
+2026-09-06-7-Adana Yeşiloba Hipodromu,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,WE ARE THE STAR,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,60.0,2,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,85.0
 2026-09-06-Adana Yeşiloba Hipodromu-7,2026-09-06,7,Adana Yeşiloba Hipodromu,1900.0,ÇELİ BEZA,NİZAMETTİN DEMİR,YELİZ BAYSAL,56.0,11,0.0,0.0,0.0,0.0,50.0,84.0,0.0,1,77.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,BORGA,MURAT AKDAĞ,AYHAN DİNÇ,50.0,3,0.0,0.0,0.0,0.0,0.0,60.0,0.0,1,38.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,DOUBLE WORLD,NİZAMETTİN DEMİR,ERTAN ACER,53.0,4,55.0,50.0,46.0,46.0,46.0,72.0,0.0,1,46.0
@@ -2019,8 +2063,10 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,PRENSES BELBUS,SALİH ÇELİK,YAKUP ÇAĞLAR,55.5,9,0.0,50.0,50.0,50.0,50.0,82.0,0.0,0,51.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,SPIC AND SPAN,MERT ALİ SOLMAZ,ALİ ÇIKMAN,52.5,1,0.0,50.0,50.0,50.0,50.0,70.0,0.0,0,45.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,STAR GATE,ROJHAT KURT,RAMAZAN TAŞDELEN,60.0,7,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,59.0
+2026-09-06-8-Adana Yeşiloba Hipodromu,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,STAR GATE,ROJHAT KURT,RAMAZAN TAŞDELEN,60.0,7,0.0,50.0,50.0,50.0,50.0,100.0,0.0,0,59.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,SUPERLINE,VELAT DEMİR,SÜLEYMAN KARAKEÇİLİ,61.5,12,0.0,50.0,50.0,50.0,50.0,94.0,0.0,0,56.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,TEK NERGİZ,TAMER BALİ,YUNUS TUNCAY,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,53.0
+2026-09-06-8-Adana Yeşiloba Hipodromu,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,TEK NERGİZ,TAMER BALİ,YUNUS TUNCAY,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,53.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,TEK OZANIM,MEHMET NURİ SUNKAR,SÜLEYMAN KARAKEÇİLİ,55.0,10,25.0,50.0,10.0,50.0,10.0,80.0,0.0,1,43.0
 2026-09-06-Adana Yeşiloba Hipodromu-8,2026-09-06,8,Adana Yeşiloba Hipodromu,1300.0,İSMETİM,İSA KATAR,SÜLEYMAN KARAKEÇİLİ,61.0,2,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,55.0
 2026-09-07-Bursa Osmangazi Hipodromu-1,2026-09-07,1,Bursa Osmangazi Hipodromu,1500.0,ALKURUŞ BEYİ,ONUR YILDIZ,RAMAZAN COŞKUN,57.0,5,0.0,50.0,50.0,50.0,50.0,88.0,6.66,0,10.0
@@ -2051,6 +2097,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-07-Bursa Osmangazi Hipodromu-3,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,DAVRANTAY,ALİCAN İNCİ,ZEYNEP KAYA,57.0,7,0.0,50.0,50.0,50.0,50.0,88.0,5.86,1,28.0
 2026-09-07-Bursa Osmangazi Hipodromu-3,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,DİKKALDIRIM,RÜZGAR YILDIZ,SERHAT ÖNDER,51.0,12,0.0,50.0,50.0,50.0,50.0,64.0,0.69,0,0.0
 2026-09-07-Bursa Osmangazi Hipodromu-3,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,GÖNÜL SARAYI,BERKAY BÜLBÜL,FERHAT ALTIN,57.0,13,0.0,50.0,50.0,50.0,50.0,88.0,5.75,0,30.0
+2026-09-07-3-Bursa Osmangazi Hipodromu,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,GÖNÜL SARAYI,BERKAY BÜLBÜL,FERHAT ALTIN,57.0,13,0.0,50.0,50.0,50.0,50.0,88.0,5.75,0,30.0
 2026-09-07-Bursa Osmangazi Hipodromu-3,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,HATUN DİDEM,ONUR ATMACA,TUNCAY TURAN,55.0,6,0.0,50.0,50.0,50.0,50.0,80.0,1.41,0,27.0
 2026-09-07-3-Bursa Osmangazi Hipodromu,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,HATUN DİDEM,ONUR ATMACA,TUNCAY TURAN,55.0,6,0.0,50.0,50.0,50.0,50.0,80.0,1.41,0,27.0
 2026-09-07-Bursa Osmangazi Hipodromu-3,2026-09-07,3,Bursa Osmangazi Hipodromu,1500.0,HIRÇIN DADAŞ,METE GÖL,TUNCAY ATEŞ,53.0,9,0.0,50.0,50.0,50.0,50.0,72.0,1.94,0,21.0
@@ -2099,6 +2146,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-07-Bursa Osmangazi Hipodromu-6,2026-09-07,6,Bursa Osmangazi Hipodromu,1400.0,RED SMOKE,ALİ MEHDİ ALTIN,HASAN DOLMAZ,54.5,4,55.0,46.0,46.0,46.0,46.0,78.0,12.83,1,59.0
 2026-09-07-Bursa Osmangazi Hipodromu-6,2026-09-07,6,Bursa Osmangazi Hipodromu,1400.0,WADRON,NEVZAT AVCİ,MEHMET ESMER,58.5,5,0.0,50.0,50.0,50.0,50.0,94.0,38.07,0,67.0
 2026-09-07-Bursa Osmangazi Hipodromu-7,2026-09-07,7,Bursa Osmangazi Hipodromu,1500.0,ALPLİ,GÖRKEM ÖZÇELİK,HASAN DOLMAZ,59.0,4,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,32.0
+2026-09-07-7-Bursa Osmangazi Hipodromu,2026-09-07,7,Bursa Osmangazi Hipodromu,1500.0,ALPLİ,GÖRKEM ÖZÇELİK,HASAN DOLMAZ,59.0,4,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,32.0
 2026-09-07-Bursa Osmangazi Hipodromu-7,2026-09-07,7,Bursa Osmangazi Hipodromu,1500.0,BANGU,MUSTAFA ÇİÇEK,SERGEN GÖKÇE,55.0,14,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,29.0
 2026-09-07-Bursa Osmangazi Hipodromu-7,2026-09-07,7,Bursa Osmangazi Hipodromu,1500.0,BARLABEY,MAHMUT TURAN,RAMAZAN COŞKUN,59.0,6,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,34.0
 2026-09-07-Bursa Osmangazi Hipodromu-7,2026-09-07,7,Bursa Osmangazi Hipodromu,1500.0,CİHANDERE,YİĞİTCAN GÖKÇE,ŞEVVAL ŞİMAL DEMİR,54.0,10,0.0,50.0,50.0,50.0,50.0,76.0,0.0,0,26.0
@@ -2121,7 +2169,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-07-8-Bursa Osmangazi Hipodromu,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,DAĞ YONCASI,NURETTİN ŞEN,TUNCAY ATEŞ,56.0,3,55.0,46.0,28.0,28.0,46.0,84.0,0.0,4,38.0
 2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,ELİFLİ,EREN KADİRLER,EMİNE KAYA,56.0,18,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,39.0
 2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,EMSALLİ ER,TUGAY ALICI,YUSUF CAN KARATOPRAK,58.0,4,0.0,0.0,0.0,50.0,0.0,92.0,0.0,1,33.0
-2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,ESENYIL,BEKİR MERT MIRIK,FERHAT ALTIN,56.0,7,100.0,100.0,50.0,100.0,100.0,84.0,0.0,1,56.0
+2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,ESENYIL,BEKİR MERT MIRIK,FERHAT ALTIN,56.0,7,100.0,100.0,50.0,100.0,100.0,84.0,0.0,2,56.0
+2026-09-07-8-Bursa Osmangazi Hipodromu,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,ESENYIL,BEKİR MERT MIRIK,FERHAT ALTIN,56.0,7,100.0,100.0,50.0,100.0,100.0,84.0,0.0,2,56.0
 2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,FOREVER DERYA,RÜZGAR YILDIZ,RANA SUNA,56.0,17,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,0.0
 2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,HANENKIZ,İSMAİL DİNAR,KAZIM ŞENGEL,55.0,15,0.0,0.0,0.0,50.0,0.0,80.0,0.0,1,30.0
 2026-09-07-Bursa Osmangazi Hipodromu-8,2026-09-07,8,Bursa Osmangazi Hipodromu,1700.0,HÜMALI KIZ,ALİ YILDIZ,TUNCAY ATEŞ,56.0,5,70.0,64.0,64.0,64.0,64.0,84.0,0.0,1,42.0
@@ -2249,19 +2298,23 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,KARANIN OĞLU,NİZAMETTİN DEMİR,MEHMET ŞEFİK KILINÇ,57.0,10,0.0,0.0,0.0,50.0,0.0,88.0,1.67,1,13.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,KIZIM SAFİR,MEHMET KESKİN,ÜMİT ARSLAN,55.0,11,0.0,0.0,0.0,50.0,0.0,80.0,0.54,1,0.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,KORDONİS,SALİH ÇELİK,CUMA DEMİR,57.0,12,25.0,10.0,10.0,50.0,10.0,88.0,12.99,1,0.0
-2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,MADAM DAISY,MEHMET ALİ AKGÖBEK,YUSUF CAN KARATOPRAK,57.0,2,85.0,82.0,82.0,50.0,82.0,88.0,12.41,1,34.0
+2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,MADAM DAISY,MEHMET ALİ AKGÖBEK,YUSUF CAN KARATOPRAK,57.0,2,85.0,82.0,82.0,50.0,82.0,88.0,12.41,2,34.0
+2026-09-08-1-Ankara 75. Yıl Hipodromu,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,MADAM DAISY,MEHMET ALİ AKGÖBEK,YUSUF CAN KARATOPRAK,57.0,2,85.0,82.0,82.0,50.0,82.0,88.0,12.41,2,34.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,MENESSAL,MEHMET TAHA COŞKUN,SERHAT POLAT,52.0,13,0.0,50.0,50.0,50.0,50.0,68.0,0.63,0,16.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,REYONTAY,AYHAN KURŞUN,YILMAZ TEKİNALP,57.0,6,10.0,0.0,0.0,50.0,0.0,88.0,25.4,1,25.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,TALİHLİ KIZ,FATİH SULTAN MEHMET SANSAR,MEHMET ŞEFİK KILINÇ,55.0,5,40.0,28.0,28.0,50.0,28.0,80.0,8.49,1,13.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,URAZ,MERT ALİ SOLMAZ,VEDAT YILDIRIM,57.0,3,0.0,0.0,0.0,0.0,0.0,88.0,12.71,1,0.0
 2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,YALIN ATEŞ,HIŞMAN ÇİZİK,HÜSEYİN KARATAŞ,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,10.6,0,25.0
 2026-09-08-1-Ankara 75. Yıl Hipodromu,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,YALIN ATEŞ,HIŞMAN ÇİZİK,HÜSEYİN KARATAŞ,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,10.6,0,25.0
-2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,ÇİRKİN VE GÜZEL,ROJHAT KURT,RAMAZAN KAYA,55.0,8,10.0,0.0,0.0,50.0,0.0,80.0,1.23,1,30.0
+2026-09-08-Ankara 75. Yıl Hipodromu-1,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,ÇİRKİN VE GÜZEL,ROJHAT KURT,RAMAZAN KAYA,55.0,8,10.0,0.0,0.0,50.0,0.0,80.0,1.23,2,30.0
+2026-09-08-1-Ankara 75. Yıl Hipodromu,2026-09-08,1,Ankara 75. Yıl Hipodromu,1400.0,ÇİRKİN VE GÜZEL,ROJHAT KURT,RAMAZAN KAYA,55.0,8,10.0,0.0,0.0,50.0,0.0,80.0,1.23,2,30.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,ADANALI KIZ,FATİH SULTAN MEHMET SANSAR,CELAL BURAK SERİNER,55.0,4,0.0,50.0,50.0,50.0,50.0,80.0,19.84,0,74.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,HIZLI GÖR,SALİH ÇELİK,MEHMET ŞEFİK KILINÇ,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,12.17,0,55.0
+2026-09-08-2-Ankara 75. Yıl Hipodromu,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,HIZLI GÖR,SALİH ÇELİK,MEHMET ŞEFİK KILINÇ,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,12.17,0,55.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,LA COPA,NİZAMETTİN DEMİR,HÜSEYİN TEKİNALP,56.5,3,55.0,50.0,50.0,50.0,50.0,86.0,5.12,2,63.0
 2026-09-08-2-Ankara 75. Yıl Hipodromu,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,LA COPA,NİZAMETTİN DEMİR,HÜSEYİN TEKİNALP,56.5,3,55.0,50.0,50.0,50.0,50.0,86.0,5.12,2,63.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,LEADER TULIP,MEHMET KESKİN,CELAL BURAK SERİNER,53.5,1,0.0,50.0,50.0,50.0,50.0,74.0,1.41,0,38.0
+2026-09-08-2-Ankara 75. Yıl Hipodromu,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,LEADER TULIP,MEHMET KESKİN,CELAL BURAK SERİNER,53.5,1,0.0,50.0,50.0,50.0,50.0,74.0,1.41,0,38.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,MAXIMAND,HIŞMAN ÇİZİK,ARZU KILIÇ,55.5,2,100.0,100.0,50.0,50.0,100.0,82.0,23.81,1,38.0
 2026-09-08-Ankara 75. Yıl Hipodromu-2,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,MY MOON,ERCAN ÇANKAYA,ARZU KILIÇ,56.5,6,100.0,50.0,50.0,50.0,50.0,86.0,18.0,2,67.0
 2026-09-08-2-Ankara 75. Yıl Hipodromu,2026-09-08,2,Ankara 75. Yıl Hipodromu,1500.0,MY MOON,ERCAN ÇANKAYA,ARZU KILIÇ,56.5,6,100.0,50.0,50.0,50.0,50.0,86.0,18.0,2,67.0
@@ -2281,6 +2334,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,BONITA,MEHMET KESKİN,MEHMET DEMİROL,52.0,12,0.0,50.0,50.0,50.0,50.0,68.0,0.44,0,10.0
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,BOSKO,ROJHAT KURT,MEHMET TEKİNALP,53.5,11,0.0,50.0,50.0,50.0,50.0,74.0,0.52,0,34.0
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,DİNAMİT KIZ,NİZAMETTİN DEMİR,ÖMER FARUK ERTUĞRUL,58.5,7,0.0,50.0,50.0,50.0,50.0,94.0,5.82,0,38.0
+2026-09-08-4-Ankara 75. Yıl Hipodromu,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,DİNAMİT KIZ,NİZAMETTİN DEMİR,ÖMER FARUK ERTUĞRUL,58.5,7,0.0,50.0,50.0,50.0,50.0,94.0,5.82,0,38.0
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,JOYOUS GIRL,MÜCAHİT BAYIR,ERTAN ACER,56.0,4,0.0,0.0,0.0,0.0,50.0,84.0,5.21,1,33.0
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,LALOCURA,ÖZCAN YILDIRIM,AVNİ KARAKUŞ,61.0,2,0.0,50.0,50.0,50.0,50.0,96.0,11.41,0,43.0
 2026-09-08-Ankara 75. Yıl Hipodromu-4,2026-09-08,4,Ankara 75. Yıl Hipodromu,1200.0,LIBERTA MIA,FATİH SULTAN MEHMET SANSAR,TANGÜL KARAHAN,52.0,9,0.0,50.0,50.0,50.0,50.0,68.0,2.4,0,14.0
@@ -2331,6 +2385,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-08-Ankara 75. Yıl Hipodromu-8,2026-09-08,8,Ankara 75. Yıl Hipodromu,1500.0,ZAGROS RÜZGARI,MEHMET AKYAVUZ,ERDAL AKYAVUZ,60.5,1,55.0,46.0,46.0,46.0,46.0,98.0,0.0,1,89.0
 2026-09-08-Ankara 75. Yıl Hipodromu-9,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,AKÇALIKIZ,MERT ALİ SOLMAZ,AYKUT ECEVİT BAŞ,55.0,12,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,26.0
 2026-09-08-Ankara 75. Yıl Hipodromu-9,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,ARKANBERK,MÜSLÜM ÇELİK,SERHAT POLAT,59.0,2,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,35.0
+2026-09-08-9-Ankara 75. Yıl Hipodromu,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,ARKANBERK,MÜSLÜM ÇELİK,SERHAT POLAT,59.0,2,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,35.0
 2026-09-08-Ankara 75. Yıl Hipodromu-9,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,ARKAZGÜLÜ,ROJHAT KURT,RAMAZAN KAYA,51.0,7,0.0,0.0,0.0,0.0,0.0,64.0,0.0,1,23.0
 2026-09-08-Ankara 75. Yıl Hipodromu-9,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,ATAERİ,MEHMET ALİ AKGÖBEK,CASIM KATI,57.0,6,85.0,82.0,82.0,50.0,82.0,88.0,0.0,1,29.0
 2026-09-08-Ankara 75. Yıl Hipodromu-9,2026-09-08,9,Ankara 75. Yıl Hipodromu,1400.0,ATEŞİZİ,ERCAN ÇANKAYA,HÜSEYİN SUNKAR,57.0,5,70.0,64.0,64.0,64.0,50.0,88.0,0.0,1,26.0
@@ -2434,7 +2489,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,KURUŞUN GÜCÜ,NEVZAT AVCİ,HÜSEYİN KARABULUT,52.0,3,55.0,50.0,50.0,46.0,46.0,68.0,0.0,2,43.0
 2026-09-08-9-Kocaeli Kartepe Hipodromu,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,KURUŞUN GÜCÜ,NEVZAT AVCİ,HÜSEYİN KARABULUT,52.0,3,55.0,50.0,50.0,46.0,46.0,68.0,0.0,2,43.0
 2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,MANDAR ABBAS,SERHAT ÇELİK,İSMAİL EROL KURAL,57.5,12,0.0,50.0,50.0,50.0,50.0,90.0,0.0,0,55.0
-2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,ODABAŞI,HÜSEYİN TURAN,ADNAN POLAT,59.0,4,70.0,64.0,50.0,50.0,50.0,96.0,0.0,1,58.0
+2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,ODABAŞI,HÜSEYİN TURAN,ADNAN POLAT,59.0,4,70.0,64.0,50.0,50.0,50.0,96.0,0.0,2,58.0
+2026-09-08-9-Kocaeli Kartepe Hipodromu,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,ODABAŞI,HÜSEYİN TURAN,ADNAN POLAT,59.0,4,70.0,64.0,50.0,50.0,50.0,96.0,0.0,2,58.0
 2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,SAFDERUN OĞLU,MEHMET KAYA,SALİH BAYDAN,63.0,6,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,60.0
 2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,SEMENDİN GÜCÜ,BURAK AKÇAY,TURGAY ÇEKİCİ,57.5,2,20.0,28.0,0.0,50.0,14.0,90.0,0.0,2,49.0
 2026-09-08-Kocaeli Kartepe Hipodromu-9,2026-09-08,9,Kocaeli Kartepe Hipodromu,2000.0,TUTMAÇ,GÖKHAN BEKTAŞ,MURAT AKKILIÇ,52.0,10,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,40.0
@@ -2764,6 +2820,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-12-Ankara 75. Yıl Hipodromu-6,2026-09-12,6,Ankara 75. Yıl Hipodromu,1600.0,OĞLUM GALİBEY,NİZAMETTİN DEMİR,SEİT KAN,54.0,5,55.0,46.0,28.0,64.0,46.0,76.0,4.42,2,71.0
 2026-09-12-Ankara 75. Yıl Hipodromu-6,2026-09-12,6,Ankara 75. Yıl Hipodromu,1600.0,VOICE OF KHAN,GÖKHAN KOCAKAYA,CANER AKGÜL,59.0,1,0.0,50.0,50.0,50.0,50.0,96.0,46.28,0,87.0
 2026-09-12-Ankara 75. Yıl Hipodromu-7,2026-09-12,7,Ankara 75. Yıl Hipodromu,1400.0,AL YELE,HALİS KARATAŞ,İBRAHİM BEKİROĞULLARI,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,54.0
+2026-09-12-7-Ankara 75. Yıl Hipodromu,2026-09-12,7,Ankara 75. Yıl Hipodromu,1400.0,AL YELE,HALİS KARATAŞ,İBRAHİM BEKİROĞULLARI,57.0,4,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,54.0
 2026-09-12-Ankara 75. Yıl Hipodromu-7,2026-09-12,7,Ankara 75. Yıl Hipodromu,1400.0,DESIGNER,MEHMET AKYAVUZ,MEHMET DEMİROL,57.0,3,55.0,46.0,46.0,46.0,46.0,88.0,0.0,1,44.0
 2026-09-12-Ankara 75. Yıl Hipodromu-7,2026-09-12,7,Ankara 75. Yıl Hipodromu,1400.0,MISS DEVRAN,GÖKHAN KOCAKAYA,İLKER KÖROĞLU,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,42.0
 2026-09-12-7-Ankara 75. Yıl Hipodromu,2026-09-12,7,Ankara 75. Yıl Hipodromu,1400.0,MISS DEVRAN,GÖKHAN KOCAKAYA,İLKER KÖROĞLU,57.0,6,0.0,50.0,50.0,50.0,50.0,88.0,0.0,0,42.0
@@ -2853,14 +2910,17 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,DIVINE CHILD,HAKİM YÖNDEN,ELİF AÇMAZ,52.0,11,0.0,50.0,50.0,50.0,50.0,68.0,1.37,0,11.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,FANDOROS,İLKER AKIN,OSMAN DEMİR,52.0,14,0.0,50.0,50.0,50.0,0.0,68.0,2.52,1,31.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,KING ANCESTOR,ÇETİN CANPOLAT,ABDULKADİR AKIL,54.0,1,0.0,50.0,50.0,50.0,50.0,76.0,3.36,0,42.0
+2026-09-12-6-Diyarbakır Hipodromu,2026-09-12,6,Diyarbakır Hipodromu,2000.0,KING ANCESTOR,ÇETİN CANPOLAT,ABDULKADİR AKIL,54.0,1,0.0,50.0,50.0,50.0,50.0,76.0,3.36,0,42.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,MİRA CETİ,LEVENT TAPTIK,HASAN TEKİNALP,56.5,7,5.0,0.0,0.0,0.0,0.0,86.0,7.3,2,49.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,NINJA,MEHMET ŞAKİR,MEHMET KAYA,60.0,3,0.0,0.0,0.0,50.0,50.0,100.0,3.7,1,54.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,PATPAT,ABDULLAH ÇANKAYA,MEHMET ALİ SUBAY,55.5,4,0.0,50.0,50.0,50.0,50.0,82.0,2.52,0,41.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,SERREŞ,MUSTAFA IŞIK,MEHMET ASLAN,58.0,12,0.0,50.0,50.0,50.0,50.0,92.0,5.88,0,46.0
 2026-09-12-6-Diyarbakır Hipodromu,2026-09-12,6,Diyarbakır Hipodromu,2000.0,SERREŞ,MUSTAFA IŞIK,MEHMET ASLAN,58.0,12,0.0,50.0,50.0,50.0,50.0,92.0,5.88,0,46.0
-2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,SILVEN,YUSUF CENGİZ,HASAN TEKİNALP,56.5,10,85.0,50.0,82.0,82.0,50.0,86.0,15.79,2,43.0
+2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,SILVEN,YUSUF CENGİZ,HASAN TEKİNALP,56.5,10,85.0,50.0,82.0,82.0,50.0,86.0,15.79,4,43.0
+2026-09-12-6-Diyarbakır Hipodromu,2026-09-12,6,Diyarbakır Hipodromu,2000.0,SILVEN,YUSUF CENGİZ,HASAN TEKİNALP,56.5,10,85.0,50.0,82.0,82.0,50.0,86.0,15.79,4,43.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,TALEBE,SAMİ KAPLAN,ERCAN ALTIN,52.0,8,10.0,50.0,0.0,50.0,0.0,68.0,7.0,1,28.0
-2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,THON KHITCHIBA,AZİZ AKDEMİR,YELİZ BAYSAL,56.0,2,40.0,50.0,28.0,50.0,50.0,84.0,8.49,1,42.0
+2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,THON KHITCHIBA,AZİZ AKDEMİR,YELİZ BAYSAL,56.0,2,40.0,50.0,28.0,50.0,50.0,84.0,8.49,2,42.0
+2026-09-12-6-Diyarbakır Hipodromu,2026-09-12,6,Diyarbakır Hipodromu,2000.0,THON KHITCHIBA,AZİZ AKDEMİR,YELİZ BAYSAL,56.0,2,40.0,50.0,28.0,50.0,50.0,84.0,8.49,2,42.0
 2026-09-12-Diyarbakır Hipodromu-6,2026-09-12,6,Diyarbakır Hipodromu,2000.0,TORUNUM DEVRİM,TAMER BALİ,HAKAN ATAKAYA,52.0,5,25.0,50.0,50.0,50.0,10.0,68.0,3.37,1,25.0
 2026-09-13-Adana Yeşiloba Hipodromu-1,2026-09-13,1,Adana Yeşiloba Hipodromu,1200.0,CRIMSON POWER,MEHMET ÇELİK,YUNUS TUNCAY,56.0,6,70.0,50.0,64.0,50.0,50.0,84.0,26.67,1,49.0
 2026-09-13-Adana Yeşiloba Hipodromu-1,2026-09-13,1,Adana Yeşiloba Hipodromu,1200.0,GHOSHA,İSA KATAR,YELİZ BAYSAL,57.0,4,10.0,50.0,0.0,0.0,0.0,88.0,4.15,2,50.0
@@ -2933,6 +2993,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,BİRÇEKIZ,TAMER BALİ,VEYSEL TEKİN,52.0,16,0.0,50.0,50.0,50.0,50.0,68.0,0.35,0,15.0
 2026-09-13-5-Adana Yeşiloba Hipodromu,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,BİRÇEKIZ,TAMER BALİ,VEYSEL TEKİN,52.0,16,0.0,50.0,50.0,50.0,50.0,68.0,0.35,0,15.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,CANMERT,MEHMET TAHA COŞKUN,ADNAN POLAT,56.5,7,0.0,50.0,50.0,50.0,50.0,86.0,9.03,0,52.0
+2026-09-13-5-Adana Yeşiloba Hipodromu,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,CANMERT,MEHMET TAHA COŞKUN,ADNAN POLAT,56.5,7,0.0,50.0,50.0,50.0,50.0,86.0,9.03,0,52.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,DEMİRDÖVEN KIZI,ROJHAT KURT,ALİ GÜLLÜ,53.0,18,0.0,50.0,50.0,50.0,50.0,72.0,0.14,0,41.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,HARPUT MUHAFIZI,SALİH ÇELİK,YAVUZ AKDAŞ,56.0,4,0.0,0.0,0.0,50.0,0.0,84.0,4.09,1,45.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,HARŞİT BEYİ,ERCAN ÇANKAYA,MÜSLÜM ÖRTÜNÇ,59.0,12,0.0,50.0,50.0,50.0,0.0,96.0,12.23,1,51.0
@@ -2943,6 +3004,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,VETCİHAN,FATİH SULTAN MEHMET SANSAR,MEHMET GÜNEŞ,52.0,3,55.0,46.0,46.0,46.0,46.0,68.0,7.16,1,35.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,ÇELİK PARÇASI,MEHMET KIYAK,YUNUS TUNCAY,53.5,8,40.0,28.0,28.0,50.0,28.0,74.0,3.04,1,44.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,ÇEŞMEBAŞI,VELAT DEMİR,YUNUS TUNCAY,56.5,6,0.0,50.0,50.0,50.0,50.0,86.0,1.51,0,46.0
+2026-09-13-5-Adana Yeşiloba Hipodromu,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,ÇEŞMEBAŞI,VELAT DEMİR,YUNUS TUNCAY,56.5,6,0.0,50.0,50.0,50.0,50.0,86.0,1.51,0,46.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,ÇİMENGÖZ,MEHMET ÇELİK,RESUL KAYA,53.5,11,0.0,0.0,0.0,50.0,0.0,74.0,0.27,2,36.0
 2026-09-13-Adana Yeşiloba Hipodromu-5,2026-09-13,5,Adana Yeşiloba Hipodromu,1900.0,ŞAHLANTAY,MERT UYAR,TOLGA SÜSLÜ,60.0,1,0.0,50.0,50.0,50.0,0.0,100.0,3.99,1,59.0
 2026-09-13-Adana Yeşiloba Hipodromu-6,2026-09-13,6,Adana Yeşiloba Hipodromu,1500.0,ABBAS BEY,MEHMET AKYAVUZ,MEHMET ARSLAN,59.5,3,85.0,50.0,82.0,50.0,50.0,98.0,59.75,1,90.0
@@ -2979,7 +3041,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,SIRIUS BLACK,VELAT DEMİR,ABDULLAH KIZILYAMAÇ,56.0,12,5.0,0.0,0.0,50.0,50.0,84.0,0.0,2,73.0
 2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,SMART CHILDREN,HIŞMAN ÇİZİK,ARZU KILIÇ,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,87.0
 2026-09-13-7-Adana Yeşiloba Hipodromu,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,SMART CHILDREN,HIŞMAN ÇİZİK,ARZU KILIÇ,58.0,4,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,87.0
-2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,TEK NERGİZ,TAMER BALİ,YUNUS TUNCAY,54.0,6,25.0,10.0,10.0,10.0,10.0,76.0,0.0,1,51.0
+2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,TEK NERGİZ,TAMER BALİ,YUNUS TUNCAY,54.0,6,25.0,10.0,10.0,10.0,10.0,76.0,0.0,2,51.0
+2026-09-13-7-Adana Yeşiloba Hipodromu,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,TEK NERGİZ,TAMER BALİ,YUNUS TUNCAY,54.0,6,25.0,10.0,10.0,10.0,10.0,76.0,0.0,2,51.0
 2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,TOMANBAY,İLHAMİ GÖÇER,YAKUP MİSDİK,55.5,15,0.0,50.0,50.0,50.0,50.0,82.0,0.0,0,0.0
 2026-09-13-Adana Yeşiloba Hipodromu-7,2026-09-13,7,Adana Yeşiloba Hipodromu,1200.0,WAR VOEL,SALİH ÇELİK,MUSTAFA ÖZYİĞİT,56.0,10,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,72.0
 2026-09-13-Adana Yeşiloba Hipodromu-8,2026-09-13,8,Adana Yeşiloba Hipodromu,1200.0,ASTAKOS,FATİH SULTAN MEHMET SANSAR,MUSTAFA ATAL,55.0,2,70.0,50.0,64.0,50.0,64.0,80.0,0.0,2,27.0
@@ -3001,6 +3064,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-13-Adana Yeşiloba Hipodromu-8,2026-09-13,8,Adana Yeşiloba Hipodromu,1200.0,VENÜS YILDIZI,FATİH RÜSTEM BEBEK,KADİR TAŞDEMİR,55.0,14,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,0.0
 2026-09-13-8-Adana Yeşiloba Hipodromu,2026-09-13,8,Adana Yeşiloba Hipodromu,1200.0,VENÜS YILDIZI,FATİH RÜSTEM BEBEK,KADİR TAŞDEMİR,55.0,14,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,0.0
 2026-09-13-Adana Yeşiloba Hipodromu-8,2026-09-13,8,Adana Yeşiloba Hipodromu,1200.0,ŞAMPİYONEREN,MEHMET KIYAK,SERHAT CEYLAN,54.0,13,0.0,50.0,50.0,50.0,50.0,76.0,0.0,0,0.0
+2026-09-13-8-Adana Yeşiloba Hipodromu,2026-09-13,8,Adana Yeşiloba Hipodromu,1200.0,ŞAMPİYONEREN,MEHMET KIYAK,SERHAT CEYLAN,54.0,13,0.0,50.0,50.0,50.0,50.0,76.0,0.0,0,0.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,BOLUN,HIŞMAN ÇİZİK,YUNUS TUNCAY,58.0,3,10.0,0.0,0.0,50.0,0.0,92.0,0.0,1,39.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,CANDIA,ROJHAT KURT,YELİZ BAYSAL,53.0,8,0.0,50.0,50.0,50.0,50.0,72.0,0.0,0,15.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,DREAM OF THE STAR,FATİH SULTAN MEHMET SANSAR,RAMAZAN TAŞDELEN,55.0,18,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,0.0
@@ -3008,7 +3072,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,KOKO LOKO,MÜSLÜM ÇELİK,SUAT ALTUNBAŞ,55.0,1,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,45.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,LADY ATAŞ,MÜCAHİT BAYIR,MUSTAFA ÖZYİĞİT,58.0,16,0.0,0.0,0.0,0.0,50.0,92.0,0.0,2,32.0
 2026-09-13-9-Adana Yeşiloba Hipodromu,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,LADY ATAŞ,MÜCAHİT BAYIR,MUSTAFA ÖZYİĞİT,58.0,16,0.0,0.0,0.0,0.0,50.0,92.0,0.0,2,32.0
-2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,O PAPATYA,MEHMET TAHA COŞKUN,YUNUS TUNCAY,54.0,10,40.0,50.0,50.0,50.0,28.0,76.0,0.0,1,32.0
+2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,O PAPATYA,MEHMET TAHA COŞKUN,YUNUS TUNCAY,54.0,10,40.0,50.0,50.0,50.0,28.0,76.0,0.0,2,32.0
+2026-09-13-9-Adana Yeşiloba Hipodromu,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,O PAPATYA,MEHMET TAHA COŞKUN,YUNUS TUNCAY,54.0,10,40.0,50.0,50.0,50.0,28.0,76.0,0.0,2,32.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,PRENSES MAVİŞ,SALİH ÇELİK,TAMER OĞUZHAN KARA,58.0,15,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,36.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,PRENSES MELTEM,VELAT DEMİR,AHMET AKBABA,58.0,9,12.5,50.0,50.0,50.0,5.0,92.0,0.0,2,23.0
 2026-09-13-Adana Yeşiloba Hipodromu-9,2026-09-13,9,Adana Yeşiloba Hipodromu,2100.0,PİTON KIZ,MEHMET ALİ AKGÖBEK,MEHRİBAN ÇİÇEK,58.0,11,0.0,0.0,0.0,0.0,50.0,92.0,0.0,2,34.0
@@ -3141,7 +3206,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,PRINCESS GIRL,ÇETİN CANPOLAT,HASAN TEKİNALP,54.0,2,12.5,50.0,10.0,50.0,5.0,76.0,3.33,2,36.0
 2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,TUMBUL NAZLI,MEHMET ÇELİK,HAKAN ATAKAYA,61.0,9,0.0,50.0,50.0,50.0,50.0,96.0,17.55,1,85.0
 2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,ÇAĞLAYANŞELALE,SEZER ÇELİK,AHMET AKBABA,62.0,4,0.0,50.0,0.0,50.0,0.0,92.0,4.08,1,67.0
-2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,ÇIĞGİBİ,İLKER AKIN,MAHMUT DOĞAN,57.0,6,25.0,50.0,14.0,50.0,28.0,88.0,1.56,2,28.0
+2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,ÇIĞGİBİ,İLKER AKIN,MAHMUT DOĞAN,57.0,6,25.0,50.0,14.0,50.0,28.0,88.0,1.56,4,28.0
+2026-09-14-2-Şanlıurfa Hipodromu,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,ÇIĞGİBİ,İLKER AKIN,MAHMUT DOĞAN,57.0,6,25.0,50.0,14.0,50.0,28.0,88.0,1.56,4,28.0
 2026-09-14-Şanlıurfa Hipodromu-2,2026-09-14,2,Şanlıurfa Hipodromu,1700.0,ÇİÇEKMAST,HAKİM YÖNDEN,MAHMUT DOĞAN,54.0,1,0.0,50.0,0.0,50.0,0.0,76.0,3.94,1,48.0
 2026-09-14-Şanlıurfa Hipodromu-3,2026-09-14,3,Şanlıurfa Hipodromu,1200.0,ADARYAM,HAKİM YÖNDEN,KADİR TAŞDEMİR,52.0,6,0.0,50.0,50.0,50.0,50.0,68.0,4.56,0,0.0
 2026-09-14-Şanlıurfa Hipodromu-3,2026-09-14,3,Şanlıurfa Hipodromu,1200.0,ARATŞAH,İSA KATAR,MEHMET ALİ SUBAY,57.0,1,0.0,50.0,50.0,50.0,50.0,88.0,6.35,0,0.0
@@ -3248,7 +3314,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-14-Şanlıurfa Hipodromu-8,2026-09-14,8,Şanlıurfa Hipodromu,1200.0,WITTO,HAKİM YÖNDEN,OSMAN DEMİR,52.0,12,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,31.0
 2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,ABADBEY,ERAY ÇİZİK,İLKER KÖROĞLU,57.0,3,40.0,28.0,28.0,28.0,28.0,88.0,3.92,1,25.0
 2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,ARDANUÇDAN,HIŞMAN ÇİZİK,CUMALİ KARATAŞ,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,3.58,0,0.0
-2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,ARKANBERK,MÜSLÜM ÇELİK,SERHAT POLAT,59.0,2,85.0,82.0,82.0,82.0,82.0,96.0,12.91,1,36.0
+2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,ARKANBERK,MÜSLÜM ÇELİK,SERHAT POLAT,59.0,2,85.0,82.0,82.0,82.0,82.0,96.0,12.91,2,36.0
+2026-09-15-1-Ankara 75. Yıl Hipodromu,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,ARKANBERK,MÜSLÜM ÇELİK,SERHAT POLAT,59.0,2,85.0,82.0,82.0,82.0,82.0,96.0,12.91,2,36.0
 2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,BÜYÜK PEHLİVAN,VEDAT ABİŞ,MUSTAFA ÖZYİĞİT,57.0,4,35.0,32.0,32.0,50.0,0.0,88.0,6.71,2,31.0
 2026-09-15-Ankara 75. Yıl Hipodromu-1,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,KING ULUDAĞ,ERCAN ÇANKAYA,VEDAT YILDIRIM,59.0,1,85.0,82.0,82.0,50.0,82.0,96.0,17.57,2,35.0
 2026-09-15-1-Ankara 75. Yıl Hipodromu,2026-09-15,1,Ankara 75. Yıl Hipodromu,1300.0,KING ULUDAĞ,ERCAN ÇANKAYA,VEDAT YILDIRIM,59.0,1,85.0,82.0,82.0,50.0,82.0,96.0,17.57,2,35.0
@@ -3278,11 +3345,14 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,KOYUNEVİ ASLANI,MERT GÖKALP ARSLAN,KÜBRA ŞENTÜRK,57.0,8,0.0,0.0,0.0,50.0,0.0,88.0,6.43,1,0.0
 2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,OSKAYBEY,HIŞMAN ÇİZİK,SERHAT POLAT,57.0,11,40.0,28.0,28.0,50.0,28.0,88.0,14.17,1,0.0
 2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,TORUN SADA,MEHMET KAYA,RAMAZAN KAYA,55.0,1,27.5,23.0,23.0,50.0,23.0,80.0,12.35,2,23.0
-2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,YARKAYA,FATİH SULTAN MEHMET SANSAR,ADNAN POLAT,57.0,7,0.0,0.0,0.0,50.0,0.0,88.0,9.54,1,0.0
+2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,YARKAYA,FATİH SULTAN MEHMET SANSAR,ADNAN POLAT,57.0,7,0.0,0.0,0.0,50.0,0.0,88.0,9.54,2,0.0
+2026-09-15-4-Ankara 75. Yıl Hipodromu,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,YARKAYA,FATİH SULTAN MEHMET SANSAR,ADNAN POLAT,57.0,7,0.0,0.0,0.0,50.0,0.0,88.0,9.54,2,0.0
 2026-09-15-Ankara 75. Yıl Hipodromu-4,2026-09-15,4,Ankara 75. Yıl Hipodromu,1300.0,YAVUZALİ,NİZAMETTİN DEMİR,SERHAT POLAT,57.0,10,10.0,0.0,0.0,50.0,0.0,88.0,5.88,1,0.0
-2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,AKIN BEYLİ,HIŞMAN ÇİZİK,CUMALİ KARATAŞ,56.5,4,40.0,28.0,28.0,50.0,28.0,86.0,11.06,1,42.0
+2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,AKIN BEYLİ,HIŞMAN ÇİZİK,CUMALİ KARATAŞ,56.5,4,40.0,28.0,28.0,50.0,28.0,86.0,11.06,2,42.0
+2026-09-15-5-Ankara 75. Yıl Hipodromu,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,AKIN BEYLİ,HIŞMAN ÇİZİK,CUMALİ KARATAŞ,56.5,4,40.0,28.0,28.0,50.0,28.0,86.0,11.06,2,42.0
 2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,ANGLE RISING,SERHAT ÇELİK,KEMAL YILMAZ,57.5,3,0.0,50.0,50.0,50.0,50.0,90.0,9.08,0,50.0
-2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,DİNAMİT KIZ,MEHMET KESKİN,ÖMER FARUK ERTUĞRUL,54.5,2,10.0,0.0,50.0,50.0,0.0,78.0,4.79,1,38.0
+2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,DİNAMİT KIZ,MEHMET KESKİN,ÖMER FARUK ERTUĞRUL,54.5,2,10.0,0.0,50.0,50.0,0.0,78.0,4.79,2,38.0
+2026-09-15-5-Ankara 75. Yıl Hipodromu,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,DİNAMİT KIZ,MEHMET KESKİN,ÖMER FARUK ERTUĞRUL,54.5,2,10.0,0.0,50.0,50.0,0.0,78.0,4.79,2,38.0
 2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,EL ALACRAN,ERCAN ÇANKAYA,NİHAT DÜNDAR,55.5,7,85.0,50.0,82.0,50.0,82.0,82.0,18.41,2,40.0
 2026-09-15-5-Ankara 75. Yıl Hipodromu,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,EL ALACRAN,ERCAN ÇANKAYA,NİHAT DÜNDAR,55.5,7,85.0,50.0,82.0,50.0,82.0,82.0,18.41,2,40.0
 2026-09-15-Ankara 75. Yıl Hipodromu-5,2026-09-15,5,Ankara 75. Yıl Hipodromu,1500.0,EL REY ESCORPİON,FESİH ÇETİNBAŞ,HÜSEYİN SUNKAR,60.0,5,0.0,0.0,0.0,0.0,50.0,100.0,1.75,2,49.0
@@ -3300,8 +3370,10 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-15-Ankara 75. Yıl Hipodromu-6,2026-09-15,6,Ankara 75. Yıl Hipodromu,2200.0,TYWIN LANNISTER,ERCAN ÇANKAYA,EMİN KARATAŞ,53.5,4,0.0,50.0,50.0,50.0,50.0,74.0,4.89,0,89.0
 2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,BOUCHERON,AYHAN KURŞUN,ERTAN ACER,58.0,6,25.0,10.0,50.0,50.0,10.0,92.0,0.0,2,85.0
 2026-09-15-7-Ankara 75. Yıl Hipodromu,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,BOUCHERON,AYHAN KURŞUN,ERTAN ACER,58.0,6,25.0,10.0,50.0,50.0,10.0,92.0,0.0,2,85.0
-2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,JAN AQUA,MEHMET AKYAVUZ,MUHAMMED AKYAVUZ,57.0,3,55.0,50.0,50.0,46.0,46.0,88.0,0.0,1,97.0
+2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,JAN AQUA,MEHMET AKYAVUZ,MUHAMMED AKYAVUZ,57.0,3,55.0,50.0,50.0,46.0,46.0,88.0,0.0,2,97.0
+2026-09-15-7-Ankara 75. Yıl Hipodromu,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,JAN AQUA,MEHMET AKYAVUZ,MUHAMMED AKYAVUZ,57.0,3,55.0,50.0,50.0,46.0,46.0,88.0,0.0,2,97.0
 2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,KARAMAÇABEY,ERCAN ÇANKAYA,HÜSEYİN TEKİNALP,55.0,2,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,37.0
+2026-09-15-7-Ankara 75. Yıl Hipodromu,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,KARAMAÇABEY,ERCAN ÇANKAYA,HÜSEYİN TEKİNALP,55.0,2,0.0,50.0,50.0,50.0,50.0,80.0,0.0,0,37.0
 2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,QUEIMADA GRANDE,MÜCAHİT BAYIR,MEHMET ÇELİK,50.0,1,85.0,50.0,50.0,50.0,50.0,60.0,0.0,2,89.0
 2026-09-15-7-Ankara 75. Yıl Hipodromu,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,QUEIMADA GRANDE,MÜCAHİT BAYIR,MEHMET ÇELİK,50.0,1,85.0,50.0,50.0,50.0,50.0,60.0,0.0,2,89.0
 2026-09-15-Ankara 75. Yıl Hipodromu-7,2026-09-15,7,Ankara 75. Yıl Hipodromu,2200.0,RUN FOR YAVUZ,BURHAN KILINÇ,MUSTAFA ÖZYİĞİT,56.0,4,10.0,0.0,50.0,50.0,50.0,84.0,0.0,1,78.0
@@ -3320,8 +3392,10 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,KARASERHAN,MERT UYAR,AYKUT AYDIN,53.0,8,25.0,10.0,10.0,50.0,10.0,72.0,0.0,1,0.0
 2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,MENESSAL,MEHMET NURİ SUNKAR,SERHAT POLAT,55.0,7,0.0,0.0,0.0,50.0,0.0,80.0,0.0,1,16.0
 2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,VENEDİKZADE,HIŞMAN ÇİZİK,MEHMET DEMİROL,57.0,10,70.0,64.0,64.0,50.0,64.0,88.0,0.0,1,0.0
-2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ZUBİR,MÜSLÜM ÇELİK,YUSUF UÇAR,57.0,6,0.0,0.0,0.0,0.0,0.0,88.0,0.0,1,0.0
-2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ÇİRKİN VE GÜZEL,SERHAT ÇELİK,RAMAZAN KAYA,55.0,3,5.0,0.0,0.0,0.0,0.0,80.0,0.0,2,28.0
+2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ZUBİR,MÜSLÜM ÇELİK,YUSUF UÇAR,57.0,6,0.0,0.0,0.0,0.0,0.0,88.0,0.0,2,0.0
+2026-09-15-8-Ankara 75. Yıl Hipodromu,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ZUBİR,MÜSLÜM ÇELİK,YUSUF UÇAR,57.0,6,0.0,0.0,0.0,0.0,0.0,88.0,0.0,2,0.0
+2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ÇİRKİN VE GÜZEL,SERHAT ÇELİK,RAMAZAN KAYA,55.0,3,5.0,0.0,0.0,0.0,0.0,80.0,0.0,4,28.0
+2026-09-15-8-Ankara 75. Yıl Hipodromu,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ÇİRKİN VE GÜZEL,SERHAT ÇELİK,RAMAZAN KAYA,55.0,3,5.0,0.0,0.0,0.0,0.0,80.0,0.0,4,28.0
 2026-09-15-Ankara 75. Yıl Hipodromu-8,2026-09-15,8,Ankara 75. Yıl Hipodromu,1300.0,ÜNAL GÖZ,AZİZ AKDEMİR,MEHMET ŞEFİK KILINÇ,60.0,1,77.5,73.0,73.0,50.0,73.0,100.0,0.0,2,36.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,ALTINEKEN,MERT GÖKALP ARSLAN,SERHAT POLAT,56.0,8,0.0,50.0,50.0,50.0,50.0,84.0,0.0,0,58.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,BURÇİGİN,VEDAT ABİŞ,CASIM KATI,55.5,1,100.0,100.0,50.0,50.0,100.0,82.0,0.0,1,61.0
@@ -3331,7 +3405,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-15-9-Ankara 75. Yıl Hipodromu,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,GÜLDANİYE,SERHAT ÇELİK,MÜCAHİT KAYA,60.0,12,10.0,0.0,50.0,0.0,0.0,100.0,0.0,2,72.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,GÜMBÜRBERK,MÜSLÜM ÇELİK,SERHAT POLAT,55.5,11,25.0,28.0,50.0,50.0,14.0,82.0,0.0,2,61.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,HADEHANIM,ERHAN AKTUĞ,ŞEFİK AYDEMİR,53.5,7,0.0,50.0,50.0,50.0,50.0,74.0,0.0,0,57.0
-2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,KUZGUNİ YEŞİL,MEHMET KESKİN,CASIM KATI,51.0,2,85.0,82.0,50.0,82.0,82.0,64.0,0.0,1,45.0
+2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,KUZGUNİ YEŞİL,MEHMET KESKİN,CASIM KATI,51.0,2,85.0,82.0,50.0,82.0,82.0,64.0,0.0,2,45.0
+2026-09-15-9-Ankara 75. Yıl Hipodromu,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,KUZGUNİ YEŞİL,MEHMET KESKİN,CASIM KATI,51.0,2,85.0,82.0,50.0,82.0,82.0,64.0,0.0,2,45.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,OYAZADE,MÜCAHİT BAYIR,MEHMET DEMİROL,54.5,9,0.0,0.0,50.0,50.0,0.0,78.0,0.0,1,55.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,SEMENDİN GÜCÜ,ERAY ÇİZİK,YUSUF UÇAR,52.0,5,41.667,50.0,41.0,50.0,50.0,68.0,0.0,3,50.0
 2026-09-15-Ankara 75. Yıl Hipodromu-9,2026-09-15,9,Ankara 75. Yıl Hipodromu,1900.0,SEMRAKAYA,ERCAN ÇANKAYA,MERT DEMİRTAŞ,59.0,10,0.0,50.0,50.0,50.0,50.0,96.0,0.0,0,68.0
@@ -3396,6 +3471,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-15-4-Kocaeli Kartepe Hipodromu,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,FUNDO,BERKANT GÖKÇE,RANA SUNA,59.5,2,40.0,28.0,28.0,50.0,50.0,98.0,3.99,2,81.0
 2026-09-15-Kocaeli Kartepe Hipodromu-4,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,KIRMÜJDE,UĞUR LEVENT,HAYRİ YILDIRIM,58.5,9,100.0,100.0,100.0,100.0,100.0,94.0,3.08,1,68.0
 2026-09-15-Kocaeli Kartepe Hipodromu-4,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,NECMİ BABA,MEHMET TAHA COŞKUN,YELİZ BAYSAL,55.5,13,0.0,50.0,50.0,50.0,50.0,82.0,0.32,0,78.0
+2026-09-15-4-Kocaeli Kartepe Hipodromu,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,NECMİ BABA,MEHMET TAHA COŞKUN,YELİZ BAYSAL,55.5,13,0.0,50.0,50.0,50.0,50.0,82.0,0.32,0,78.0
 2026-09-15-Kocaeli Kartepe Hipodromu-4,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,NUMANIM,SİNAN ÖZEN,NİHAT KAYA,56.5,14,0.0,0.0,0.0,50.0,0.0,86.0,0.27,1,53.0
 2026-09-15-Kocaeli Kartepe Hipodromu-4,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,RİGEL,EREN KADİRLER,AHMET ÖCAL,59.5,3,0.0,0.0,0.0,50.0,0.0,98.0,1.21,1,75.0
 2026-09-15-Kocaeli Kartepe Hipodromu-4,2026-09-15,4,Kocaeli Kartepe Hipodromu,1400.0,SİNAN ABİ,ERTUĞRUL CANKILIÇ,UĞUR TEMUÇİN,55.0,15,0.0,50.0,50.0,50.0,50.0,80.0,0.29,0,27.0
@@ -3526,7 +3602,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,LEO MELO,SAMİ KAPLAN,ESER YILDIRIM,58.0,5,51.667,48.667,73.0,100.0,50.0,92.0,0.0,3,40.0
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,MEMORY REMAINS,MEHMET ALİ AKTÜRK,MEHMET ALİ SUBAY,58.0,1,0.0,50.0,50.0,50.0,50.0,92.0,0.0,0,87.0
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,PRINCESS ALLIANOI,YUSUF CENGİZ,MEHMET ALTIN,58.0,7,85.0,82.0,50.0,50.0,82.0,92.0,0.0,1,73.0
-2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,SELANİK PRENSİ,İSA AKYAVUZ,MEHMET ALTIN,62.0,3,17.5,0.0,5.0,10.0,5.0,92.0,0.0,2,78.0
+2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,SELANİK PRENSİ,İSA AKYAVUZ,MEHMET ALTIN,62.0,3,17.5,0.0,5.0,10.0,5.0,92.0,0.0,4,78.0
+2026-09-16-8-Elazığ Hipodromu,2026-09-16,8,Elazığ Hipodromu,2000.0,SELANİK PRENSİ,İSA AKYAVUZ,MEHMET ALTIN,62.0,3,17.5,0.0,5.0,10.0,5.0,92.0,0.0,4,78.0
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,THE LAST UNICORN,EMRE AKKILIÇ,MUHAMMED BULUÇ,57.0,13,0.0,0.0,50.0,50.0,0.0,88.0,0.0,1,68.0
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,ÇELİ BEZA,AHMET HASAN BAYAR,MEHMET KAYA,57.0,4,0.0,50.0,0.0,50.0,0.0,88.0,0.0,2,75.0
 2026-09-16-Elazığ Hipodromu-8,2026-09-16,8,Elazığ Hipodromu,2000.0,ÇUKUROVA PEHLİVANI,ABDULLAH ÇANKAYA,RAMAZAN BARMAN,57.0,12,10.0,0.0,50.0,0.0,0.0,88.0,0.0,1,39.0
@@ -3580,7 +3657,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,DAPPER GIRL,SALİH ÇELİK,UMUT ÇİÇEK,55.0,7,70.0,50.0,64.0,64.0,64.0,80.0,11.11,1,27.0
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,GENERAL FEMALE,MEHMET NURİ SUNKAR,YILMAZ TEKİNALP,57.0,6,35.0,0.0,32.0,0.0,0.0,88.0,14.94,2,29.0
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,OY YARE,ROJHAT KURT,MEHMET TEKİNALP,55.0,4,55.0,46.0,46.0,46.0,46.0,80.0,4.77,1,30.0
-2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,PERIWINKLE,AYHAN KURŞUN,ŞEFİK AYDEMİR,55.0,1,10.0,0.0,0.0,50.0,0.0,80.0,10.69,1,0.0
+2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,PERIWINKLE,AYHAN KURŞUN,ŞEFİK AYDEMİR,55.0,1,10.0,0.0,0.0,50.0,0.0,80.0,10.69,2,0.0
+2026-09-17-5-Ankara 75. Yıl Hipodromu,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,PERIWINKLE,AYHAN KURŞUN,ŞEFİK AYDEMİR,55.0,1,10.0,0.0,0.0,50.0,0.0,80.0,10.69,2,0.0
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,ROYAL PRYTANIA,VEDAT ABİŞ,VEDAT YILDIRIM,55.0,3,0.0,50.0,50.0,50.0,50.0,80.0,18.81,0,0.0
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,SOUL OF MINE,ERAY ÇİZİK,ADNAN POLAT,57.0,5,25.0,50.0,10.0,50.0,10.0,88.0,7.94,1,30.0
 2026-09-17-Ankara 75. Yıl Hipodromu-5,2026-09-17,5,Ankara 75. Yıl Hipodromu,1200.0,WELL SUPPORTED,GÖKHAN KOCAKAYA,ARZU KILIÇ,55.0,2,0.0,50.0,50.0,50.0,50.0,80.0,9.71,0,0.0
@@ -3605,9 +3683,11 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,KARLOVASİ,SERHAT ÇELİK,AYBERK ÇAYIR,52.0,11,70.0,64.0,50.0,64.0,50.0,68.0,0.0,1,36.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,KEMALS ELF,FATİH SULTAN MEHMET SANSAR,UMUT ÇİÇEK,52.0,10,85.0,82.0,50.0,82.0,82.0,68.0,0.0,1,32.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,LADY GROUND,ERCAN ÇANKAYA,EMİN KARATAŞ,57.5,5,100.0,100.0,100.0,100.0,100.0,90.0,0.0,1,61.0
-2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,LEADER TULIP,MEHMET KESKİN,CELAL BURAK SERİNER,52.0,2,100.0,100.0,50.0,100.0,100.0,68.0,0.0,1,46.0
+2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,LEADER TULIP,MEHMET KESKİN,CELAL BURAK SERİNER,52.0,2,100.0,100.0,50.0,100.0,100.0,68.0,0.0,2,46.0
+2026-09-17-8-Ankara 75. Yıl Hipodromu,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,LEADER TULIP,MEHMET KESKİN,CELAL BURAK SERİNER,52.0,2,100.0,100.0,50.0,100.0,100.0,68.0,0.0,2,46.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,MON BİJOU,ENES ATLAMAZ,ÖMER ALAÇAM,60.0,3,55.0,46.0,50.0,50.0,46.0,100.0,0.0,1,65.0
-2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,NAMASTE,MERT UYAR,ARZU KILIÇ,50.0,4,40.0,28.0,28.0,28.0,28.0,60.0,0.0,1,34.0
+2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,NAMASTE,MERT UYAR,ARZU KILIÇ,50.0,4,40.0,28.0,28.0,28.0,28.0,60.0,0.0,2,34.0
+2026-09-17-8-Ankara 75. Yıl Hipodromu,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,NAMASTE,MERT UYAR,ARZU KILIÇ,50.0,4,40.0,28.0,28.0,28.0,28.0,60.0,0.0,2,34.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,ÇEVİK VAKTİ,MEHMET TAHA COŞKUN,MEHMET ALİ CANPOLATLI,58.0,8,0.0,0.0,50.0,50.0,50.0,92.0,0.0,1,61.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,ÜNLÜ BOMBA,SALİH ÇELİK,SEİT KAN,54.0,9,0.0,0.0,50.0,50.0,0.0,76.0,0.0,1,47.0
 2026-09-17-Ankara 75. Yıl Hipodromu-8,2026-09-17,8,Ankara 75. Yıl Hipodromu,2000.0,ÜÇNUR,İLKER AKIN,ERGÜN ÇETİNKURT,52.0,6,0.0,50.0,50.0,50.0,50.0,68.0,0.0,0,34.0
@@ -3708,13 +3788,16 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ERKURT,SERHAT ÇELİK,ADNAN POLAT,60.0,8,0.0,0.0,50.0,50.0,0.0,100.0,1.62,2,74.0
 2026-09-19-2-Ankara 75. Yıl Hipodromu,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ERKURT,SERHAT ÇELİK,ADNAN POLAT,60.0,8,0.0,0.0,50.0,50.0,0.0,100.0,1.62,2,74.0
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,FERAT,ERAY ÇİZİK,ADEM GÜVEN,57.0,7,77.5,46.0,50.0,50.0,46.0,88.0,13.22,2,62.0
-2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,GAZNELİ,VEDAT ABİŞ,ÜMİT ARSLAN,54.0,1,25.0,10.0,50.0,50.0,10.0,76.0,16.96,1,56.0
+2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,GAZNELİ,VEDAT ABİŞ,ÜMİT ARSLAN,54.0,1,25.0,10.0,50.0,50.0,10.0,76.0,16.96,2,56.0
+2026-09-19-2-Ankara 75. Yıl Hipodromu,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,GAZNELİ,VEDAT ABİŞ,ÜMİT ARSLAN,54.0,1,25.0,10.0,50.0,50.0,10.0,76.0,16.96,2,56.0
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,KARSAVURANLI,ERTUĞRUL CANKILIÇ,MEHMET ALİ CANPOLATLI,60.5,5,85.0,50.0,50.0,50.0,82.0,98.0,18.07,1,73.0
-2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ODABAŞI,NİZAMETTİN DEMİR,ADNAN POLAT,57.5,9,62.5,50.0,46.0,64.0,46.0,90.0,2.63,2,58.0
+2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ODABAŞI,NİZAMETTİN DEMİR,ADNAN POLAT,57.5,9,62.5,50.0,46.0,64.0,46.0,90.0,2.63,4,58.0
+2026-09-19-2-Ankara 75. Yıl Hipodromu,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ODABAŞI,NİZAMETTİN DEMİR,ADNAN POLAT,57.5,9,62.5,50.0,46.0,64.0,46.0,90.0,2.63,4,58.0
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,SAPANCA AĞASI,AYHAN KURŞUN,MERT KORKMAZ,61.5,2,0.0,0.0,50.0,0.0,50.0,94.0,7.05,1,71.0
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,TABİP BEY,MEHMET ALİ AKGÖBEK,HÜSEYİN SUNKAR,58.5,4,0.0,0.0,0.0,50.0,50.0,94.0,2.48,1,65.0
 2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,UMUTSER,MEHMET KESKİN,CUMALİ KARATAŞ,52.0,3,85.0,82.0,50.0,50.0,82.0,68.0,13.18,1,39.0
-2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ÖZGÜNVERA,MÜSLÜM ÇELİK,HÜSEYİN ATAŞ,52.0,6,70.0,64.0,50.0,50.0,64.0,68.0,18.6,1,52.0
+2026-09-19-Ankara 75. Yıl Hipodromu-2,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ÖZGÜNVERA,MÜSLÜM ÇELİK,HÜSEYİN ATAŞ,52.0,6,70.0,64.0,50.0,50.0,64.0,68.0,18.6,2,52.0
+2026-09-19-2-Ankara 75. Yıl Hipodromu,2026-09-19,2,Ankara 75. Yıl Hipodromu,2000.0,ÖZGÜNVERA,MÜSLÜM ÇELİK,HÜSEYİN ATAŞ,52.0,6,70.0,64.0,50.0,50.0,64.0,68.0,18.6,2,52.0
 2026-09-19-Ankara 75. Yıl Hipodromu-3,2026-09-19,3,Ankara 75. Yıl Hipodromu,1300.0,CAPRENO,FATİH SULTAN MEHMET SANSAR,YASİN POLAT,57.0,2,40.0,28.0,28.0,28.0,28.0,88.0,7.53,1,27.0
 2026-09-19-Ankara 75. Yıl Hipodromu-3,2026-09-19,3,Ankara 75. Yıl Hipodromu,1300.0,LADY SOVEREIGN,MEHMET ALİ AKGÖBEK,İBRAHİM BEKİROĞULLARI,55.0,3,47.5,37.0,37.0,50.0,37.0,80.0,3.01,4,23.0
 2026-09-19-3-Ankara 75. Yıl Hipodromu,2026-09-19,3,Ankara 75. Yıl Hipodromu,1300.0,LADY SOVEREIGN,MEHMET ALİ AKGÖBEK,İBRAHİM BEKİROĞULLARI,55.0,3,47.5,37.0,37.0,50.0,37.0,80.0,3.01,4,23.0
@@ -3731,7 +3814,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-19-Ankara 75. Yıl Hipodromu-4,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,GENGAR,AYHAN KURŞUN,İSMET TEKİNALP,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,5.27,0,82.0
 2026-09-19-4-Ankara 75. Yıl Hipodromu,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,GENGAR,AYHAN KURŞUN,İSMET TEKİNALP,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,5.27,0,82.0
 2026-09-19-Ankara 75. Yıl Hipodromu-4,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,NORTHERN NURDETTA,VEDAT ABİŞ,VEDAT YILDIRIM,58.0,1,25.0,10.0,10.0,50.0,50.0,92.0,29.92,1,87.0
-2026-09-19-Ankara 75. Yıl Hipodromu-4,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,56.0,6,55.0,46.0,46.0,28.0,46.0,84.0,2.49,2,66.0
+2026-09-19-Ankara 75. Yıl Hipodromu-4,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,56.0,6,55.0,46.0,46.0,28.0,46.0,84.0,2.49,4,66.0
+2026-09-19-4-Ankara 75. Yıl Hipodromu,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,ONE PAGE,MEHMET TAHA COŞKUN,ERGÜN ÇETİNKURT,56.0,6,55.0,46.0,46.0,28.0,46.0,84.0,2.49,4,66.0
 2026-09-19-Ankara 75. Yıl Hipodromu-4,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,ROSAS DEL ROSEDAL,MEHMET ALİ AKGÖBEK,HÜSEYİN SUNKAR,56.5,7,25.0,12.667,19.0,5.0,5.0,86.0,4.63,6,63.0
 2026-09-19-4-Ankara 75. Yıl Hipodromu,2026-09-19,4,Ankara 75. Yıl Hipodromu,1500.0,ROSAS DEL ROSEDAL,MEHMET ALİ AKGÖBEK,HÜSEYİN SUNKAR,56.5,7,25.0,12.667,19.0,5.0,5.0,86.0,4.63,6,63.0
 2026-09-19-Ankara 75. Yıl Hipodromu-5,2026-09-19,5,Ankara 75. Yıl Hipodromu,1400.0,AFRİKA SULTANI,VEDAT ABİŞ,KADİR TEKİNALP,57.0,9,0.0,50.0,50.0,50.0,50.0,88.0,16.87,0,20.0
@@ -3848,7 +3932,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-19-Diyarbakır Hipodromu-4,2026-09-19,4,Diyarbakır Hipodromu,1200.0,ŞAH TUNALI,İSA KATAR,HAKAN ATAKAYA,55.0,2,11.667,50.0,0.0,50.0,5.0,80.0,3.16,3,21.0
 2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,ANGEL OF DONYA,MUSTAFA IŞIK,ELİF AÇMAZ,58.0,3,0.0,50.0,50.0,50.0,50.0,92.0,32.54,0,41.0
 2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,BY SİNANLI,HAKİM YÖNDEN,MUHAMMED BULUÇ,54.0,6,25.0,28.0,14.0,50.0,14.0,76.0,2.66,2,12.0
-2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,ZEKERİYA AKDEMİR,55.0,4,70.0,50.0,64.0,64.0,50.0,80.0,4.56,2,33.0
+2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,ZEKERİYA AKDEMİR,55.0,4,70.0,50.0,64.0,64.0,50.0,80.0,4.56,4,33.0
+2026-09-19-5-Diyarbakır Hipodromu,2026-09-19,5,Diyarbakır Hipodromu,1200.0,DAUGHTER OF VICTOR,YUNUS ÇELİKBAŞ,ZEKERİYA AKDEMİR,55.0,4,70.0,50.0,64.0,64.0,50.0,80.0,4.56,4,33.0
 2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,EWER OF SWEET,İSA AKYAVUZ,ERCAN ALTIN,55.0,7,0.0,50.0,50.0,50.0,50.0,80.0,38.99,0,41.0
 2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,KUMSAL STAR,AZİZ AKDEMİR,ELİF AÇMAZ,54.0,2,62.5,100.0,55.0,50.0,55.0,76.0,4.69,2,34.0
 2026-09-19-Diyarbakır Hipodromu-5,2026-09-19,5,Diyarbakır Hipodromu,1200.0,ÇELİK STAR,YUSUF CENGİZ,SÜLEYMAN KARAKEÇİLİ,57.0,5,70.0,50.0,64.0,50.0,64.0,88.0,6.46,1,33.0
@@ -3864,6 +3949,7 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,SHINE,ABDULLAH ÇANKAYA,HAKAN ATAKAYA,55.0,12,0.0,50.0,50.0,50.0,50.0,80.0,1.53,0,41.0
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,SÜRATLİ KIZ,YUSUF CENGİZ,BAHATTİN DEMİRKAPU,56.0,2,0.0,50.0,50.0,50.0,50.0,84.0,4.24,0,73.0
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,YETİMABLA,İSA KATAR,RESUL KAYA,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,3.38,0,30.0
+2026-09-19-6-Diyarbakır Hipodromu,2026-09-19,6,Diyarbakır Hipodromu,1200.0,YETİMABLA,İSA KATAR,RESUL KAYA,55.0,8,0.0,50.0,50.0,50.0,50.0,80.0,3.38,0,30.0
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,ZULEMA,LEVENT TAPTIK,ERCAN ALTIN,56.0,13,0.0,50.0,0.0,50.0,0.0,84.0,1.65,1,55.0
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,ÇİÇEKMAST,MEHMET EMİN DOĞAN,MAHMUT DOĞAN,60.0,6,50.0,50.0,50.0,50.0,50.0,100.0,11.9,2,56.0
 2026-09-19-Diyarbakır Hipodromu-6,2026-09-19,6,Diyarbakır Hipodromu,1200.0,ŞAL KIZI,MEHMET DOĞAN,OSMAN DEMİR,56.0,7,0.0,50.0,50.0,50.0,50.0,84.0,3.02,0,37.0
@@ -3874,7 +3960,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-20-1-Adana Yeşiloba Hipodromu,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,ARSLAN OĞLU,MEHMET AKYAVUZ,SERHAT POLAT,63.0,2,70.0,82.0,64.0,82.0,82.0,88.0,16.79,4,68.0
 2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,BALAK GAZİ,İSMAİL YILDIRIM,YUSUF CAN KARATOPRAK,54.0,11,0.0,0.0,50.0,50.0,50.0,76.0,3.39,1,48.0
 2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,BUBUKAN,ENES ATLAMAZ,AVNİ KARAKUŞ,52.0,12,0.0,50.0,50.0,50.0,50.0,68.0,1.52,0,24.0
-2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,CANMERT,MÜSLÜM ÇELİK,MEHMET DAŞ,55.0,3,10.0,0.0,50.0,50.0,50.0,80.0,13.57,1,52.0
+2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,CANMERT,MÜSLÜM ÇELİK,MEHMET DAŞ,55.0,3,10.0,0.0,50.0,50.0,50.0,80.0,13.57,2,52.0
+2026-09-20-1-Adana Yeşiloba Hipodromu,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,CANMERT,MÜSLÜM ÇELİK,MEHMET DAŞ,55.0,3,10.0,0.0,50.0,50.0,50.0,80.0,13.57,2,52.0
 2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,DEMİRDÖVEN KIZI,DOĞUKAN KONUK,ALİ GÜLLÜ,52.0,8,0.0,0.0,50.0,50.0,0.0,68.0,0.31,1,39.0
 2026-09-20-Adana Yeşiloba Hipodromu-1,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,RÜZGAR DELEN,NİZAMETTİN DEMİR,ERGÜN ÇETİNKURT,58.5,10,0.0,50.0,50.0,50.0,50.0,94.0,2.9,2,57.0
 2026-09-20-1-Adana Yeşiloba Hipodromu,2026-09-20,1,Adana Yeşiloba Hipodromu,1300.0,RÜZGAR DELEN,NİZAMETTİN DEMİR,ERGÜN ÇETİNKURT,58.5,10,0.0,50.0,50.0,50.0,50.0,94.0,2.9,2,57.0
@@ -3889,13 +3976,17 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,BIG FORTUNA,MEHMET TAHA COŞKUN,MUSTAFA ÖZYİĞİT,56.0,5,0.0,50.0,50.0,50.0,50.0,84.0,5.16,0,71.0
 2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,DİNEDA,ENES ATLAMAZ,YUNUS TUNCAY,52.5,10,0.0,0.0,50.0,50.0,0.0,70.0,0.54,1,41.0
 2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,FORLORN,MEHMET SALİH ÇELİK,ALİ ÇIKMAN,56.0,9,85.0,82.0,82.0,82.0,82.0,84.0,20.32,1,85.0
-2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,HIZLI GÖR,FESİH ÇETİNBAŞ,RAMAZAN TAŞDELEN,58.0,2,40.0,50.0,28.0,50.0,50.0,92.0,5.46,1,55.0
-2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,PRINCESS BALA,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,56.5,6,25.0,10.0,10.0,10.0,10.0,86.0,1.76,2,43.0
+2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,HIZLI GÖR,FESİH ÇETİNBAŞ,RAMAZAN TAŞDELEN,58.0,2,40.0,50.0,28.0,50.0,50.0,92.0,5.46,2,55.0
+2026-09-20-2-Adana Yeşiloba Hipodromu,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,HIZLI GÖR,FESİH ÇETİNBAŞ,RAMAZAN TAŞDELEN,58.0,2,40.0,50.0,28.0,50.0,50.0,92.0,5.46,2,55.0
+2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,PRINCESS BALA,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,56.5,6,25.0,10.0,10.0,10.0,10.0,86.0,1.76,4,43.0
+2026-09-20-2-Adana Yeşiloba Hipodromu,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,PRINCESS BALA,FATİH RÜSTEM BEBEK,TAMER OĞUZHAN KARA,56.5,6,25.0,10.0,10.0,10.0,10.0,86.0,1.76,4,43.0
 2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,SEHERİN YELİ,ERAY ÇİZİK,VELİ ÇİZİK,56.0,7,62.5,50.0,55.0,50.0,55.0,84.0,6.68,2,72.0
 2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,SMART CHILDREN,İSMAİL YILDIRIM,ARZU KILIÇ,59.0,4,55.0,46.0,46.0,50.0,46.0,96.0,23.54,2,87.0
 2026-09-20-2-Adana Yeşiloba Hipodromu,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,SMART CHILDREN,İSMAİL YILDIRIM,ARZU KILIÇ,59.0,4,55.0,46.0,46.0,50.0,46.0,96.0,23.54,2,87.0
-2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,STAR GATE,SALİH ÇELİK,RAMAZAN TAŞDELEN,57.0,8,10.0,0.0,0.0,50.0,0.0,88.0,5.84,1,59.0
-2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,TEK NERGİZ,NİZAMETTİN DEMİR,YUNUS TUNCAY,56.0,3,25.0,10.0,10.0,50.0,10.0,84.0,2.61,2,51.0
+2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,STAR GATE,SALİH ÇELİK,RAMAZAN TAŞDELEN,57.0,8,10.0,0.0,0.0,50.0,0.0,88.0,5.84,2,59.0
+2026-09-20-2-Adana Yeşiloba Hipodromu,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,STAR GATE,SALİH ÇELİK,RAMAZAN TAŞDELEN,57.0,8,10.0,0.0,0.0,50.0,0.0,88.0,5.84,2,59.0
+2026-09-20-Adana Yeşiloba Hipodromu-2,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,TEK NERGİZ,NİZAMETTİN DEMİR,YUNUS TUNCAY,56.0,3,25.0,10.0,10.0,50.0,10.0,84.0,2.61,4,51.0
+2026-09-20-2-Adana Yeşiloba Hipodromu,2026-09-20,2,Adana Yeşiloba Hipodromu,1300.0,TEK NERGİZ,NİZAMETTİN DEMİR,YUNUS TUNCAY,56.0,3,25.0,10.0,10.0,50.0,10.0,84.0,2.61,4,51.0
 2026-09-20-Adana Yeşiloba Hipodromu-3,2026-09-20,3,Adana Yeşiloba Hipodromu,1300.0,BOBİDİK,ERAY ÇİZİK,VEDAT YILDIRIM,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,7.51,0,0.0
 2026-09-20-3-Adana Yeşiloba Hipodromu,2026-09-20,3,Adana Yeşiloba Hipodromu,1300.0,BOBİDİK,ERAY ÇİZİK,VEDAT YILDIRIM,57.0,3,0.0,50.0,50.0,50.0,50.0,88.0,7.51,0,0.0
 2026-09-20-Adana Yeşiloba Hipodromu-3,2026-09-20,3,Adana Yeşiloba Hipodromu,1300.0,DISASTER GIRL,NİZAMETTİN DEMİR,MEHMET DAŞ,55.0,8,55.0,46.0,46.0,82.0,46.0,80.0,9.37,2,0.0
@@ -3942,7 +4033,8 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,GREAT ANGEL,MURAT AKDAĞ,CELAL BURAK SERİNER,52.0,14,0.0,0.0,50.0,0.0,50.0,68.0,0.45,1,25.0
 2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,IRONHOOF,TAMER BALİ,GÖZDE KÖSE,54.0,12,0.0,0.0,50.0,50.0,0.0,76.0,0.64,1,45.0
 2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,KALİ STRATA,MEHMET SALİH ÇELİK,UĞUR KULAK,61.0,6,55.0,50.0,50.0,46.0,46.0,96.0,12.6,1,70.0
-2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,KARACI,FATİH SULTAN MEHMET SANSAR,KADİR TAŞDEMİR,54.0,10,100.0,50.0,100.0,50.0,100.0,76.0,2.02,1,34.0
+2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,KARACI,FATİH SULTAN MEHMET SANSAR,KADİR TAŞDEMİR,54.0,10,100.0,50.0,100.0,50.0,100.0,76.0,2.02,2,34.0
+2026-09-20-6-Adana Yeşiloba Hipodromu,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,KARACI,FATİH SULTAN MEHMET SANSAR,KADİR TAŞDEMİR,54.0,10,100.0,50.0,100.0,50.0,100.0,76.0,2.02,2,34.0
 2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,KNOW WORTH,İSA KATAR,VELİ ÇİZİK,55.0,7,0.0,50.0,0.0,50.0,50.0,80.0,1.96,1,69.0
 2026-09-20-Adana Yeşiloba Hipodromu-6,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,MAXIMUS MAN,MERT GÖKALP ARSLAN,CELAL BURAK SERİNER,61.0,8,47.5,50.0,64.0,50.0,37.0,96.0,3.78,4,66.0
 2026-09-20-6-Adana Yeşiloba Hipodromu,2026-09-20,6,Adana Yeşiloba Hipodromu,1200.0,MAXIMUS MAN,MERT GÖKALP ARSLAN,CELAL BURAK SERİNER,61.0,8,47.5,50.0,64.0,50.0,37.0,96.0,3.78,4,66.0
@@ -4002,4 +4094,5 @@ race_id,race_date,race_number,track,distance,horse,jockey,trainer,weight,finish_
 2026-09-20-Adana Yeşiloba Hipodromu-10,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇELİK PARÇASI,NİZAMETTİN DEMİR,YUNUS TUNCAY,54.5,3,20.0,14.0,50.0,50.0,14.0,78.0,0.0,2,42.0
 2026-09-20-Adana Yeşiloba Hipodromu-10,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇETİNYEL,ROJHAT KURT,YUNUS TUNCAY,52.0,4,25.0,50.0,10.0,50.0,50.0,68.0,0.0,2,32.0
 2026-09-20-10-Adana Yeşiloba Hipodromu,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇETİNYEL,ROJHAT KURT,YUNUS TUNCAY,52.0,4,25.0,50.0,10.0,50.0,50.0,68.0,0.0,2,32.0
-2026-09-20-Adana Yeşiloba Hipodromu-10,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇEŞMEBAŞI,MÜSLÜM ÇELİK,YUNUS TUNCAY,56.5,7,25.0,10.0,50.0,50.0,10.0,86.0,0.0,1,46.0
+2026-09-20-Adana Yeşiloba Hipodromu-10,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇEŞMEBAŞI,MÜSLÜM ÇELİK,YUNUS TUNCAY,56.5,7,25.0,10.0,50.0,50.0,10.0,86.0,0.0,2,46.0
+2026-09-20-10-Adana Yeşiloba Hipodromu,2026-09-20,10,Adana Yeşiloba Hipodromu,1200.0,ÇEŞMEBAŞI,MÜSLÜM ÇELİK,YUNUS TUNCAY,56.5,7,25.0,10.0,50.0,50.0,10.0,86.0,0.0,2,46.0
